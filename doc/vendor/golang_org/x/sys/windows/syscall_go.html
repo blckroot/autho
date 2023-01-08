@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>syscall.go - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../../../";
+  var index_rel_prefix = "../../../../../";
+</script>
+
+<script src="../../../../../js/navigation.js" defer></script>
+<script src="../../../../../js/search.js" defer></script>
+<script src="../../../../../js/search_index.js" defer></script>
+<script src="../../../../../js/searcher.js" defer></script>
+<script src="../../../../../js/darkfish.js" defer></script>
+
+<link href="../../../../../css/fonts.css" rel="stylesheet">
+<link href="../../../../../css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    
+<div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+    <li><a href="../../../../../LICENSE.html">LICENSE</a>
+    <li><a href="../../../../../README_md.html">README</a>
+    <li><a href="../../../../../api/access_token_go.html">access_token.go</a>
+    <li><a href="../../../../../api/access_token_test_go.html">access_token_test.go</a>
+    <li><a href="../../../../../api/form_go.html">form.go</a>
+    <li><a href="../../../../../api/form_test_go.html">form_test.go</a>
+    <li><a href="../../../../../device/device_flow_go.html">device_flow.go</a>
+    <li><a href="../../../../../device/device_flow_test_go.html">device_flow_test.go</a>
+    <li><a href="../../../../../device/examples_test_go.html">examples_test.go</a>
+    <li><a href="../../../../../device/poller_go.html">poller.go</a>
+    <li><a href="../../../../../examples_test_go.html">examples_test.go</a>
+    <li><a href="../../../../../go_mod.html">go.mod</a>
+    <li><a href="../../../../../go_sum.html">go.sum</a>
+    <li><a href="../../../../../oauth_go.html">oauth.go</a>
+    <li><a href="../../../../../oauth_device_go.html">oauth_device.go</a>
+    <li><a href="../../../../../oauth_webapp_go.html">oauth_webapp.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/LICENSE.html">LICENSE</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/README_md.html">README</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_go.html">browser.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_darwin_go.html">browser_darwin.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_freebsd_go.html">browser_freebsd.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_linux_go.html">browser_linux.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_openbsd_go.html">browser_openbsd.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_unsupported_go.html">browser_unsupported.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_windows_go.html">browser_windows.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/zbrowser_windows_go.html">zbrowser_windows.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/LICENSE.html">LICENSE</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/README_md.html">README</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/api/access_token_go.html">access_token.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/api/form_go.html">form.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/device/device_flow_go.html">device_flow.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/device/poller_go.html">poller.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/oauth_go.html">oauth.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/oauth_device_go.html">oauth_device.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/oauth_webapp_go.html">oauth_webapp.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/webapp/local_server_go.html">local_server.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/webapp/webapp_flow_go.html">webapp_flow.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/LICENSE.html">LICENSE</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/PATENTS.html">PATENTS</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/internal/unsafeheader/unsafeheader_go.html">unsafeheader.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/aliases_go.html">aliases.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/dll_windows_go.html">dll_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/empty_s.html">empty.s</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/env_windows_go.html">env_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/eventlog_go.html">eventlog.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/exec_windows_go.html">exec_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/memory_windows_go.html">memory_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/mkerrors_bash.html">mkerrors.bash</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/mkknownfolderids_bash.html">mkknownfolderids.bash</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/mksyscall_go.html">mksyscall.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/race_go.html">race.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/race0_go.html">race0.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/security_windows_go.html">security_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/service_go.html">service.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/setupapi_windows_go.html">setupapi_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/str_go.html">str.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/syscall_go.html">syscall.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/syscall_windows_go.html">syscall_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/types_windows_go.html">types_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/types_windows_386_go.html">types_windows_386.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/types_windows_amd64_go.html">types_windows_amd64.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/types_windows_arm_go.html">types_windows_arm.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/types_windows_arm64_go.html">types_windows_arm64.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/zerrors_windows_go.html">zerrors_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/zknownfolderids_windows_go.html">zknownfolderids_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/zsyscall_windows_go.html">zsyscall_windows.go</a>
+    <li><a href="../../../../../vendor/modules_txt.html">modules</a>
+    <li><a href="../../../../../webapp/examples_test_go.html">examples_test.go</a>
+    <li><a href="../../../../../webapp/local_server_go.html">local_server.go</a>
+    <li><a href="../../../../../webapp/local_server_test_go.html">local_server_test.go</a>
+    <li><a href="../../../../../webapp/webapp_flow_go.html">webapp_flow.go</a>
+    <li><a href="../../../../../webapp/webapp_flow_test_go.html">webapp_flow_test.go</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page vendor/golang.org/x/sys/windows/syscall.go">
+
+<p>// Copyright 2009 The Go Authors. All rights reserved. // Use of this source code is governed by a BSD-style // license that can be found in the <a href="../../../../../LICENSE.html">LICENSE</a> file.</p>
+
+<p>//go:build windows // +build windows</p>
+
+<p>// Package windows contains an interface to the low-level operating system // primitives. OS details vary depending on the underlying system, and // by default, godoc will display the OS-specific documentation for the current // system. If you want godoc to display syscall documentation for another // system, set $GOOS and $GOARCH to the desired system. For example, if // you want to view documentation for freebsd/arm on linux/amd64, set $GOOS // to freebsd and $GOARCH to arm. // // The primary use of this package is inside other packages that provide a more // portable interface to the system, such as “os”, “time” and “net”.  Use // those packages rather than this one if you can. // // For details of the functions and data types in this package consult // the manuals for the appropriate operating system. // // These calls return err == nil to indicate success; otherwise // err represents an operating system error describing the failure and // holds a value of type syscall.Errno. package windows // import “golang.org/x/sys/windows”</p>
+
+<p>import (</p>
+
+<pre class="ruby"><span class="ruby-string">&quot;bytes&quot;</span>
+<span class="ruby-string">&quot;strings&quot;</span>
+<span class="ruby-string">&quot;syscall&quot;</span>
+<span class="ruby-string">&quot;unsafe&quot;</span>
+</pre>
+
+<p>)</p>
+
+<p>// ByteSliceFromString returns a NUL-terminated slice of bytes // containing the text of s. If s contains a NUL byte at any // location, it returns (nil, syscall.EINVAL). func ByteSliceFromString(s string) ([]byte, error) {</p>
+
+<pre>if strings.IndexByte(s, 0) != -1 {
+        return nil, syscall.EINVAL
+}
+a := make([]byte, len(s)+1)
+copy(a, s)
+return a, nil</pre>
+
+<p>}</p>
+
+<p>// BytePtrFromString returns a pointer to a NUL-terminated array of // bytes containing the text of s. If s contains a NUL byte at any // location, it returns (nil, syscall.EINVAL). func BytePtrFromString(s string) (*byte, error) {</p>
+
+<pre>a, err := ByteSliceFromString(s)
+if err != nil {
+        return nil, err
+}
+return &amp;a[0], nil</pre>
+
+<p>}</p>
+
+<p>// ByteSliceToString returns a string form of the text represented by the slice s, with a terminating NUL and any // bytes after the NUL removed. func ByteSliceToString(s []byte) string {</p>
+
+<pre>if i := bytes.IndexByte(s, 0); i != -1 {
+        s = s[:i]
+}
+return string(s)</pre>
+
+<p>}</p>
+
+<p>// BytePtrToString takes a pointer to a sequence of text and returns the corresponding string. // If the pointer is nil, it returns the empty string. It assumes that the text sequence is terminated // at a zero byte; if the zero byte is not present, the program may crash. func BytePtrToString(p *byte) string {</p>
+
+<pre>if p == nil {
+        return &quot;&quot;
+}
+if *p == 0 {
+        return &quot;&quot;
+}
+
+// Find NUL terminator.
+n := 0
+for ptr := unsafe.Pointer(p); *(*byte)(ptr) != 0; n++ {
+        ptr = unsafe.Pointer(uintptr(ptr) + 1)
+}
+
+return string(unsafe.Slice(p, n))</pre>
+
+<p>}</p>
+
+<p>// Single-word zero for use when we need a valid pointer to 0 bytes. // See mksyscall.pl. var _zero uintptr</p>
+
+<p>func (ts *Timespec) Unix() (sec int64, nsec int64) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">int64</span>(<span class="ruby-identifier">ts</span>.<span class="ruby-constant">Sec</span>), <span class="ruby-identifier">int64</span>(<span class="ruby-identifier">ts</span>.<span class="ruby-constant">Nsec</span>)
+</pre>
+
+<p>}</p>
+
+<p>func (tv *Timeval) Unix() (sec int64, nsec int64) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">int64</span>(<span class="ruby-identifier">tv</span>.<span class="ruby-constant">Sec</span>), <span class="ruby-identifier">int64</span>(<span class="ruby-identifier">tv</span>.<span class="ruby-constant">Usec</span>) <span class="ruby-operator">*</span> <span class="ruby-value">1000</span>
+</pre>
+
+<p>}</p>
+
+<p>func (ts *Timespec) Nano() int64 {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">int64</span>(<span class="ruby-identifier">ts</span>.<span class="ruby-constant">Sec</span>)<span class="ruby-operator">*</span><span class="ruby-value">1e9</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">int64</span>(<span class="ruby-identifier">ts</span>.<span class="ruby-constant">Nsec</span>)
+</pre>
+
+<p>}</p>
+
+<p>func (tv *Timeval) Nano() int64 {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">int64</span>(<span class="ruby-identifier">tv</span>.<span class="ruby-constant">Sec</span>)<span class="ruby-operator">*</span><span class="ruby-value">1e9</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">int64</span>(<span class="ruby-identifier">tv</span>.<span class="ruby-constant">Usec</span>)<span class="ruby-operator">*</span><span class="ruby-value">1000</span>
+</pre>
+
+<p>}</p>
+
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>setupapi_windows.go - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../../../";
+  var index_rel_prefix = "../../../../../";
+</script>
+
+<script src="../../../../../js/navigation.js" defer></script>
+<script src="../../../../../js/search.js" defer></script>
+<script src="../../../../../js/search_index.js" defer></script>
+<script src="../../../../../js/searcher.js" defer></script>
+<script src="../../../../../js/darkfish.js" defer></script>
+
+<link href="../../../../../css/fonts.css" rel="stylesheet">
+<link href="../../../../../css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    
+<div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+    <li><a href="../../../../../LICENSE.html">LICENSE</a>
+    <li><a href="../../../../../README_md.html">README</a>
+    <li><a href="../../../../../api/access_token_go.html">access_token.go</a>
+    <li><a href="../../../../../api/access_token_test_go.html">access_token_test.go</a>
+    <li><a href="../../../../../api/form_go.html">form.go</a>
+    <li><a href="../../../../../api/form_test_go.html">form_test.go</a>
+    <li><a href="../../../../../device/device_flow_go.html">device_flow.go</a>
+    <li><a href="../../../../../device/device_flow_test_go.html">device_flow_test.go</a>
+    <li><a href="../../../../../device/examples_test_go.html">examples_test.go</a>
+    <li><a href="../../../../../device/poller_go.html">poller.go</a>
+    <li><a href="../../../../../examples_test_go.html">examples_test.go</a>
+    <li><a href="../../../../../go_mod.html">go.mod</a>
+    <li><a href="../../../../../go_sum.html">go.sum</a>
+    <li><a href="../../../../../oauth_go.html">oauth.go</a>
+    <li><a href="../../../../../oauth_device_go.html">oauth_device.go</a>
+    <li><a href="../../../../../oauth_webapp_go.html">oauth_webapp.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/LICENSE.html">LICENSE</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/README_md.html">README</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_go.html">browser.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_darwin_go.html">browser_darwin.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_freebsd_go.html">browser_freebsd.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_linux_go.html">browser_linux.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_openbsd_go.html">browser_openbsd.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_unsupported_go.html">browser_unsupported.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_windows_go.html">browser_windows.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/zbrowser_windows_go.html">zbrowser_windows.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/LICENSE.html">LICENSE</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/README_md.html">README</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/api/access_token_go.html">access_token.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/api/form_go.html">form.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/device/device_flow_go.html">device_flow.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/device/poller_go.html">poller.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/oauth_go.html">oauth.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/oauth_device_go.html">oauth_device.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/oauth_webapp_go.html">oauth_webapp.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/webapp/local_server_go.html">local_server.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/webapp/webapp_flow_go.html">webapp_flow.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/LICENSE.html">LICENSE</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/PATENTS.html">PATENTS</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/internal/unsafeheader/unsafeheader_go.html">unsafeheader.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/aliases_go.html">aliases.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/dll_windows_go.html">dll_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/empty_s.html">empty.s</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/env_windows_go.html">env_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/eventlog_go.html">eventlog.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/exec_windows_go.html">exec_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/memory_windows_go.html">memory_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/mkerrors_bash.html">mkerrors.bash</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/mkknownfolderids_bash.html">mkknownfolderids.bash</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/mksyscall_go.html">mksyscall.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/race_go.html">race.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/race0_go.html">race0.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/security_windows_go.html">security_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/service_go.html">service.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/setupapi_windows_go.html">setupapi_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/str_go.html">str.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/syscall_go.html">syscall.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/syscall_windows_go.html">syscall_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/types_windows_go.html">types_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/types_windows_386_go.html">types_windows_386.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/types_windows_amd64_go.html">types_windows_amd64.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/types_windows_arm_go.html">types_windows_arm.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/types_windows_arm64_go.html">types_windows_arm64.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/zerrors_windows_go.html">zerrors_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/zknownfolderids_windows_go.html">zknownfolderids_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/zsyscall_windows_go.html">zsyscall_windows.go</a>
+    <li><a href="../../../../../vendor/modules_txt.html">modules</a>
+    <li><a href="../../../../../webapp/examples_test_go.html">examples_test.go</a>
+    <li><a href="../../../../../webapp/local_server_go.html">local_server.go</a>
+    <li><a href="../../../../../webapp/local_server_test_go.html">local_server_test.go</a>
+    <li><a href="../../../../../webapp/webapp_flow_go.html">webapp_flow.go</a>
+    <li><a href="../../../../../webapp/webapp_flow_test_go.html">webapp_flow_test.go</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page vendor/golang.org/x/sys/windows/setupapi_windows.go">
+
+<p>// Copyright 2021 The Go Authors. All rights reserved. // Use of this source code is governed by a BSD-style // license that can be found in the <a href="../../../../../LICENSE.html">LICENSE</a> file.</p>
+
+<p>package windows</p>
+
+<p>import (</p>
+
+<pre class="ruby"><span class="ruby-string">&quot;encoding/binary&quot;</span>
+<span class="ruby-string">&quot;errors&quot;</span>
+<span class="ruby-string">&quot;fmt&quot;</span>
+<span class="ruby-string">&quot;runtime&quot;</span>
+<span class="ruby-string">&quot;strings&quot;</span>
+<span class="ruby-string">&quot;syscall&quot;</span>
+<span class="ruby-string">&quot;unsafe&quot;</span>
+</pre>
+
+<p>)</p>
+
+<p>// This file contains functions that wrap SetupAPI.dll and CfgMgr32.dll, // core system functions for managing hardware devices, drivers, and the PnP tree. // Information about these APIs can be found at: //     <a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/install/setupapi">docs.microsoft.com/en-us/windows-hardware/drivers/install/setupapi</a> //     <a href="https://docs.microsoft.com/en-us/windows/win32/devinst/cfgmgr32">docs.microsoft.com/en-us/windows/win32/devinst/cfgmgr32</a>-</p>
+
+<p>const (</p>
+
+<pre class="ruby"><span class="ruby-constant">ERROR_EXPECTED_SECTION_NAME</span>                  <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0</span>
+<span class="ruby-constant">ERROR_BAD_SECTION_NAME_LINE</span>                  <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">1</span>
+<span class="ruby-constant">ERROR_SECTION_NAME_TOO_LONG</span>                  <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">2</span>
+<span class="ruby-constant">ERROR_GENERAL_SYNTAX</span>                         <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">3</span>
+<span class="ruby-constant">ERROR_WRONG_INF_STYLE</span>                        <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x100</span>
+<span class="ruby-constant">ERROR_SECTION_NOT_FOUND</span>                      <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x101</span>
+<span class="ruby-constant">ERROR_LINE_NOT_FOUND</span>                         <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x102</span>
+<span class="ruby-constant">ERROR_NO_BACKUP</span>                              <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x103</span>
+<span class="ruby-constant">ERROR_NO_ASSOCIATED_CLASS</span>                    <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x200</span>
+<span class="ruby-constant">ERROR_CLASS_MISMATCH</span>                         <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x201</span>
+<span class="ruby-constant">ERROR_DUPLICATE_FOUND</span>                        <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x202</span>
+<span class="ruby-constant">ERROR_NO_DRIVER_SELECTED</span>                     <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x203</span>
+<span class="ruby-constant">ERROR_KEY_DOES_NOT_EXIST</span>                     <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x204</span>
+<span class="ruby-constant">ERROR_INVALID_DEVINST_NAME</span>                   <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x205</span>
+<span class="ruby-constant">ERROR_INVALID_CLASS</span>                          <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x206</span>
+<span class="ruby-constant">ERROR_DEVINST_ALREADY_EXISTS</span>                 <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x207</span>
+<span class="ruby-constant">ERROR_DEVINFO_NOT_REGISTERED</span>                 <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x208</span>
+<span class="ruby-constant">ERROR_INVALID_REG_PROPERTY</span>                   <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x209</span>
+<span class="ruby-constant">ERROR_NO_INF</span>                                 <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x20A</span>
+<span class="ruby-constant">ERROR_NO_SUCH_DEVINST</span>                        <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x20B</span>
+<span class="ruby-constant">ERROR_CANT_LOAD_CLASS_ICON</span>                   <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x20C</span>
+<span class="ruby-constant">ERROR_INVALID_CLASS_INSTALLER</span>                <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x20D</span>
+<span class="ruby-constant">ERROR_DI_DO_DEFAULT</span>                          <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x20E</span>
+<span class="ruby-constant">ERROR_DI_NOFILECOPY</span>                          <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x20F</span>
+<span class="ruby-constant">ERROR_INVALID_HWPROFILE</span>                      <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x210</span>
+<span class="ruby-constant">ERROR_NO_DEVICE_SELECTED</span>                     <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x211</span>
+<span class="ruby-constant">ERROR_DEVINFO_LIST_LOCKED</span>                    <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x212</span>
+<span class="ruby-constant">ERROR_DEVINFO_DATA_LOCKED</span>                    <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x213</span>
+<span class="ruby-constant">ERROR_DI_BAD_PATH</span>                            <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x214</span>
+<span class="ruby-constant">ERROR_NO_CLASSINSTALL_PARAMS</span>                 <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x215</span>
+<span class="ruby-constant">ERROR_FILEQUEUE_LOCKED</span>                       <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x216</span>
+<span class="ruby-constant">ERROR_BAD_SERVICE_INSTALLSECT</span>                <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x217</span>
+<span class="ruby-constant">ERROR_NO_CLASS_DRIVER_LIST</span>                   <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x218</span>
+<span class="ruby-constant">ERROR_NO_ASSOCIATED_SERVICE</span>                  <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x219</span>
+<span class="ruby-constant">ERROR_NO_DEFAULT_DEVICE_INTERFACE</span>            <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x21A</span>
+<span class="ruby-constant">ERROR_DEVICE_INTERFACE_ACTIVE</span>                <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x21B</span>
+<span class="ruby-constant">ERROR_DEVICE_INTERFACE_REMOVED</span>               <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x21C</span>
+<span class="ruby-constant">ERROR_BAD_INTERFACE_INSTALLSECT</span>              <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x21D</span>
+<span class="ruby-constant">ERROR_NO_SUCH_INTERFACE_CLASS</span>                <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x21E</span>
+<span class="ruby-constant">ERROR_INVALID_REFERENCE_STRING</span>               <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x21F</span>
+<span class="ruby-constant">ERROR_INVALID_MACHINENAME</span>                    <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x220</span>
+<span class="ruby-constant">ERROR_REMOTE_COMM_FAILURE</span>                    <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x221</span>
+<span class="ruby-constant">ERROR_MACHINE_UNAVAILABLE</span>                    <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x222</span>
+<span class="ruby-constant">ERROR_NO_CONFIGMGR_SERVICES</span>                  <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x223</span>
+<span class="ruby-constant">ERROR_INVALID_PROPPAGE_PROVIDER</span>              <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x224</span>
+<span class="ruby-constant">ERROR_NO_SUCH_DEVICE_INTERFACE</span>               <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x225</span>
+<span class="ruby-constant">ERROR_DI_POSTPROCESSING_REQUIRED</span>             <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x226</span>
+<span class="ruby-constant">ERROR_INVALID_COINSTALLER</span>                    <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x227</span>
+<span class="ruby-constant">ERROR_NO_COMPAT_DRIVERS</span>                      <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x228</span>
+<span class="ruby-constant">ERROR_NO_DEVICE_ICON</span>                         <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x229</span>
+<span class="ruby-constant">ERROR_INVALID_INF_LOGCONFIG</span>                  <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x22A</span>
+<span class="ruby-constant">ERROR_DI_DONT_INSTALL</span>                        <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x22B</span>
+<span class="ruby-constant">ERROR_INVALID_FILTER_DRIVER</span>                  <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x22C</span>
+<span class="ruby-constant">ERROR_NON_WINDOWS_NT_DRIVER</span>                  <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x22D</span>
+<span class="ruby-constant">ERROR_NON_WINDOWS_DRIVER</span>                     <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x22E</span>
+<span class="ruby-constant">ERROR_NO_CATALOG_FOR_OEM_INF</span>                 <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x22F</span>
+<span class="ruby-constant">ERROR_DEVINSTALL_QUEUE_NONNATIVE</span>             <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x230</span>
+<span class="ruby-constant">ERROR_NOT_DISABLEABLE</span>                        <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x231</span>
+<span class="ruby-constant">ERROR_CANT_REMOVE_DEVINST</span>                    <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x232</span>
+<span class="ruby-constant">ERROR_INVALID_TARGET</span>                         <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x233</span>
+<span class="ruby-constant">ERROR_DRIVER_NONNATIVE</span>                       <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x234</span>
+<span class="ruby-constant">ERROR_IN_WOW64</span>                               <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x235</span>
+<span class="ruby-constant">ERROR_SET_SYSTEM_RESTORE_POINT</span>               <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x236</span>
+<span class="ruby-constant">ERROR_SCE_DISABLED</span>                           <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x238</span>
+<span class="ruby-constant">ERROR_UNKNOWN_EXCEPTION</span>                      <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x239</span>
+<span class="ruby-constant">ERROR_PNP_REGISTRY_ERROR</span>                     <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x23A</span>
+<span class="ruby-constant">ERROR_REMOTE_REQUEST_UNSUPPORTED</span>             <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x23B</span>
+<span class="ruby-constant">ERROR_NOT_AN_INSTALLED_OEM_INF</span>               <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x23C</span>
+<span class="ruby-constant">ERROR_INF_IN_USE_BY_DEVICES</span>                  <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x23D</span>
+<span class="ruby-constant">ERROR_DI_FUNCTION_OBSOLETE</span>                   <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x23E</span>
+<span class="ruby-constant">ERROR_NO_AUTHENTICODE_CATALOG</span>                <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x23F</span>
+<span class="ruby-constant">ERROR_AUTHENTICODE_DISALLOWED</span>                <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x240</span>
+<span class="ruby-constant">ERROR_AUTHENTICODE_TRUSTED_PUBLISHER</span>         <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x241</span>
+<span class="ruby-constant">ERROR_AUTHENTICODE_TRUST_NOT_ESTABLISHED</span>     <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x242</span>
+<span class="ruby-constant">ERROR_AUTHENTICODE_PUBLISHER_NOT_TRUSTED</span>     <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x243</span>
+<span class="ruby-constant">ERROR_SIGNATURE_OSATTRIBUTE_MISMATCH</span>         <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x244</span>
+<span class="ruby-constant">ERROR_ONLY_VALIDATE_VIA_AUTHENTICODE</span>         <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x245</span>
+<span class="ruby-constant">ERROR_DEVICE_INSTALLER_NOT_READY</span>             <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x246</span>
+<span class="ruby-constant">ERROR_DRIVER_STORE_ADD_FAILED</span>                <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x247</span>
+<span class="ruby-constant">ERROR_DEVICE_INSTALL_BLOCKED</span>                 <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x248</span>
+<span class="ruby-constant">ERROR_DRIVER_INSTALL_BLOCKED</span>                 <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x249</span>
+<span class="ruby-constant">ERROR_WRONG_INF_TYPE</span>                         <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x24A</span>
+<span class="ruby-constant">ERROR_FILE_HASH_NOT_IN_CATALOG</span>               <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x24B</span>
+<span class="ruby-constant">ERROR_DRIVER_STORE_DELETE_FAILED</span>             <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x24C</span>
+<span class="ruby-constant">ERROR_UNRECOVERABLE_STACK_OVERFLOW</span>           <span class="ruby-constant">Errno</span> = <span class="ruby-value">0x20000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xC0000000</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x300</span>
+<span class="ruby-constant">EXCEPTION_SPAPI_UNRECOVERABLE_STACK_OVERFLOW</span> <span class="ruby-constant">Errno</span> = <span class="ruby-constant">ERROR_UNRECOVERABLE_STACK_OVERFLOW</span>
+<span class="ruby-constant">ERROR_NO_DEFAULT_INTERFACE_DEVICE</span>            <span class="ruby-constant">Errno</span> = <span class="ruby-constant">ERROR_NO_DEFAULT_DEVICE_INTERFACE</span>
+<span class="ruby-constant">ERROR_INTERFACE_DEVICE_ACTIVE</span>                <span class="ruby-constant">Errno</span> = <span class="ruby-constant">ERROR_DEVICE_INTERFACE_ACTIVE</span>
+<span class="ruby-constant">ERROR_INTERFACE_DEVICE_REMOVED</span>               <span class="ruby-constant">Errno</span> = <span class="ruby-constant">ERROR_DEVICE_INTERFACE_REMOVED</span>
+<span class="ruby-constant">ERROR_NO_SUCH_INTERFACE_DEVICE</span>               <span class="ruby-constant">Errno</span> = <span class="ruby-constant">ERROR_NO_SUCH_DEVICE_INTERFACE</span>
+</pre>
+
+<p>)</p>
+
+<p>const (</p>
+
+<pre>MAX_DEVICE_ID_LEN   = 200
+MAX_DEVNODE_ID_LEN  = MAX_DEVICE_ID_LEN
+MAX_GUID_STRING_LEN = 39 // 38 chars + terminator null
+MAX_CLASS_NAME_LEN  = 32
+MAX_PROFILE_LEN     = 80
+MAX_CONFIG_VALUE    = 9999
+MAX_INSTANCE_VALUE  = 9999
+CONFIGMG_VERSION    = 0x0400</pre>
+
+<p>)</p>
+
+<p>// Maximum string length constants const (</p>
+
+<pre>LINE_LEN                    = 256  // Windows 9x-compatible maximum for displayable strings coming from a device INF.
+MAX_INF_STRING_LENGTH       = 4096 // Actual maximum size of an INF string (including string substitutions).
+MAX_INF_SECTION_NAME_LENGTH = 255  // For Windows 9x compatibility, INF section names should be constrained to 32 characters.
+MAX_TITLE_LEN               = 60
+MAX_INSTRUCTION_LEN         = 256
+MAX_LABEL_LEN               = 30
+MAX_SERVICE_NAME_LEN        = 256
+MAX_SUBTITLE_LEN            = 256</pre>
+
+<p>)</p>
+
+<p>const (</p>
+
+<pre>// SP_MAX_MACHINENAME_LENGTH defines maximum length of a machine name in the format expected by ConfigMgr32 CM_Connect_Machine (i.e., &quot;\\\\MachineName\0&quot;).
+SP_MAX_MACHINENAME_LENGTH = MAX_PATH + 3</pre>
+
+<p>)</p>
+
+<p>// HSPFILEQ is type for setup file queue type HSPFILEQ uintptr</p>
+
+<p>// DevInfo holds reference to device information set type DevInfo Handle</p>
+
+<p>// DEVINST is a handle usually recognized by cfgmgr32 APIs type DEVINST uint32</p>
+
+<p>// DevInfoData is a device information structure (references a device instance that is a member of a device information set) type DevInfoData struct {</p>
+
+<pre class="ruby"><span class="ruby-identifier">size</span>      <span class="ruby-identifier">uint32</span>
+<span class="ruby-constant">ClassGUID</span> <span class="ruby-constant">GUID</span>
+<span class="ruby-constant">DevInst</span>   <span class="ruby-constant">DEVINST</span>
+<span class="ruby-identifier">_</span>         <span class="ruby-identifier">uintptr</span>
+</pre>
+
+<p>}</p>
+
+<p>// DevInfoListDetailData is a structure for detailed information on a device information set (used for SetupDiGetDeviceInfoListDetail which supersedes the functionality of SetupDiGetDeviceInfoListClass). type DevInfoListDetailData struct {</p>
+
+<pre>size                uint32 // Use unsafeSizeOf method
+ClassGUID           GUID
+RemoteMachineHandle Handle
+remoteMachineName   [SP_MAX_MACHINENAME_LENGTH]uint16</pre>
+
+<p>}</p>
+
+<p>func (*DevInfoListDetailData) unsafeSizeOf() uint32 {</p>
+
+<pre>if unsafe.Sizeof(uintptr(0)) == 4 {
+        // Windows declares this with pshpack1.h
+        return uint32(unsafe.Offsetof(DevInfoListDetailData{}.remoteMachineName) + unsafe.Sizeof(DevInfoListDetailData{}.remoteMachineName))
+}
+return uint32(unsafe.Sizeof(DevInfoListDetailData{}))</pre>
+
+<p>}</p>
+
+<p>func (data *DevInfoListDetailData) RemoteMachineName() string {</p>
+
+<pre>return UTF16ToString(data.remoteMachineName[:])</pre>
+
+<p>}</p>
+
+<p>func (data *DevInfoListDetailData) SetRemoteMachineName(remoteMachineName string) error {</p>
+
+<pre>str, err := UTF16FromString(remoteMachineName)
+if err != nil {
+        return err
+}
+copy(data.remoteMachineName[:], str)
+return nil</pre>
+
+<p>}</p>
+
+<p>// DI_FUNCTION is function type for device installer type DI_FUNCTION uint32</p>
+
+<p>const (</p>
+
+<pre class="ruby"><span class="ruby-constant">DIF_SELECTDEVICE</span>                   <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000001</span>
+<span class="ruby-constant">DIF_INSTALLDEVICE</span>                  <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000002</span>
+<span class="ruby-constant">DIF_ASSIGNRESOURCES</span>                <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000003</span>
+<span class="ruby-constant">DIF_PROPERTIES</span>                     <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000004</span>
+<span class="ruby-constant">DIF_REMOVE</span>                         <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000005</span>
+<span class="ruby-constant">DIF_FIRSTTIMESETUP</span>                 <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000006</span>
+<span class="ruby-constant">DIF_FOUNDDEVICE</span>                    <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000007</span>
+<span class="ruby-constant">DIF_SELECTCLASSDRIVERS</span>             <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000008</span>
+<span class="ruby-constant">DIF_VALIDATECLASSDRIVERS</span>           <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000009</span>
+<span class="ruby-constant">DIF_INSTALLCLASSDRIVERS</span>            <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x0000000A</span>
+<span class="ruby-constant">DIF_CALCDISKSPACE</span>                  <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x0000000B</span>
+<span class="ruby-constant">DIF_DESTROYPRIVATEDATA</span>             <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x0000000C</span>
+<span class="ruby-constant">DIF_VALIDATEDRIVER</span>                 <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x0000000D</span>
+<span class="ruby-constant">DIF_DETECT</span>                         <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x0000000F</span>
+<span class="ruby-constant">DIF_INSTALLWIZARD</span>                  <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000010</span>
+<span class="ruby-constant">DIF_DESTROYWIZARDDATA</span>              <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000011</span>
+<span class="ruby-constant">DIF_PROPERTYCHANGE</span>                 <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000012</span>
+<span class="ruby-constant">DIF_ENABLECLASS</span>                    <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000013</span>
+<span class="ruby-constant">DIF_DETECTVERIFY</span>                   <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000014</span>
+<span class="ruby-constant">DIF_INSTALLDEVICEFILES</span>             <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000015</span>
+<span class="ruby-constant">DIF_UNREMOVE</span>                       <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000016</span>
+<span class="ruby-constant">DIF_SELECTBESTCOMPATDRV</span>            <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000017</span>
+<span class="ruby-constant">DIF_ALLOW_INSTALL</span>                  <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000018</span>
+<span class="ruby-constant">DIF_REGISTERDEVICE</span>                 <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000019</span>
+<span class="ruby-constant">DIF_NEWDEVICEWIZARD_PRESELECT</span>      <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x0000001A</span>
+<span class="ruby-constant">DIF_NEWDEVICEWIZARD_SELECT</span>         <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x0000001B</span>
+<span class="ruby-constant">DIF_NEWDEVICEWIZARD_PREANALYZE</span>     <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x0000001C</span>
+<span class="ruby-constant">DIF_NEWDEVICEWIZARD_POSTANALYZE</span>    <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x0000001D</span>
+<span class="ruby-constant">DIF_NEWDEVICEWIZARD_FINISHINSTALL</span>  <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x0000001E</span>
+<span class="ruby-constant">DIF_INSTALLINTERFACES</span>              <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000020</span>
+<span class="ruby-constant">DIF_DETECTCANCEL</span>                   <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000021</span>
+<span class="ruby-constant">DIF_REGISTER_COINSTALLERS</span>          <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000022</span>
+<span class="ruby-constant">DIF_ADDPROPERTYPAGE_ADVANCED</span>       <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000023</span>
+<span class="ruby-constant">DIF_ADDPROPERTYPAGE_BASIC</span>          <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000024</span>
+<span class="ruby-constant">DIF_TROUBLESHOOTER</span>                 <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000026</span>
+<span class="ruby-constant">DIF_POWERMESSAGEWAKE</span>               <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000027</span>
+<span class="ruby-constant">DIF_ADDREMOTEPROPERTYPAGE_ADVANCED</span> <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000028</span>
+<span class="ruby-constant">DIF_UPDATEDRIVER_UI</span>                <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x00000029</span>
+<span class="ruby-constant">DIF_FINISHINSTALL_ACTION</span>           <span class="ruby-constant">DI_FUNCTION</span> = <span class="ruby-value">0x0000002A</span>
+</pre>
+
+<p>)</p>
+
+<p>// DevInstallParams is device installation parameters structure (associated with a particular device information element, or globally with a device information set) type DevInstallParams struct {</p>
+
+<pre>size                     uint32
+Flags                    DI_FLAGS
+FlagsEx                  DI_FLAGSEX
+hwndParent               uintptr
+InstallMsgHandler        uintptr
+InstallMsgHandlerContext uintptr
+FileQueue                HSPFILEQ
+_                        uintptr
+_                        uint32
+driverPath               [MAX_PATH]uint16</pre>
+
+<p>}</p>
+
+<p>func (params *DevInstallParams) DriverPath() string {</p>
+
+<pre>return UTF16ToString(params.driverPath[:])</pre>
+
+<p>}</p>
+
+<p>func (params *DevInstallParams) SetDriverPath(driverPath string) error {</p>
+
+<pre>str, err := UTF16FromString(driverPath)
+if err != nil {
+        return err
+}
+copy(params.driverPath[:], str)
+return nil</pre>
+
+<p>}</p>
+
+<p>// DI_FLAGS is SP_DEVINSTALL_PARAMS.Flags values type DI_FLAGS uint32</p>
+
+<p>const (</p>
+
+<pre>// Flags for choosing a device
+DI_SHOWOEM       DI_FLAGS = 0x00000001 // support Other... button
+DI_SHOWCOMPAT    DI_FLAGS = 0x00000002 // show compatibility list
+DI_SHOWCLASS     DI_FLAGS = 0x00000004 // show class list
+DI_SHOWALL       DI_FLAGS = 0x00000007 // both class &amp; compat list shown
+DI_NOVCP         DI_FLAGS = 0x00000008 // don&#39;t create a new copy queue--use caller-supplied FileQueue
+DI_DIDCOMPAT     DI_FLAGS = 0x00000010 // Searched for compatible devices
+DI_DIDCLASS      DI_FLAGS = 0x00000020 // Searched for class devices
+DI_AUTOASSIGNRES DI_FLAGS = 0x00000040 // No UI for resources if possible
+
+// Flags returned by DiInstallDevice to indicate need to reboot/restart
+DI_NEEDRESTART DI_FLAGS = 0x00000080 // Reboot required to take effect
+DI_NEEDREBOOT  DI_FLAGS = 0x00000100 // &quot;&quot;
+
+// Flags for device installation
+DI_NOBROWSE DI_FLAGS = 0x00000200 // no Browse... in InsertDisk
+
+// Flags set by DiBuildDriverInfoList
+DI_MULTMFGS DI_FLAGS = 0x00000400 // Set if multiple manufacturers in class driver list
+
+// Flag indicates that device is disabled
+DI_DISABLED DI_FLAGS = 0x00000800 // Set if device disabled
+
+// Flags for Device/Class Properties
+DI_GENERALPAGE_ADDED  DI_FLAGS = 0x00001000
+DI_RESOURCEPAGE_ADDED DI_FLAGS = 0x00002000
+
+// Flag to indicate the setting properties for this Device (or class) caused a change so the Dev Mgr UI probably needs to be updated.
+DI_PROPERTIES_CHANGE DI_FLAGS = 0x00004000
+
+// Flag to indicate that the sorting from the INF file should be used.
+DI_INF_IS_SORTED DI_FLAGS = 0x00008000
+
+// Flag to indicate that only the INF specified by SP_DEVINSTALL_PARAMS.DriverPath should be searched.
+DI_ENUMSINGLEINF DI_FLAGS = 0x00010000
+
+// Flag that prevents ConfigMgr from removing/re-enumerating devices during device
+// registration, installation, and deletion.
+DI_DONOTCALLCONFIGMG DI_FLAGS = 0x00020000
+
+// The following flag can be used to install a device disabled
+DI_INSTALLDISABLED DI_FLAGS = 0x00040000
+
+// Flag that causes SetupDiBuildDriverInfoList to build a device&#39;s compatible driver
+// list from its existing class driver list, instead of the normal INF search.
+DI_COMPAT_FROM_CLASS DI_FLAGS = 0x00080000
+
+// This flag is set if the Class Install params should be used.
+DI_CLASSINSTALLPARAMS DI_FLAGS = 0x00100000
+
+// This flag is set if the caller of DiCallClassInstaller does NOT want the internal default action performed if the Class installer returns ERROR_DI_DO_DEFAULT.
+DI_NODI_DEFAULTACTION DI_FLAGS = 0x00200000
+
+// Flags for device installation
+DI_QUIETINSTALL        DI_FLAGS = 0x00800000 // don&#39;t confuse the user with questions or excess info
+DI_NOFILECOPY          DI_FLAGS = 0x01000000 // No file Copy necessary
+DI_FORCECOPY           DI_FLAGS = 0x02000000 // Force files to be copied from install path
+DI_DRIVERPAGE_ADDED    DI_FLAGS = 0x04000000 // Prop provider added Driver page.
+DI_USECI_SELECTSTRINGS DI_FLAGS = 0x08000000 // Use Class Installer Provided strings in the Select Device Dlg
+DI_OVERRIDE_INFFLAGS   DI_FLAGS = 0x10000000 // Override INF flags
+DI_PROPS_NOCHANGEUSAGE DI_FLAGS = 0x20000000 // No Enable/Disable in General Props
+
+DI_NOSELECTICONS DI_FLAGS = 0x40000000 // No small icons in select device dialogs
+
+DI_NOWRITE_IDS DI_FLAGS = 0x80000000 // Don&#39;t write HW &amp; Compat IDs on install</pre>
+
+<p>)</p>
+
+<p>// DI_FLAGSEX is SP_DEVINSTALL_PARAMS.FlagsEx values type DI_FLAGSEX uint32</p>
+
+<p>const (</p>
+
+<pre>DI_FLAGSEX_CI_FAILED                DI_FLAGSEX = 0x00000004 // Failed to Load/Call class installer
+DI_FLAGSEX_FINISHINSTALL_ACTION     DI_FLAGSEX = 0x00000008 // Class/co-installer wants to get a DIF_FINISH_INSTALL action in client context.
+DI_FLAGSEX_DIDINFOLIST              DI_FLAGSEX = 0x00000010 // Did the Class Info List
+DI_FLAGSEX_DIDCOMPATINFO            DI_FLAGSEX = 0x00000020 // Did the Compat Info List
+DI_FLAGSEX_FILTERCLASSES            DI_FLAGSEX = 0x00000040
+DI_FLAGSEX_SETFAILEDINSTALL         DI_FLAGSEX = 0x00000080
+DI_FLAGSEX_DEVICECHANGE             DI_FLAGSEX = 0x00000100
+DI_FLAGSEX_ALWAYSWRITEIDS           DI_FLAGSEX = 0x00000200
+DI_FLAGSEX_PROPCHANGE_PENDING       DI_FLAGSEX = 0x00000400 // One or more device property sheets have had changes made to them, and need to have a DIF_PROPERTYCHANGE occur.
+DI_FLAGSEX_ALLOWEXCLUDEDDRVS        DI_FLAGSEX = 0x00000800
+DI_FLAGSEX_NOUIONQUERYREMOVE        DI_FLAGSEX = 0x00001000
+DI_FLAGSEX_USECLASSFORCOMPAT        DI_FLAGSEX = 0x00002000 // Use the device&#39;s class when building compat drv list. (Ignored if DI_COMPAT_FROM_CLASS flag is specified.)
+DI_FLAGSEX_NO_DRVREG_MODIFY         DI_FLAGSEX = 0x00008000 // Don&#39;t run AddReg and DelReg for device&#39;s software (driver) key.
+DI_FLAGSEX_IN_SYSTEM_SETUP          DI_FLAGSEX = 0x00010000 // Installation is occurring during initial system setup.
+DI_FLAGSEX_INET_DRIVER              DI_FLAGSEX = 0x00020000 // Driver came from Windows Update
+DI_FLAGSEX_APPENDDRIVERLIST         DI_FLAGSEX = 0x00040000 // Cause SetupDiBuildDriverInfoList to append a new driver list to an existing list.
+DI_FLAGSEX_PREINSTALLBACKUP         DI_FLAGSEX = 0x00080000 // not used
+DI_FLAGSEX_BACKUPONREPLACE          DI_FLAGSEX = 0x00100000 // not used
+DI_FLAGSEX_DRIVERLIST_FROM_URL      DI_FLAGSEX = 0x00200000 // build driver list from INF(s) retrieved from URL specified in SP_DEVINSTALL_PARAMS.DriverPath (empty string means Windows Update website)
+DI_FLAGSEX_EXCLUDE_OLD_INET_DRIVERS DI_FLAGSEX = 0x00800000 // Don&#39;t include old Internet drivers when building a driver list. Ignored on Windows Vista and later.
+DI_FLAGSEX_POWERPAGE_ADDED          DI_FLAGSEX = 0x01000000 // class installer added their own power page
+DI_FLAGSEX_FILTERSIMILARDRIVERS     DI_FLAGSEX = 0x02000000 // only include similar drivers in class list
+DI_FLAGSEX_INSTALLEDDRIVER          DI_FLAGSEX = 0x04000000 // only add the installed driver to the class or compat driver list.  Used in calls to SetupDiBuildDriverInfoList
+DI_FLAGSEX_NO_CLASSLIST_NODE_MERGE  DI_FLAGSEX = 0x08000000 // Don&#39;t remove identical driver nodes from the class list
+DI_FLAGSEX_ALTPLATFORM_DRVSEARCH    DI_FLAGSEX = 0x10000000 // Build driver list based on alternate platform information specified in associated file queue
+DI_FLAGSEX_RESTART_DEVICE_ONLY      DI_FLAGSEX = 0x20000000 // only restart the device drivers are being installed on as opposed to restarting all devices using those drivers.
+DI_FLAGSEX_RECURSIVESEARCH          DI_FLAGSEX = 0x40000000 // Tell SetupDiBuildDriverInfoList to do a recursive search
+DI_FLAGSEX_SEARCH_PUBLISHED_INFS    DI_FLAGSEX = 0x80000000 // Tell SetupDiBuildDriverInfoList to do a &quot;published INF&quot; search</pre>
+
+<p>)</p>
+
+<p>// ClassInstallHeader is the first member of any class install parameters structure. It contains the device installation request code that defines the format of the rest of the install parameters structure. type ClassInstallHeader struct {</p>
+
+<pre class="ruby"><span class="ruby-identifier">size</span>            <span class="ruby-identifier">uint32</span>
+<span class="ruby-constant">InstallFunction</span> <span class="ruby-constant">DI_FUNCTION</span>
+</pre>
+
+<p>}</p>
+
+<p>func MakeClassInstallHeader(installFunction DI_FUNCTION) *ClassInstallHeader {</p>
+
+<pre>hdr := &amp;ClassInstallHeader{InstallFunction: installFunction}
+hdr.size = uint32(unsafe.Sizeof(*hdr))
+return hdr</pre>
+
+<p>}</p>
+
+<p>// DICS_STATE specifies values indicating a change in a device’s state type DICS_STATE uint32</p>
+
+<p>const (</p>
+
+<pre>DICS_ENABLE     DICS_STATE = 0x00000001 // The device is being enabled.
+DICS_DISABLE    DICS_STATE = 0x00000002 // The device is being disabled.
+DICS_PROPCHANGE DICS_STATE = 0x00000003 // The properties of the device have changed.
+DICS_START      DICS_STATE = 0x00000004 // The device is being started (if the request is for the currently active hardware profile).
+DICS_STOP       DICS_STATE = 0x00000005 // The device is being stopped. The driver stack will be unloaded and the CSCONFIGFLAG_DO_NOT_START flag will be set for the device.</pre>
+
+<p>)</p>
+
+<p>// DICS_FLAG specifies the scope of a device property change type DICS_FLAG uint32</p>
+
+<p>const (</p>
+
+<pre>DICS_FLAG_GLOBAL         DICS_FLAG = 0x00000001 // make change in all hardware profiles
+DICS_FLAG_CONFIGSPECIFIC DICS_FLAG = 0x00000002 // make change in specified profile only
+DICS_FLAG_CONFIGGENERAL  DICS_FLAG = 0x00000004 // 1 or more hardware profile-specific changes to follow (obsolete)</pre>
+
+<p>)</p>
+
+<p>// PropChangeParams is a structure corresponding to a DIF_PROPERTYCHANGE install function. type PropChangeParams struct {</p>
+
+<pre class="ruby"><span class="ruby-constant">ClassInstallHeader</span> <span class="ruby-constant">ClassInstallHeader</span>
+<span class="ruby-constant">StateChange</span>        <span class="ruby-constant">DICS_STATE</span>
+<span class="ruby-constant">Scope</span>              <span class="ruby-constant">DICS_FLAG</span>
+<span class="ruby-constant">HwProfile</span>          <span class="ruby-identifier">uint32</span>
+</pre>
+
+<p>}</p>
+
+<p>// DI_REMOVEDEVICE specifies the scope of the device removal type DI_REMOVEDEVICE uint32</p>
+
+<p>const (</p>
+
+<pre>DI_REMOVEDEVICE_GLOBAL         DI_REMOVEDEVICE = 0x00000001 // Make this change in all hardware profiles. Remove information about the device from the registry.
+DI_REMOVEDEVICE_CONFIGSPECIFIC DI_REMOVEDEVICE = 0x00000002 // Make this change to only the hardware profile specified by HwProfile. this flag only applies to root-enumerated devices. When Windows removes the device from the last hardware profile in which it was configured, Windows performs a global removal.</pre>
+
+<p>)</p>
+
+<p>// RemoveDeviceParams is a structure corresponding to a DIF_REMOVE install function. type RemoveDeviceParams struct {</p>
+
+<pre class="ruby"><span class="ruby-constant">ClassInstallHeader</span> <span class="ruby-constant">ClassInstallHeader</span>
+<span class="ruby-constant">Scope</span>              <span class="ruby-constant">DI_REMOVEDEVICE</span>
+<span class="ruby-constant">HwProfile</span>          <span class="ruby-identifier">uint32</span>
+</pre>
+
+<p>}</p>
+
+<p>// DrvInfoData is driver information structure (member of a driver info list that may be associated with a particular device instance, or (globally) with a device information set) type DrvInfoData struct {</p>
+
+<pre>size          uint32
+DriverType    uint32
+_             uintptr
+description   [LINE_LEN]uint16
+mfgName       [LINE_LEN]uint16
+providerName  [LINE_LEN]uint16
+DriverDate    Filetime
+DriverVersion uint64</pre>
+
+<p>}</p>
+
+<p>func (data *DrvInfoData) Description() string {</p>
+
+<pre>return UTF16ToString(data.description[:])</pre>
+
+<p>}</p>
+
+<p>func (data *DrvInfoData) SetDescription(description string) error {</p>
+
+<pre>str, err := UTF16FromString(description)
+if err != nil {
+        return err
+}
+copy(data.description[:], str)
+return nil</pre>
+
+<p>}</p>
+
+<p>func (data *DrvInfoData) MfgName() string {</p>
+
+<pre>return UTF16ToString(data.mfgName[:])</pre>
+
+<p>}</p>
+
+<p>func (data *DrvInfoData) SetMfgName(mfgName string) error {</p>
+
+<pre>str, err := UTF16FromString(mfgName)
+if err != nil {
+        return err
+}
+copy(data.mfgName[:], str)
+return nil</pre>
+
+<p>}</p>
+
+<p>func (data *DrvInfoData) ProviderName() string {</p>
+
+<pre>return UTF16ToString(data.providerName[:])</pre>
+
+<p>}</p>
+
+<p>func (data *DrvInfoData) SetProviderName(providerName string) error {</p>
+
+<pre>str, err := UTF16FromString(providerName)
+if err != nil {
+        return err
+}
+copy(data.providerName[:], str)
+return nil</pre>
+
+<p>}</p>
+
+<p>// IsNewer method returns true if DrvInfoData date and version is newer than supplied parameters. func (data *DrvInfoData) IsNewer(driverDate Filetime, driverVersion uint64) bool {</p>
+
+<pre>if data.DriverDate.HighDateTime &gt; driverDate.HighDateTime {
+        return true
+}
+if data.DriverDate.HighDateTime &lt; driverDate.HighDateTime {
+        return false
+}
+
+if data.DriverDate.LowDateTime &gt; driverDate.LowDateTime {
+        return true
+}
+if data.DriverDate.LowDateTime &lt; driverDate.LowDateTime {
+        return false
+}
+
+if data.DriverVersion &gt; driverVersion {
+        return true
+}
+if data.DriverVersion &lt; driverVersion {
+        return false
+}
+
+return false</pre>
+
+<p>}</p>
+
+<p>// DrvInfoDetailData is driver information details structure (provides detailed information about a particular driver information structure) type DrvInfoDetailData struct {</p>
+
+<pre>size            uint32 // Use unsafeSizeOf method
+InfDate         Filetime
+compatIDsOffset uint32
+compatIDsLength uint32
+_               uintptr
+sectionName     [LINE_LEN]uint16
+infFileName     [MAX_PATH]uint16
+drvDescription  [LINE_LEN]uint16
+hardwareID      [1]uint16</pre>
+
+<p>}</p>
+
+<p>func (*DrvInfoDetailData) unsafeSizeOf() uint32 {</p>
+
+<pre>if unsafe.Sizeof(uintptr(0)) == 4 {
+        // Windows declares this with pshpack1.h
+        return uint32(unsafe.Offsetof(DrvInfoDetailData{}.hardwareID) + unsafe.Sizeof(DrvInfoDetailData{}.hardwareID))
+}
+return uint32(unsafe.Sizeof(DrvInfoDetailData{}))</pre>
+
+<p>}</p>
+
+<p>func (data *DrvInfoDetailData) SectionName() string {</p>
+
+<pre>return UTF16ToString(data.sectionName[:])</pre>
+
+<p>}</p>
+
+<p>func (data *DrvInfoDetailData) InfFileName() string {</p>
+
+<pre>return UTF16ToString(data.infFileName[:])</pre>
+
+<p>}</p>
+
+<p>func (data *DrvInfoDetailData) DrvDescription() string {</p>
+
+<pre>return UTF16ToString(data.drvDescription[:])</pre>
+
+<p>}</p>
+
+<p>func (data *DrvInfoDetailData) HardwareID() string {</p>
+
+<pre>if data.compatIDsOffset &gt; 1 {
+        bufW := data.getBuf()
+        return UTF16ToString(bufW[:wcslen(bufW)])
+}
+
+return &quot;&quot;</pre>
+
+<p>}</p>
+
+<p>func (data *DrvInfoDetailData) CompatIDs() []string {</p>
+
+<pre>a := make([]string, 0)
+
+if data.compatIDsLength &gt; 0 {
+        bufW := data.getBuf()
+        bufW = bufW[data.compatIDsOffset : data.compatIDsOffset+data.compatIDsLength]
+        for i := 0; i &lt; len(bufW); {
+                j := i + wcslen(bufW[i:])
+                if i &lt; j {
+                        a = append(a, UTF16ToString(bufW[i:j]))
+                }
+                i = j + 1
+        }
+}
+
+return a</pre>
+
+<p>}</p>
+
+<p>func (data *DrvInfoDetailData) getBuf() []uint16 {</p>
+
+<pre>len := (data.size - uint32(unsafe.Offsetof(data.hardwareID))) / 2
+sl := struct {
+        addr *uint16
+        len  int
+        cap  int
+}{&amp;data.hardwareID[0], int(len), int(len)}
+return *(*[]uint16)(unsafe.Pointer(&amp;sl))</pre>
+
+<p>}</p>
+
+<p>// IsCompatible method tests if given hardware ID matches the driver or is listed on the compatible ID list. func (data *DrvInfoDetailData) IsCompatible(hwid string) bool {</p>
+
+<pre>hwidLC := strings.ToLower(hwid)
+if strings.ToLower(data.HardwareID()) == hwidLC {
+        return true
+}
+a := data.CompatIDs()
+for i := range a {
+        if strings.ToLower(a[i]) == hwidLC {
+                return true
+        }
+}
+
+return false</pre>
+
+<p>}</p>
+
+<p>// DICD flags control SetupDiCreateDeviceInfo type DICD uint32</p>
+
+<p>const (</p>
+
+<pre class="ruby"><span class="ruby-constant">DICD_GENERATE_ID</span>       <span class="ruby-constant">DICD</span> = <span class="ruby-value">0x00000001</span>
+<span class="ruby-constant">DICD_INHERIT_CLASSDRVS</span> <span class="ruby-constant">DICD</span> = <span class="ruby-value">0x00000002</span>
+</pre>
+
+<p>)</p>
+
+<p>// SUOI flags control SetupUninstallOEMInf type SUOI uint32</p>
+
+<p>const (</p>
+
+<pre class="ruby"><span class="ruby-constant">SUOI_FORCEDELETE</span> <span class="ruby-constant">SUOI</span> = <span class="ruby-value">0x0001</span>
+</pre>
+
+<p>)</p>
+
+<p>// SPDIT flags to distinguish between class drivers and // device drivers. (Passed in ‘DriverType’ parameter of // driver information list APIs) type SPDIT uint32</p>
+
+<p>const (</p>
+
+<pre class="ruby"><span class="ruby-constant">SPDIT_NODRIVER</span>     <span class="ruby-constant">SPDIT</span> = <span class="ruby-value">0x00000000</span>
+<span class="ruby-constant">SPDIT_CLASSDRIVER</span>  <span class="ruby-constant">SPDIT</span> = <span class="ruby-value">0x00000001</span>
+<span class="ruby-constant">SPDIT_COMPATDRIVER</span> <span class="ruby-constant">SPDIT</span> = <span class="ruby-value">0x00000002</span>
+</pre>
+
+<p>)</p>
+
+<p>// DIGCF flags control what is included in the device information set built by SetupDiGetClassDevs type DIGCF uint32</p>
+
+<p>const (</p>
+
+<pre>DIGCF_DEFAULT         DIGCF = 0x00000001 // only valid with DIGCF_DEVICEINTERFACE
+DIGCF_PRESENT         DIGCF = 0x00000002
+DIGCF_ALLCLASSES      DIGCF = 0x00000004
+DIGCF_PROFILE         DIGCF = 0x00000008
+DIGCF_DEVICEINTERFACE DIGCF = 0x00000010</pre>
+
+<p>)</p>
+
+<p>// DIREG specifies values for SetupDiCreateDevRegKey, SetupDiOpenDevRegKey, and SetupDiDeleteDevRegKey. type DIREG uint32</p>
+
+<p>const (</p>
+
+<pre>DIREG_DEV  DIREG = 0x00000001 // Open/Create/Delete device key
+DIREG_DRV  DIREG = 0x00000002 // Open/Create/Delete driver key
+DIREG_BOTH DIREG = 0x00000004 // Delete both driver and Device key</pre>
+
+<p>)</p>
+
+<p>// SPDRP specifies device registry property codes // (Codes marked as read-only ® may only be used for // SetupDiGetDeviceRegistryProperty) // // These values should cover the same set of registry properties // as defined by the CM_DRP codes in cfgmgr32.h. // // Note that SPDRP codes are zero based while CM_DRP codes are one based! type SPDRP uint32</p>
+
+<p>const (</p>
+
+<pre>SPDRP_DEVICEDESC                  SPDRP = 0x00000000 // DeviceDesc (R/W)
+SPDRP_HARDWAREID                  SPDRP = 0x00000001 // HardwareID (R/W)
+SPDRP_COMPATIBLEIDS               SPDRP = 0x00000002 // CompatibleIDs (R/W)
+SPDRP_SERVICE                     SPDRP = 0x00000004 // Service (R/W)
+SPDRP_CLASS                       SPDRP = 0x00000007 // Class (R--tied to ClassGUID)
+SPDRP_CLASSGUID                   SPDRP = 0x00000008 // ClassGUID (R/W)
+SPDRP_DRIVER                      SPDRP = 0x00000009 // Driver (R/W)
+SPDRP_CONFIGFLAGS                 SPDRP = 0x0000000A // ConfigFlags (R/W)
+SPDRP_MFG                         SPDRP = 0x0000000B // Mfg (R/W)
+SPDRP_FRIENDLYNAME                SPDRP = 0x0000000C // FriendlyName (R/W)
+SPDRP_LOCATION_INFORMATION        SPDRP = 0x0000000D // LocationInformation (R/W)
+SPDRP_PHYSICAL_DEVICE_OBJECT_NAME SPDRP = 0x0000000E // PhysicalDeviceObjectName (R)
+SPDRP_CAPABILITIES                SPDRP = 0x0000000F // Capabilities (R)
+SPDRP_UI_NUMBER                   SPDRP = 0x00000010 // UiNumber (R)
+SPDRP_UPPERFILTERS                SPDRP = 0x00000011 // UpperFilters (R/W)
+SPDRP_LOWERFILTERS                SPDRP = 0x00000012 // LowerFilters (R/W)
+SPDRP_BUSTYPEGUID                 SPDRP = 0x00000013 // BusTypeGUID (R)
+SPDRP_LEGACYBUSTYPE               SPDRP = 0x00000014 // LegacyBusType (R)
+SPDRP_BUSNUMBER                   SPDRP = 0x00000015 // BusNumber (R)
+SPDRP_ENUMERATOR_NAME             SPDRP = 0x00000016 // Enumerator Name (R)
+SPDRP_SECURITY                    SPDRP = 0x00000017 // Security (R/W, binary form)
+SPDRP_SECURITY_SDS                SPDRP = 0x00000018 // Security (W, SDS form)
+SPDRP_DEVTYPE                     SPDRP = 0x00000019 // Device Type (R/W)
+SPDRP_EXCLUSIVE                   SPDRP = 0x0000001A // Device is exclusive-access (R/W)
+SPDRP_CHARACTERISTICS             SPDRP = 0x0000001B // Device Characteristics (R/W)
+SPDRP_ADDRESS                     SPDRP = 0x0000001C // Device Address (R)
+SPDRP_UI_NUMBER_DESC_FORMAT       SPDRP = 0x0000001D // UiNumberDescFormat (R/W)
+SPDRP_DEVICE_POWER_DATA           SPDRP = 0x0000001E // Device Power Data (R)
+SPDRP_REMOVAL_POLICY              SPDRP = 0x0000001F // Removal Policy (R)
+SPDRP_REMOVAL_POLICY_HW_DEFAULT   SPDRP = 0x00000020 // Hardware Removal Policy (R)
+SPDRP_REMOVAL_POLICY_OVERRIDE     SPDRP = 0x00000021 // Removal Policy Override (RW)
+SPDRP_INSTALL_STATE               SPDRP = 0x00000022 // Device Install State (R)
+SPDRP_LOCATION_PATHS              SPDRP = 0x00000023 // Device Location Paths (R)
+SPDRP_BASE_CONTAINERID            SPDRP = 0x00000024 // Base ContainerID (R)
+
+SPDRP_MAXIMUM_PROPERTY SPDRP = 0x00000025 // Upper bound on ordinals</pre>
+
+<p>)</p>
+
+<p>// DEVPROPTYPE represents the property-data-type identifier that specifies the // data type of a device property value in the unified device property model. type DEVPROPTYPE uint32</p>
+
+<p>const (</p>
+
+<pre class="ruby"><span class="ruby-constant">DEVPROP_TYPEMOD_ARRAY</span> <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00001000</span>
+<span class="ruby-constant">DEVPROP_TYPEMOD_LIST</span>  <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00002000</span>
+
+<span class="ruby-constant">DEVPROP_TYPE_EMPTY</span>                      <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000000</span>
+<span class="ruby-constant">DEVPROP_TYPE_NULL</span>                       <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000001</span>
+<span class="ruby-constant">DEVPROP_TYPE_SBYTE</span>                      <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000002</span>
+<span class="ruby-constant">DEVPROP_TYPE_BYTE</span>                       <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000003</span>
+<span class="ruby-constant">DEVPROP_TYPE_INT16</span>                      <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000004</span>
+<span class="ruby-constant">DEVPROP_TYPE_UINT16</span>                     <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000005</span>
+<span class="ruby-constant">DEVPROP_TYPE_INT32</span>                      <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000006</span>
+<span class="ruby-constant">DEVPROP_TYPE_UINT32</span>                     <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000007</span>
+<span class="ruby-constant">DEVPROP_TYPE_INT64</span>                      <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000008</span>
+<span class="ruby-constant">DEVPROP_TYPE_UINT64</span>                     <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000009</span>
+<span class="ruby-constant">DEVPROP_TYPE_FLOAT</span>                      <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x0000000A</span>
+<span class="ruby-constant">DEVPROP_TYPE_DOUBLE</span>                     <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x0000000B</span>
+<span class="ruby-constant">DEVPROP_TYPE_DECIMAL</span>                    <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x0000000C</span>
+<span class="ruby-constant">DEVPROP_TYPE_GUID</span>                       <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x0000000D</span>
+<span class="ruby-constant">DEVPROP_TYPE_CURRENCY</span>                   <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x0000000E</span>
+<span class="ruby-constant">DEVPROP_TYPE_DATE</span>                       <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x0000000F</span>
+<span class="ruby-constant">DEVPROP_TYPE_FILETIME</span>                   <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000010</span>
+<span class="ruby-constant">DEVPROP_TYPE_BOOLEAN</span>                    <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000011</span>
+<span class="ruby-constant">DEVPROP_TYPE_STRING</span>                     <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000012</span>
+<span class="ruby-constant">DEVPROP_TYPE_STRING_LIST</span>                <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-constant">DEVPROP_TYPE_STRING</span> <span class="ruby-operator">|</span> <span class="ruby-constant">DEVPROP_TYPEMOD_LIST</span>
+<span class="ruby-constant">DEVPROP_TYPE_SECURITY_DESCRIPTOR</span>        <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000013</span>
+<span class="ruby-constant">DEVPROP_TYPE_SECURITY_DESCRIPTOR_STRING</span> <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000014</span>
+<span class="ruby-constant">DEVPROP_TYPE_DEVPROPKEY</span>                 <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000015</span>
+<span class="ruby-constant">DEVPROP_TYPE_DEVPROPTYPE</span>                <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000016</span>
+<span class="ruby-constant">DEVPROP_TYPE_BINARY</span>                     <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-constant">DEVPROP_TYPE_BYTE</span> <span class="ruby-operator">|</span> <span class="ruby-constant">DEVPROP_TYPEMOD_ARRAY</span>
+<span class="ruby-constant">DEVPROP_TYPE_ERROR</span>                      <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000017</span>
+<span class="ruby-constant">DEVPROP_TYPE_NTSTATUS</span>                   <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000018</span>
+<span class="ruby-constant">DEVPROP_TYPE_STRING_INDIRECT</span>            <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000019</span>
+
+<span class="ruby-constant">MAX_DEVPROP_TYPE</span>    <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000019</span>
+<span class="ruby-constant">MAX_DEVPROP_TYPEMOD</span> <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00002000</span>
+
+<span class="ruby-constant">DEVPROP_MASK_TYPE</span>    <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x00000FFF</span>
+<span class="ruby-constant">DEVPROP_MASK_TYPEMOD</span> <span class="ruby-constant">DEVPROPTYPE</span> = <span class="ruby-value">0x0000F000</span>
+</pre>
+
+<p>)</p>
+
+<p>// DEVPROPGUID specifies a property category. type DEVPROPGUID GUID</p>
+
+<p>// DEVPROPID uniquely identifies the property within the property category. type DEVPROPID uint32</p>
+
+<p>const DEVPROPID_FIRST_USABLE DEVPROPID = 2</p>
+
+<p>// DEVPROPKEY represents a device property key for a device property in the // unified device property model. type DEVPROPKEY struct {</p>
+
+<pre class="ruby"><span class="ruby-constant">FmtID</span> <span class="ruby-constant">DEVPROPGUID</span>
+<span class="ruby-constant">PID</span>   <span class="ruby-constant">DEVPROPID</span>
+</pre>
+
+<p>}</p>
+
+<p>// CONFIGRET is a return value or error code from cfgmgr32 APIs type CONFIGRET uint32</p>
+
+<p>func (ret CONFIGRET) Error() string {</p>
+
+<pre>if win32Error, ok := ret.Unwrap().(Errno); ok {
+        return fmt.Sprintf(&quot;%s (CfgMgr error: 0x%08x)&quot;, win32Error.Error(), uint32(ret))
+}
+return fmt.Sprintf(&quot;CfgMgr error: 0x%08x&quot;, uint32(ret))</pre>
+
+<p>}</p>
+
+<p>func (ret CONFIGRET) Win32Error(defaultError Errno) Errno {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">cm_MapCrToWin32Err</span>(<span class="ruby-identifier">ret</span>, <span class="ruby-identifier">defaultError</span>)
+</pre>
+
+<p>}</p>
+
+<p>func (ret CONFIGRET) Unwrap() error {</p>
+
+<pre>const noMatch = Errno(^uintptr(0))
+win32Error := ret.Win32Error(noMatch)
+if win32Error == noMatch {
+        return nil
+}
+return win32Error</pre>
+
+<p>}</p>
+
+<p>const (</p>
+
+<pre class="ruby"><span class="ruby-constant">CR_SUCCESS</span>                  <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000000</span>
+<span class="ruby-constant">CR_DEFAULT</span>                  <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000001</span>
+<span class="ruby-constant">CR_OUT_OF_MEMORY</span>            <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000002</span>
+<span class="ruby-constant">CR_INVALID_POINTER</span>          <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000003</span>
+<span class="ruby-constant">CR_INVALID_FLAG</span>             <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000004</span>
+<span class="ruby-constant">CR_INVALID_DEVNODE</span>          <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000005</span>
+<span class="ruby-constant">CR_INVALID_DEVINST</span>                    = <span class="ruby-constant">CR_INVALID_DEVNODE</span>
+<span class="ruby-constant">CR_INVALID_RES_DES</span>          <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000006</span>
+<span class="ruby-constant">CR_INVALID_LOG_CONF</span>         <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000007</span>
+<span class="ruby-constant">CR_INVALID_ARBITRATOR</span>       <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000008</span>
+<span class="ruby-constant">CR_INVALID_NODELIST</span>         <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000009</span>
+<span class="ruby-constant">CR_DEVNODE_HAS_REQS</span>         <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000000A</span>
+<span class="ruby-constant">CR_DEVINST_HAS_REQS</span>                   = <span class="ruby-constant">CR_DEVNODE_HAS_REQS</span>
+<span class="ruby-constant">CR_INVALID_RESOURCEID</span>       <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000000B</span>
+<span class="ruby-constant">CR_DLVXD_NOT_FOUND</span>          <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000000C</span>
+<span class="ruby-constant">CR_NO_SUCH_DEVNODE</span>          <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000000D</span>
+<span class="ruby-constant">CR_NO_SUCH_DEVINST</span>                    = <span class="ruby-constant">CR_NO_SUCH_DEVNODE</span>
+<span class="ruby-constant">CR_NO_MORE_LOG_CONF</span>         <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000000E</span>
+<span class="ruby-constant">CR_NO_MORE_RES_DES</span>          <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000000F</span>
+<span class="ruby-constant">CR_ALREADY_SUCH_DEVNODE</span>     <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000010</span>
+<span class="ruby-constant">CR_ALREADY_SUCH_DEVINST</span>               = <span class="ruby-constant">CR_ALREADY_SUCH_DEVNODE</span>
+<span class="ruby-constant">CR_INVALID_RANGE_LIST</span>       <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000011</span>
+<span class="ruby-constant">CR_INVALID_RANGE</span>            <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000012</span>
+<span class="ruby-constant">CR_FAILURE</span>                  <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000013</span>
+<span class="ruby-constant">CR_NO_SUCH_LOGICAL_DEV</span>      <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000014</span>
+<span class="ruby-constant">CR_CREATE_BLOCKED</span>           <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000015</span>
+<span class="ruby-constant">CR_NOT_SYSTEM_VM</span>            <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000016</span>
+<span class="ruby-constant">CR_REMOVE_VETOED</span>            <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000017</span>
+<span class="ruby-constant">CR_APM_VETOED</span>               <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000018</span>
+<span class="ruby-constant">CR_INVALID_LOAD_TYPE</span>        <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000019</span>
+<span class="ruby-constant">CR_BUFFER_SMALL</span>             <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000001A</span>
+<span class="ruby-constant">CR_NO_ARBITRATOR</span>            <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000001B</span>
+<span class="ruby-constant">CR_NO_REGISTRY_HANDLE</span>       <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000001C</span>
+<span class="ruby-constant">CR_REGISTRY_ERROR</span>           <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000001D</span>
+<span class="ruby-constant">CR_INVALID_DEVICE_ID</span>        <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000001E</span>
+<span class="ruby-constant">CR_INVALID_DATA</span>             <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000001F</span>
+<span class="ruby-constant">CR_INVALID_API</span>              <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000020</span>
+<span class="ruby-constant">CR_DEVLOADER_NOT_READY</span>      <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000021</span>
+<span class="ruby-constant">CR_NEED_RESTART</span>             <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000022</span>
+<span class="ruby-constant">CR_NO_MORE_HW_PROFILES</span>      <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000023</span>
+<span class="ruby-constant">CR_DEVICE_NOT_THERE</span>         <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000024</span>
+<span class="ruby-constant">CR_NO_SUCH_VALUE</span>            <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000025</span>
+<span class="ruby-constant">CR_WRONG_TYPE</span>               <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000026</span>
+<span class="ruby-constant">CR_INVALID_PRIORITY</span>         <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000027</span>
+<span class="ruby-constant">CR_NOT_DISABLEABLE</span>          <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000028</span>
+<span class="ruby-constant">CR_FREE_RESOURCES</span>           <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000029</span>
+<span class="ruby-constant">CR_QUERY_VETOED</span>             <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000002A</span>
+<span class="ruby-constant">CR_CANT_SHARE_IRQ</span>           <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000002B</span>
+<span class="ruby-constant">CR_NO_DEPENDENT</span>             <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000002C</span>
+<span class="ruby-constant">CR_SAME_RESOURCES</span>           <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000002D</span>
+<span class="ruby-constant">CR_NO_SUCH_REGISTRY_KEY</span>     <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000002E</span>
+<span class="ruby-constant">CR_INVALID_MACHINENAME</span>      <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000002F</span>
+<span class="ruby-constant">CR_REMOTE_COMM_FAILURE</span>      <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000030</span>
+<span class="ruby-constant">CR_MACHINE_UNAVAILABLE</span>      <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000031</span>
+<span class="ruby-constant">CR_NO_CM_SERVICES</span>           <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000032</span>
+<span class="ruby-constant">CR_ACCESS_DENIED</span>            <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000033</span>
+<span class="ruby-constant">CR_CALL_NOT_IMPLEMENTED</span>     <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000034</span>
+<span class="ruby-constant">CR_INVALID_PROPERTY</span>         <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000035</span>
+<span class="ruby-constant">CR_DEVICE_INTERFACE_ACTIVE</span>  <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000036</span>
+<span class="ruby-constant">CR_NO_SUCH_DEVICE_INTERFACE</span> <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000037</span>
+<span class="ruby-constant">CR_INVALID_REFERENCE_STRING</span> <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000038</span>
+<span class="ruby-constant">CR_INVALID_CONFLICT_LIST</span>    <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x00000039</span>
+<span class="ruby-constant">CR_INVALID_INDEX</span>            <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000003A</span>
+<span class="ruby-constant">CR_INVALID_STRUCTURE_SIZE</span>   <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000003B</span>
+<span class="ruby-constant">NUM_CR_RESULTS</span>              <span class="ruby-constant">CONFIGRET</span> = <span class="ruby-value">0x0000003C</span>
+</pre>
+
+<p>)</p>
+
+<p>const (</p>
+
+<pre>CM_GET_DEVICE_INTERFACE_LIST_PRESENT     = 0 // only currently &#39;live&#39; device interfaces
+CM_GET_DEVICE_INTERFACE_LIST_ALL_DEVICES = 1 // all registered device interfaces, live or not</pre>
+
+<p>)</p>
+
+<p>const (</p>
+
+<pre>DN_ROOT_ENUMERATED       = 0x00000001        // Was enumerated by ROOT
+DN_DRIVER_LOADED         = 0x00000002        // Has Register_Device_Driver
+DN_ENUM_LOADED           = 0x00000004        // Has Register_Enumerator
+DN_STARTED               = 0x00000008        // Is currently configured
+DN_MANUAL                = 0x00000010        // Manually installed
+DN_NEED_TO_ENUM          = 0x00000020        // May need reenumeration
+DN_NOT_FIRST_TIME        = 0x00000040        // Has received a config
+DN_HARDWARE_ENUM         = 0x00000080        // Enum generates hardware ID
+DN_LIAR                  = 0x00000100        // Lied about can reconfig once
+DN_HAS_MARK              = 0x00000200        // Not CM_Create_DevInst lately
+DN_HAS_PROBLEM           = 0x00000400        // Need device installer
+DN_FILTERED              = 0x00000800        // Is filtered
+DN_MOVED                 = 0x00001000        // Has been moved
+DN_DISABLEABLE           = 0x00002000        // Can be disabled
+DN_REMOVABLE             = 0x00004000        // Can be removed
+DN_PRIVATE_PROBLEM       = 0x00008000        // Has a private problem
+DN_MF_PARENT             = 0x00010000        // Multi function parent
+DN_MF_CHILD              = 0x00020000        // Multi function child
+DN_WILL_BE_REMOVED       = 0x00040000        // DevInst is being removed
+DN_NOT_FIRST_TIMEE       = 0x00080000        // Has received a config enumerate
+DN_STOP_FREE_RES         = 0x00100000        // When child is stopped, free resources
+DN_REBAL_CANDIDATE       = 0x00200000        // Don&#39;t skip during rebalance
+DN_BAD_PARTIAL           = 0x00400000        // This devnode&#39;s log_confs do not have same resources
+DN_NT_ENUMERATOR         = 0x00800000        // This devnode&#39;s is an NT enumerator
+DN_NT_DRIVER             = 0x01000000        // This devnode&#39;s is an NT driver
+DN_NEEDS_LOCKING         = 0x02000000        // Devnode need lock resume processing
+DN_ARM_WAKEUP            = 0x04000000        // Devnode can be the wakeup device
+DN_APM_ENUMERATOR        = 0x08000000        // APM aware enumerator
+DN_APM_DRIVER            = 0x10000000        // APM aware driver
+DN_SILENT_INSTALL        = 0x20000000        // Silent install
+DN_NO_SHOW_IN_DM         = 0x40000000        // No show in device manager
+DN_BOOT_LOG_PROB         = 0x80000000        // Had a problem during preassignment of boot log conf
+DN_NEED_RESTART          = DN_LIAR           // System needs to be restarted for this Devnode to work properly
+DN_DRIVER_BLOCKED        = DN_NOT_FIRST_TIME // One or more drivers are blocked from loading for this Devnode
+DN_LEGACY_DRIVER         = DN_MOVED          // This device is using a legacy driver
+DN_CHILD_WITH_INVALID_ID = DN_HAS_MARK       // One or more children have invalid IDs
+DN_DEVICE_DISCONNECTED   = DN_NEEDS_LOCKING  // The function driver for a device reported that the device is not connected.  Typically this means a wireless device is out of range.
+DN_QUERY_REMOVE_PENDING  = DN_MF_PARENT      // Device is part of a set of related devices collectively pending query-removal
+DN_QUERY_REMOVE_ACTIVE   = DN_MF_CHILD       // Device is actively engaged in a query-remove IRP
+DN_CHANGEABLE_FLAGS      = DN_NOT_FIRST_TIME | DN_HARDWARE_ENUM | DN_HAS_MARK | DN_DISABLEABLE | DN_REMOVABLE | DN_MF_CHILD | DN_MF_PARENT | DN_NOT_FIRST_TIMEE | DN_STOP_FREE_RES | DN_REBAL_CANDIDATE | DN_NT_ENUMERATOR | DN_NT_DRIVER | DN_SILENT_INSTALL | DN_NO_SHOW_IN_DM</pre>
+
+<p>)</p>
+
+<p>//sys   setupDiCreateDeviceInfoListEx(classGUID *GUID, hwndParent uintptr, machineName *uint16, reserved uintptr) (handle DevInfo, err error) [failretval==DevInfo(InvalidHandle)] = setupapi.SetupDiCreateDeviceInfoListExW</p>
+
+<p>// SetupDiCreateDeviceInfoListEx function creates an empty device information set on a remote or a local computer and optionally associates the set with a device setup class. func SetupDiCreateDeviceInfoListEx(classGUID *GUID, hwndParent uintptr, machineName string) (deviceInfoSet DevInfo, err error) {</p>
+
+<pre>var machineNameUTF16 *uint16
+if machineName != &quot;&quot; {
+        machineNameUTF16, err = UTF16PtrFromString(machineName)
+        if err != nil {
+                return
+        }
+}
+return setupDiCreateDeviceInfoListEx(classGUID, hwndParent, machineNameUTF16, 0)</pre>
+
+<p>}</p>
+
+<p>//sys   setupDiGetDeviceInfoListDetail(deviceInfoSet DevInfo, deviceInfoSetDetailData *DevInfoListDetailData) (err error) = setupapi.SetupDiGetDeviceInfoListDetailW</p>
+
+<p>// SetupDiGetDeviceInfoListDetail function retrieves information associated with a device information set including the class GUID, remote computer handle, and remote computer name. func SetupDiGetDeviceInfoListDetail(deviceInfoSet DevInfo) (deviceInfoSetDetailData *DevInfoListDetailData, err error) {</p>
+
+<pre>data := &amp;DevInfoListDetailData{}
+data.size = data.unsafeSizeOf()
+
+return data, setupDiGetDeviceInfoListDetail(deviceInfoSet, data)</pre>
+
+<p>}</p>
+
+<p>// DeviceInfoListDetail method retrieves information associated with a device information set including the class GUID, remote computer handle, and remote computer name. func (deviceInfoSet DevInfo) DeviceInfoListDetail() (*DevInfoListDetailData, error) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiGetDeviceInfoListDetail</span>(<span class="ruby-identifier">deviceInfoSet</span>)
+</pre>
+
+<p>}</p>
+
+<p>//sys   setupDiCreateDeviceInfo(deviceInfoSet DevInfo, DeviceName *uint16, classGUID *GUID, DeviceDescription *uint16, hwndParent uintptr, CreationFlags DICD, deviceInfoData *DevInfoData) (err error) = setupapi.SetupDiCreateDeviceInfoW</p>
+
+<p>// SetupDiCreateDeviceInfo function creates a new device information element and adds it as a new member to the specified device information set. func SetupDiCreateDeviceInfo(deviceInfoSet DevInfo, deviceName string, classGUID *GUID, deviceDescription string, hwndParent uintptr, creationFlags DICD) (deviceInfoData *DevInfoData, err error) {</p>
+
+<pre>deviceNameUTF16, err := UTF16PtrFromString(deviceName)
+if err != nil {
+        return
+}
+
+var deviceDescriptionUTF16 *uint16
+if deviceDescription != &quot;&quot; {
+        deviceDescriptionUTF16, err = UTF16PtrFromString(deviceDescription)
+        if err != nil {
+                return
+        }
+}
+
+data := &amp;DevInfoData{}
+data.size = uint32(unsafe.Sizeof(*data))
+
+return data, setupDiCreateDeviceInfo(deviceInfoSet, deviceNameUTF16, classGUID, deviceDescriptionUTF16, hwndParent, creationFlags, data)</pre>
+
+<p>}</p>
+
+<p>// CreateDeviceInfo method creates a new device information element and adds it as a new member to the specified device information set. func (deviceInfoSet DevInfo) CreateDeviceInfo(deviceName string, classGUID *GUID, deviceDescription string, hwndParent uintptr, creationFlags DICD) (*DevInfoData, error) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiCreateDeviceInfo</span>(<span class="ruby-identifier">deviceInfoSet</span>, <span class="ruby-identifier">deviceName</span>, <span class="ruby-identifier">classGUID</span>, <span class="ruby-identifier">deviceDescription</span>, <span class="ruby-identifier">hwndParent</span>, <span class="ruby-identifier">creationFlags</span>)
+</pre>
+
+<p>}</p>
+
+<p>//sys   setupDiEnumDeviceInfo(deviceInfoSet DevInfo, memberIndex uint32, deviceInfoData *DevInfoData) (err error) = setupapi.SetupDiEnumDeviceInfo</p>
+
+<p>// SetupDiEnumDeviceInfo function returns a DevInfoData structure that specifies a device information element in a device information set. func SetupDiEnumDeviceInfo(deviceInfoSet DevInfo, memberIndex int) (*DevInfoData, error) {</p>
+
+<pre>data := &amp;DevInfoData{}
+data.size = uint32(unsafe.Sizeof(*data))
+
+return data, setupDiEnumDeviceInfo(deviceInfoSet, uint32(memberIndex), data)</pre>
+
+<p>}</p>
+
+<p>// EnumDeviceInfo method returns a DevInfoData structure that specifies a device information element in a device information set. func (deviceInfoSet DevInfo) EnumDeviceInfo(memberIndex int) (*DevInfoData, error) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiEnumDeviceInfo</span>(<span class="ruby-identifier">deviceInfoSet</span>, <span class="ruby-identifier">memberIndex</span>)
+</pre>
+
+<p>}</p>
+
+<p>// SetupDiDestroyDeviceInfoList function deletes a device information set and frees all associated memory. //sys   SetupDiDestroyDeviceInfoList(deviceInfoSet DevInfo) (err error) = setupapi.SetupDiDestroyDeviceInfoList</p>
+
+<p>// Close method deletes a device information set and frees all associated memory. func (deviceInfoSet DevInfo) Close() error {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiDestroyDeviceInfoList</span>(<span class="ruby-identifier">deviceInfoSet</span>)
+</pre>
+
+<p>}</p>
+
+<p>//sys   SetupDiBuildDriverInfoList(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, driverType SPDIT) (err error) = setupapi.SetupDiBuildDriverInfoList</p>
+
+<p>// BuildDriverInfoList method builds a list of drivers that is associated with a specific device or with the global class driver list for a device information set. func (deviceInfoSet DevInfo) BuildDriverInfoList(deviceInfoData *DevInfoData, driverType SPDIT) error {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiBuildDriverInfoList</span>(<span class="ruby-identifier">deviceInfoSet</span>, <span class="ruby-identifier">deviceInfoData</span>, <span class="ruby-identifier">driverType</span>)
+</pre>
+
+<p>}</p>
+
+<p>//sys   SetupDiCancelDriverInfoSearch(deviceInfoSet DevInfo) (err error) = setupapi.SetupDiCancelDriverInfoSearch</p>
+
+<p>// CancelDriverInfoSearch method cancels a driver list search that is currently in progress in a different thread. func (deviceInfoSet DevInfo) CancelDriverInfoSearch() error {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiCancelDriverInfoSearch</span>(<span class="ruby-identifier">deviceInfoSet</span>)
+</pre>
+
+<p>}</p>
+
+<p>//sys   setupDiEnumDriverInfo(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, driverType SPDIT, memberIndex uint32, driverInfoData *DrvInfoData) (err error) = setupapi.SetupDiEnumDriverInfoW</p>
+
+<p>// SetupDiEnumDriverInfo function enumerates the members of a driver list. func SetupDiEnumDriverInfo(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, driverType SPDIT, memberIndex int) (*DrvInfoData, error) {</p>
+
+<pre>data := &amp;DrvInfoData{}
+data.size = uint32(unsafe.Sizeof(*data))
+
+return data, setupDiEnumDriverInfo(deviceInfoSet, deviceInfoData, driverType, uint32(memberIndex), data)</pre>
+
+<p>}</p>
+
+<p>// EnumDriverInfo method enumerates the members of a driver list. func (deviceInfoSet DevInfo) EnumDriverInfo(deviceInfoData *DevInfoData, driverType SPDIT, memberIndex int) (*DrvInfoData, error) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiEnumDriverInfo</span>(<span class="ruby-identifier">deviceInfoSet</span>, <span class="ruby-identifier">deviceInfoData</span>, <span class="ruby-identifier">driverType</span>, <span class="ruby-identifier">memberIndex</span>)
+</pre>
+
+<p>}</p>
+
+<p>//sys   setupDiGetSelectedDriver(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, driverInfoData *DrvInfoData) (err error) = setupapi.SetupDiGetSelectedDriverW</p>
+
+<p>// SetupDiGetSelectedDriver function retrieves the selected driver for a device information set or a particular device information element. func SetupDiGetSelectedDriver(deviceInfoSet DevInfo, deviceInfoData *DevInfoData) (*DrvInfoData, error) {</p>
+
+<pre>data := &amp;DrvInfoData{}
+data.size = uint32(unsafe.Sizeof(*data))
+
+return data, setupDiGetSelectedDriver(deviceInfoSet, deviceInfoData, data)</pre>
+
+<p>}</p>
+
+<p>// SelectedDriver method retrieves the selected driver for a device information set or a particular device information element. func (deviceInfoSet DevInfo) SelectedDriver(deviceInfoData *DevInfoData) (*DrvInfoData, error) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiGetSelectedDriver</span>(<span class="ruby-identifier">deviceInfoSet</span>, <span class="ruby-identifier">deviceInfoData</span>)
+</pre>
+
+<p>}</p>
+
+<p>//sys   SetupDiSetSelectedDriver(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, driverInfoData *DrvInfoData) (err error) = setupapi.SetupDiSetSelectedDriverW</p>
+
+<p>// SetSelectedDriver method sets, or resets, the selected driver for a device information element or the selected class driver for a device information set. func (deviceInfoSet DevInfo) SetSelectedDriver(deviceInfoData *DevInfoData, driverInfoData *DrvInfoData) error {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiSetSelectedDriver</span>(<span class="ruby-identifier">deviceInfoSet</span>, <span class="ruby-identifier">deviceInfoData</span>, <span class="ruby-identifier">driverInfoData</span>)
+</pre>
+
+<p>}</p>
+
+<p>//sys   setupDiGetDriverInfoDetail(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, driverInfoData *DrvInfoData, driverInfoDetailData *DrvInfoDetailData, driverInfoDetailDataSize uint32, requiredSize *uint32) (err error) = setupapi.SetupDiGetDriverInfoDetailW</p>
+
+<p>// SetupDiGetDriverInfoDetail function retrieves driver information detail for a device information set or a particular device information element in the device information set. func SetupDiGetDriverInfoDetail(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, driverInfoData *DrvInfoData) (*DrvInfoDetailData, error) {</p>
+
+<pre>reqSize := uint32(2048)
+for {
+        buf := make([]byte, reqSize)
+        data := (*DrvInfoDetailData)(unsafe.Pointer(&amp;buf[0]))
+        data.size = data.unsafeSizeOf()
+        err := setupDiGetDriverInfoDetail(deviceInfoSet, deviceInfoData, driverInfoData, data, uint32(len(buf)), &amp;reqSize)
+        if err == ERROR_INSUFFICIENT_BUFFER {
+                continue
+        }
+        if err != nil {
+                return nil, err
+        }
+        data.size = reqSize
+        return data, nil
+}</pre>
+
+<p>}</p>
+
+<p>// DriverInfoDetail method retrieves driver information detail for a device information set or a particular device information element in the device information set. func (deviceInfoSet DevInfo) DriverInfoDetail(deviceInfoData *DevInfoData, driverInfoData *DrvInfoData) (*DrvInfoDetailData, error) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiGetDriverInfoDetail</span>(<span class="ruby-identifier">deviceInfoSet</span>, <span class="ruby-identifier">deviceInfoData</span>, <span class="ruby-identifier">driverInfoData</span>)
+</pre>
+
+<p>}</p>
+
+<p>//sys   SetupDiDestroyDriverInfoList(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, driverType SPDIT) (err error) = setupapi.SetupDiDestroyDriverInfoList</p>
+
+<p>// DestroyDriverInfoList method deletes a driver list. func (deviceInfoSet DevInfo) DestroyDriverInfoList(deviceInfoData *DevInfoData, driverType SPDIT) error {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiDestroyDriverInfoList</span>(<span class="ruby-identifier">deviceInfoSet</span>, <span class="ruby-identifier">deviceInfoData</span>, <span class="ruby-identifier">driverType</span>)
+</pre>
+
+<p>}</p>
+
+<p>//sys   setupDiGetClassDevsEx(classGUID *GUID, Enumerator *uint16, hwndParent uintptr, Flags DIGCF, deviceInfoSet DevInfo, machineName *uint16, reserved uintptr) (handle DevInfo, err error) [failretval==DevInfo(InvalidHandle)] = setupapi.SetupDiGetClassDevsExW</p>
+
+<p>// SetupDiGetClassDevsEx function returns a handle to a device information set that contains requested device information elements for a local or a remote computer. func SetupDiGetClassDevsEx(classGUID *GUID, enumerator string, hwndParent uintptr, flags DIGCF, deviceInfoSet DevInfo, machineName string) (handle DevInfo, err error) {</p>
+
+<pre>var enumeratorUTF16 *uint16
+if enumerator != &quot;&quot; {
+        enumeratorUTF16, err = UTF16PtrFromString(enumerator)
+        if err != nil {
+                return
+        }
+}
+var machineNameUTF16 *uint16
+if machineName != &quot;&quot; {
+        machineNameUTF16, err = UTF16PtrFromString(machineName)
+        if err != nil {
+                return
+        }
+}
+return setupDiGetClassDevsEx(classGUID, enumeratorUTF16, hwndParent, flags, deviceInfoSet, machineNameUTF16, 0)</pre>
+
+<p>}</p>
+
+<p>// SetupDiCallClassInstaller function calls the appropriate class installer, and any registered co-installers, with the specified installation request (DIF code). //sys   SetupDiCallClassInstaller(installFunction DI_FUNCTION, deviceInfoSet DevInfo, deviceInfoData *DevInfoData) (err error) = setupapi.SetupDiCallClassInstaller</p>
+
+<p>// CallClassInstaller member calls the appropriate class installer, and any registered co-installers, with the specified installation request (DIF code). func (deviceInfoSet DevInfo) CallClassInstaller(installFunction DI_FUNCTION, deviceInfoData *DevInfoData) error {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiCallClassInstaller</span>(<span class="ruby-identifier">installFunction</span>, <span class="ruby-identifier">deviceInfoSet</span>, <span class="ruby-identifier">deviceInfoData</span>)
+</pre>
+
+<p>}</p>
+
+<p>// SetupDiOpenDevRegKey function opens a registry key for device-specific configuration information. //sys   SetupDiOpenDevRegKey(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, Scope DICS_FLAG, HwProfile uint32, KeyType DIREG, samDesired uint32) (key Handle, err error) [failretval==InvalidHandle] = setupapi.SetupDiOpenDevRegKey</p>
+
+<p>// OpenDevRegKey method opens a registry key for device-specific configuration information. func (deviceInfoSet DevInfo) OpenDevRegKey(DeviceInfoData *DevInfoData, Scope DICS_FLAG, HwProfile uint32, KeyType DIREG, samDesired uint32) (Handle, error) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiOpenDevRegKey</span>(<span class="ruby-identifier">deviceInfoSet</span>, <span class="ruby-constant">DeviceInfoData</span>, <span class="ruby-constant">Scope</span>, <span class="ruby-constant">HwProfile</span>, <span class="ruby-constant">KeyType</span>, <span class="ruby-identifier">samDesired</span>)
+</pre>
+
+<p>}</p>
+
+<p>//sys   setupDiGetDeviceProperty(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, propertyKey *DEVPROPKEY, propertyType *DEVPROPTYPE, propertyBuffer *byte, propertyBufferSize uint32, requiredSize *uint32, flags uint32) (err error) = setupapi.SetupDiGetDevicePropertyW</p>
+
+<p>// SetupDiGetDeviceProperty function retrieves a specified device instance property. func SetupDiGetDeviceProperty(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, propertyKey *DEVPROPKEY) (value interface{}, err error) {</p>
+
+<pre>reqSize := uint32(256)
+for {
+        var dataType DEVPROPTYPE
+        buf := make([]byte, reqSize)
+        err = setupDiGetDeviceProperty(deviceInfoSet, deviceInfoData, propertyKey, &amp;dataType, &amp;buf[0], uint32(len(buf)), &amp;reqSize, 0)
+        if err == ERROR_INSUFFICIENT_BUFFER {
+                continue
+        }
+        if err != nil {
+                return
+        }
+        switch dataType {
+        case DEVPROP_TYPE_STRING:
+                ret := UTF16ToString(bufToUTF16(buf))
+                runtime.KeepAlive(buf)
+                return ret, nil
+        }
+        return nil, errors.New(&quot;unimplemented property type&quot;)
+}</pre>
+
+<p>}</p>
+
+<p>//sys   setupDiGetDeviceRegistryProperty(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, property SPDRP, propertyRegDataType *uint32, propertyBuffer *byte, propertyBufferSize uint32, requiredSize *uint32) (err error) = setupapi.SetupDiGetDeviceRegistryPropertyW</p>
+
+<p>// SetupDiGetDeviceRegistryProperty function retrieves a specified Plug and Play device property. func SetupDiGetDeviceRegistryProperty(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, property SPDRP) (value interface{}, err error) {</p>
+
+<pre>reqSize := uint32(256)
+for {
+        var dataType uint32
+        buf := make([]byte, reqSize)
+        err = setupDiGetDeviceRegistryProperty(deviceInfoSet, deviceInfoData, property, &amp;dataType, &amp;buf[0], uint32(len(buf)), &amp;reqSize)
+        if err == ERROR_INSUFFICIENT_BUFFER {
+                continue
+        }
+        if err != nil {
+                return
+        }
+        return getRegistryValue(buf[:reqSize], dataType)
+}</pre>
+
+<p>}</p>
+
+<p>func getRegistryValue(buf []byte, dataType uint32) (interface{}, error) {</p>
+
+<pre>switch dataType {
+case REG_SZ:
+        ret := UTF16ToString(bufToUTF16(buf))
+        runtime.KeepAlive(buf)
+        return ret, nil
+case REG_EXPAND_SZ:
+        value := UTF16ToString(bufToUTF16(buf))
+        if value == &quot;&quot; {
+                return &quot;&quot;, nil
+        }
+        p, err := syscall.UTF16PtrFromString(value)
+        if err != nil {
+                return &quot;&quot;, err
+        }
+        ret := make([]uint16, 100)
+        for {
+                n, err := ExpandEnvironmentStrings(p, &amp;ret[0], uint32(len(ret)))
+                if err != nil {
+                        return &quot;&quot;, err
+                }
+                if n &lt;= uint32(len(ret)) {
+                        return UTF16ToString(ret[:n]), nil
+                }
+                ret = make([]uint16, n)
+        }
+case REG_BINARY:
+        return buf, nil
+case REG_DWORD_LITTLE_ENDIAN:
+        return binary.LittleEndian.Uint32(buf), nil
+case REG_DWORD_BIG_ENDIAN:
+        return binary.BigEndian.Uint32(buf), nil
+case REG_MULTI_SZ:
+        bufW := bufToUTF16(buf)
+        a := []string{}
+        for i := 0; i &lt; len(bufW); {
+                j := i + wcslen(bufW[i:])
+                if i &lt; j {
+                        a = append(a, UTF16ToString(bufW[i:j]))
+                }
+                i = j + 1
+        }
+        runtime.KeepAlive(buf)
+        return a, nil
+case REG_QWORD_LITTLE_ENDIAN:
+        return binary.LittleEndian.Uint64(buf), nil
+default:
+        return nil, fmt.Errorf(&quot;Unsupported registry value type: %v&quot;, dataType)
+}</pre>
+
+<p>}</p>
+
+<p>// bufToUTF16 function reinterprets []byte buffer as []uint16 func bufToUTF16(buf []byte) []uint16 {</p>
+
+<pre>sl := struct {
+        addr *uint16
+        len  int
+        cap  int
+}{(*uint16)(unsafe.Pointer(&amp;buf[0])), len(buf) / 2, cap(buf) / 2}
+return *(*[]uint16)(unsafe.Pointer(&amp;sl))</pre>
+
+<p>}</p>
+
+<p>// utf16ToBuf function reinterprets []uint16 as []byte func utf16ToBuf(buf []uint16) []byte {</p>
+
+<pre>sl := struct {
+        addr *byte
+        len  int
+        cap  int
+}{(*byte)(unsafe.Pointer(&amp;buf[0])), len(buf) * 2, cap(buf) * 2}
+return *(*[]byte)(unsafe.Pointer(&amp;sl))</pre>
+
+<p>}</p>
+
+<p>func wcslen(str []uint16) int {</p>
+
+<pre>for i := 0; i &lt; len(str); i++ {
+        if str[i] == 0 {
+                return i
+        }
+}
+return len(str)</pre>
+
+<p>}</p>
+
+<p>// DeviceRegistryProperty method retrieves a specified Plug and Play device property. func (deviceInfoSet DevInfo) DeviceRegistryProperty(deviceInfoData *DevInfoData, property SPDRP) (interface{}, error) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiGetDeviceRegistryProperty</span>(<span class="ruby-identifier">deviceInfoSet</span>, <span class="ruby-identifier">deviceInfoData</span>, <span class="ruby-identifier">property</span>)
+</pre>
+
+<p>}</p>
+
+<p>//sys   setupDiSetDeviceRegistryProperty(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, property SPDRP, propertyBuffer *byte, propertyBufferSize uint32) (err error) = setupapi.SetupDiSetDeviceRegistryPropertyW</p>
+
+<p>// SetupDiSetDeviceRegistryProperty function sets a Plug and Play device property for a device. func SetupDiSetDeviceRegistryProperty(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, property SPDRP, propertyBuffers []byte) error {</p>
+
+<pre>return setupDiSetDeviceRegistryProperty(deviceInfoSet, deviceInfoData, property, &amp;propertyBuffers[0], uint32(len(propertyBuffers)))</pre>
+
+<p>}</p>
+
+<p>// SetDeviceRegistryProperty function sets a Plug and Play device property for a device. func (deviceInfoSet DevInfo) SetDeviceRegistryProperty(deviceInfoData *DevInfoData, property SPDRP, propertyBuffers []byte) error {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiSetDeviceRegistryProperty</span>(<span class="ruby-identifier">deviceInfoSet</span>, <span class="ruby-identifier">deviceInfoData</span>, <span class="ruby-identifier">property</span>, <span class="ruby-identifier">propertyBuffers</span>)
+</pre>
+
+<p>}</p>
+
+<p>// SetDeviceRegistryPropertyString method sets a Plug and Play device property string for a device. func (deviceInfoSet DevInfo) SetDeviceRegistryPropertyString(deviceInfoData *DevInfoData, property SPDRP, str string) error {</p>
+
+<pre>str16, err := UTF16FromString(str)
+if err != nil {
+        return err
+}
+err = SetupDiSetDeviceRegistryProperty(deviceInfoSet, deviceInfoData, property, utf16ToBuf(append(str16, 0)))
+runtime.KeepAlive(str16)
+return err</pre>
+
+<p>}</p>
+
+<p>//sys   setupDiGetDeviceInstallParams(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, deviceInstallParams *DevInstallParams) (err error) = setupapi.SetupDiGetDeviceInstallParamsW</p>
+
+<p>// SetupDiGetDeviceInstallParams function retrieves device installation parameters for a device information set or a particular device information element. func SetupDiGetDeviceInstallParams(deviceInfoSet DevInfo, deviceInfoData *DevInfoData) (*DevInstallParams, error) {</p>
+
+<pre>params := &amp;DevInstallParams{}
+params.size = uint32(unsafe.Sizeof(*params))
+
+return params, setupDiGetDeviceInstallParams(deviceInfoSet, deviceInfoData, params)</pre>
+
+<p>}</p>
+
+<p>// DeviceInstallParams method retrieves device installation parameters for a device information set or a particular device information element. func (deviceInfoSet DevInfo) DeviceInstallParams(deviceInfoData *DevInfoData) (*DevInstallParams, error) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiGetDeviceInstallParams</span>(<span class="ruby-identifier">deviceInfoSet</span>, <span class="ruby-identifier">deviceInfoData</span>)
+</pre>
+
+<p>}</p>
+
+<p>//sys   setupDiGetDeviceInstanceId(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, instanceId *uint16, instanceIdSize uint32, instanceIdRequiredSize *uint32) (err error) = setupapi.SetupDiGetDeviceInstanceIdW</p>
+
+<p>// SetupDiGetDeviceInstanceId function retrieves the instance ID of the device. func SetupDiGetDeviceInstanceId(deviceInfoSet DevInfo, deviceInfoData *DevInfoData) (string, error) {</p>
+
+<pre>reqSize := uint32(1024)
+for {
+        buf := make([]uint16, reqSize)
+        err := setupDiGetDeviceInstanceId(deviceInfoSet, deviceInfoData, &amp;buf[0], uint32(len(buf)), &amp;reqSize)
+        if err == ERROR_INSUFFICIENT_BUFFER {
+                continue
+        }
+        if err != nil {
+                return &quot;&quot;, err
+        }
+        return UTF16ToString(buf), nil
+}</pre>
+
+<p>}</p>
+
+<p>// DeviceInstanceID method retrieves the instance ID of the device. func (deviceInfoSet DevInfo) DeviceInstanceID(deviceInfoData *DevInfoData) (string, error) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiGetDeviceInstanceId</span>(<span class="ruby-identifier">deviceInfoSet</span>, <span class="ruby-identifier">deviceInfoData</span>)
+</pre>
+
+<p>}</p>
+
+<p>// SetupDiGetClassInstallParams function retrieves class installation parameters for a device information set or a particular device information element. //sys   SetupDiGetClassInstallParams(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, classInstallParams *ClassInstallHeader, classInstallParamsSize uint32, requiredSize *uint32) (err error) = setupapi.SetupDiGetClassInstallParamsW</p>
+
+<p>// ClassInstallParams method retrieves class installation parameters for a device information set or a particular device information element. func (deviceInfoSet DevInfo) ClassInstallParams(deviceInfoData *DevInfoData, classInstallParams *ClassInstallHeader, classInstallParamsSize uint32, requiredSize *uint32) error {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiGetClassInstallParams</span>(<span class="ruby-identifier">deviceInfoSet</span>, <span class="ruby-identifier">deviceInfoData</span>, <span class="ruby-identifier">classInstallParams</span>, <span class="ruby-identifier">classInstallParamsSize</span>, <span class="ruby-identifier">requiredSize</span>)
+</pre>
+
+<p>}</p>
+
+<p>//sys   SetupDiSetDeviceInstallParams(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, deviceInstallParams *DevInstallParams) (err error) = setupapi.SetupDiSetDeviceInstallParamsW</p>
+
+<p>// SetDeviceInstallParams member sets device installation parameters for a device information set or a particular device information element. func (deviceInfoSet DevInfo) SetDeviceInstallParams(deviceInfoData *DevInfoData, deviceInstallParams *DevInstallParams) error {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiSetDeviceInstallParams</span>(<span class="ruby-identifier">deviceInfoSet</span>, <span class="ruby-identifier">deviceInfoData</span>, <span class="ruby-identifier">deviceInstallParams</span>)
+</pre>
+
+<p>}</p>
+
+<p>// SetupDiSetClassInstallParams function sets or clears class install parameters for a device information set or a particular device information element. //sys   SetupDiSetClassInstallParams(deviceInfoSet DevInfo, deviceInfoData *DevInfoData, classInstallParams *ClassInstallHeader, classInstallParamsSize uint32) (err error) = setupapi.SetupDiSetClassInstallParamsW</p>
+
+<p>// SetClassInstallParams method sets or clears class install parameters for a device information set or a particular device information element. func (deviceInfoSet DevInfo) SetClassInstallParams(deviceInfoData *DevInfoData, classInstallParams *ClassInstallHeader, classInstallParamsSize uint32) error {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiSetClassInstallParams</span>(<span class="ruby-identifier">deviceInfoSet</span>, <span class="ruby-identifier">deviceInfoData</span>, <span class="ruby-identifier">classInstallParams</span>, <span class="ruby-identifier">classInstallParamsSize</span>)
+</pre>
+
+<p>}</p>
+
+<p>//sys   setupDiClassNameFromGuidEx(classGUID *GUID, className *uint16, classNameSize uint32, requiredSize *uint32, machineName *uint16, reserved uintptr) (err error) = setupapi.SetupDiClassNameFromGuidExW</p>
+
+<p>// SetupDiClassNameFromGuidEx function retrieves the class name associated with a class GUID. The class can be installed on a local or remote computer. func SetupDiClassNameFromGuidEx(classGUID *GUID, machineName string) (className string, err error) {</p>
+
+<pre>var classNameUTF16 [MAX_CLASS_NAME_LEN]uint16
+
+var machineNameUTF16 *uint16
+if machineName != &quot;&quot; {
+        machineNameUTF16, err = UTF16PtrFromString(machineName)
+        if err != nil {
+                return
+        }
+}
+
+err = setupDiClassNameFromGuidEx(classGUID, &amp;classNameUTF16[0], MAX_CLASS_NAME_LEN, nil, machineNameUTF16, 0)
+if err != nil {
+        return
+}
+
+className = UTF16ToString(classNameUTF16[:])
+return</pre>
+
+<p>}</p>
+
+<p>//sys   setupDiClassGuidsFromNameEx(className *uint16, classGuidList *GUID, classGuidListSize uint32, requiredSize *uint32, machineName *uint16, reserved uintptr) (err error) = setupapi.SetupDiClassGuidsFromNameExW</p>
+
+<p>// SetupDiClassGuidsFromNameEx function retrieves the GUIDs associated with the specified class name. This resulting list contains the classes currently installed on a local or remote computer. func SetupDiClassGuidsFromNameEx(className string, machineName string) ([]GUID, error) {</p>
+
+<pre>classNameUTF16, err := UTF16PtrFromString(className)
+if err != nil {
+        return nil, err
+}
+
+var machineNameUTF16 *uint16
+if machineName != &quot;&quot; {
+        machineNameUTF16, err = UTF16PtrFromString(machineName)
+        if err != nil {
+                return nil, err
+        }
+}
+
+reqSize := uint32(4)
+for {
+        buf := make([]GUID, reqSize)
+        err = setupDiClassGuidsFromNameEx(classNameUTF16, &amp;buf[0], uint32(len(buf)), &amp;reqSize, machineNameUTF16, 0)
+        if err == ERROR_INSUFFICIENT_BUFFER {
+                continue
+        }
+        if err != nil {
+                return nil, err
+        }
+        return buf[:reqSize], nil
+}</pre>
+
+<p>}</p>
+
+<p>//sys   setupDiGetSelectedDevice(deviceInfoSet DevInfo, deviceInfoData *DevInfoData) (err error) = setupapi.SetupDiGetSelectedDevice</p>
+
+<p>// SetupDiGetSelectedDevice function retrieves the selected device information element in a device information set. func SetupDiGetSelectedDevice(deviceInfoSet DevInfo) (*DevInfoData, error) {</p>
+
+<pre>data := &amp;DevInfoData{}
+data.size = uint32(unsafe.Sizeof(*data))
+
+return data, setupDiGetSelectedDevice(deviceInfoSet, data)</pre>
+
+<p>}</p>
+
+<p>// SelectedDevice method retrieves the selected device information element in a device information set. func (deviceInfoSet DevInfo) SelectedDevice() (*DevInfoData, error) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiGetSelectedDevice</span>(<span class="ruby-identifier">deviceInfoSet</span>)
+</pre>
+
+<p>}</p>
+
+<p>// SetupDiSetSelectedDevice function sets a device information element as the selected member of a device information set. This function is typically used by an installation wizard. //sys   SetupDiSetSelectedDevice(deviceInfoSet DevInfo, deviceInfoData *DevInfoData) (err error) = setupapi.SetupDiSetSelectedDevice</p>
+
+<p>// SetSelectedDevice method sets a device information element as the selected member of a device information set. This function is typically used by an installation wizard. func (deviceInfoSet DevInfo) SetSelectedDevice(deviceInfoData *DevInfoData) error {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">SetupDiSetSelectedDevice</span>(<span class="ruby-identifier">deviceInfoSet</span>, <span class="ruby-identifier">deviceInfoData</span>)
+</pre>
+
+<p>}</p>
+
+<p>//sys   setupUninstallOEMInf(infFileName *uint16, flags SUOI, reserved uintptr) (err error) = setupapi.SetupUninstallOEMInfW</p>
+
+<p>// SetupUninstallOEMInf uninstalls the specified driver. func SetupUninstallOEMInf(infFileName string, flags SUOI) error {</p>
+
+<pre>infFileName16, err := UTF16PtrFromString(infFileName)
+if err != nil {
+        return err
+}
+return setupUninstallOEMInf(infFileName16, flags, 0)</pre>
+
+<p>}</p>
+
+<p>//sys cm_MapCrToWin32Err(configRet CONFIGRET, defaultWin32Error Errno) (ret Errno) = CfgMgr32.CM_MapCrToWin32Err</p>
+
+<p>//sys cm_Get_Device_Interface_List_Size(len *uint32, interfaceClass *GUID, deviceID *uint16, flags uint32) (ret CONFIGRET) = CfgMgr32.CM_Get_Device_Interface_List_SizeW //sys cm_Get_Device_Interface_List(interfaceClass *GUID, deviceID *uint16, buffer *uint16, bufferLen uint32, flags uint32) (ret CONFIGRET) = CfgMgr32.CM_Get_Device_Interface_ListW</p>
+
+<p>func CM_Get_Device_Interface_List(deviceID string, interfaceClass *GUID, flags uint32) ([]string, error) {</p>
+
+<pre>deviceID16, err := UTF16PtrFromString(deviceID)
+if err != nil {
+        return nil, err
+}
+var buf []uint16
+var buflen uint32
+for {
+        if ret := cm_Get_Device_Interface_List_Size(&amp;buflen, interfaceClass, deviceID16, flags); ret != CR_SUCCESS {
+                return nil, ret
+        }
+        buf = make([]uint16, buflen)
+        if ret := cm_Get_Device_Interface_List(interfaceClass, deviceID16, &amp;buf[0], buflen, flags); ret == CR_SUCCESS {
+                break
+        } else if ret != CR_BUFFER_SMALL {
+                return nil, ret
+        }
+}
+var interfaces []string
+for i := 0; i &lt; len(buf); {
+        j := i + wcslen(buf[i:])
+        if i &lt; j {
+                interfaces = append(interfaces, UTF16ToString(buf[i:j]))
+        }
+        i = j + 1
+}
+if interfaces == nil {
+        return nil, ERROR_NO_SUCH_DEVICE_INTERFACE
+}
+return interfaces, nil</pre>
+
+<p>}</p>
+
+<p>//sys cm_Get_DevNode_Status(status *uint32, problemNumber *uint32, devInst DEVINST, flags uint32) (ret CONFIGRET) = CfgMgr32.CM_Get_DevNode_Status</p>
+
+<p>func CM_Get_DevNode_Status(status *uint32, problemNumber *uint32, devInst DEVINST, flags uint32) error {</p>
+
+<pre>ret := cm_Get_DevNode_Status(status, problemNumber, devInst, flags)
+if ret == CR_SUCCESS {
+        return nil
+}
+return ret</pre>
+
+<p>}</p>
+
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>security_windows.go - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../../../";
+  var index_rel_prefix = "../../../../../";
+</script>
+
+<script src="../../../../../js/navigation.js" defer></script>
+<script src="../../../../../js/search.js" defer></script>
+<script src="../../../../../js/search_index.js" defer></script>
+<script src="../../../../../js/searcher.js" defer></script>
+<script src="../../../../../js/darkfish.js" defer></script>
+
+<link href="../../../../../css/fonts.css" rel="stylesheet">
+<link href="../../../../../css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    
+<div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+    <li><a href="../../../../../LICENSE.html">LICENSE</a>
+    <li><a href="../../../../../README_md.html">README</a>
+    <li><a href="../../../../../api/access_token_go.html">access_token.go</a>
+    <li><a href="../../../../../api/access_token_test_go.html">access_token_test.go</a>
+    <li><a href="../../../../../api/form_go.html">form.go</a>
+    <li><a href="../../../../../api/form_test_go.html">form_test.go</a>
+    <li><a href="../../../../../device/device_flow_go.html">device_flow.go</a>
+    <li><a href="../../../../../device/device_flow_test_go.html">device_flow_test.go</a>
+    <li><a href="../../../../../device/examples_test_go.html">examples_test.go</a>
+    <li><a href="../../../../../device/poller_go.html">poller.go</a>
+    <li><a href="../../../../../examples_test_go.html">examples_test.go</a>
+    <li><a href="../../../../../go_mod.html">go.mod</a>
+    <li><a href="../../../../../go_sum.html">go.sum</a>
+    <li><a href="../../../../../oauth_go.html">oauth.go</a>
+    <li><a href="../../../../../oauth_device_go.html">oauth_device.go</a>
+    <li><a href="../../../../../oauth_webapp_go.html">oauth_webapp.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/LICENSE.html">LICENSE</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/README_md.html">README</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_go.html">browser.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_darwin_go.html">browser_darwin.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_freebsd_go.html">browser_freebsd.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_linux_go.html">browser_linux.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_openbsd_go.html">browser_openbsd.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_unsupported_go.html">browser_unsupported.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/browser_windows_go.html">browser_windows.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/browser/zbrowser_windows_go.html">zbrowser_windows.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/LICENSE.html">LICENSE</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/README_md.html">README</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/api/access_token_go.html">access_token.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/api/form_go.html">form.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/device/device_flow_go.html">device_flow.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/device/poller_go.html">poller.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/oauth_go.html">oauth.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/oauth_device_go.html">oauth_device.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/oauth_webapp_go.html">oauth_webapp.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/webapp/local_server_go.html">local_server.go</a>
+    <li><a href="../../../../../vendor/github_com/cli/oauth/webapp/webapp_flow_go.html">webapp_flow.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/LICENSE.html">LICENSE</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/PATENTS.html">PATENTS</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/internal/unsafeheader/unsafeheader_go.html">unsafeheader.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/aliases_go.html">aliases.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/dll_windows_go.html">dll_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/empty_s.html">empty.s</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/env_windows_go.html">env_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/eventlog_go.html">eventlog.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/exec_windows_go.html">exec_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/memory_windows_go.html">memory_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/mkerrors_bash.html">mkerrors.bash</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/mkknownfolderids_bash.html">mkknownfolderids.bash</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/mksyscall_go.html">mksyscall.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/race_go.html">race.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/race0_go.html">race0.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/security_windows_go.html">security_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/service_go.html">service.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/setupapi_windows_go.html">setupapi_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/str_go.html">str.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/syscall_go.html">syscall.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/syscall_windows_go.html">syscall_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/types_windows_go.html">types_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/types_windows_386_go.html">types_windows_386.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/types_windows_amd64_go.html">types_windows_amd64.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/types_windows_arm_go.html">types_windows_arm.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/types_windows_arm64_go.html">types_windows_arm64.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/zerrors_windows_go.html">zerrors_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/zknownfolderids_windows_go.html">zknownfolderids_windows.go</a>
+    <li><a href="../../../../../vendor/golang_org/x/sys/windows/zsyscall_windows_go.html">zsyscall_windows.go</a>
+    <li><a href="../../../../../vendor/modules_txt.html">modules</a>
+    <li><a href="../../../../../webapp/examples_test_go.html">examples_test.go</a>
+    <li><a href="../../../../../webapp/local_server_go.html">local_server.go</a>
+    <li><a href="../../../../../webapp/local_server_test_go.html">local_server_test.go</a>
+    <li><a href="../../../../../webapp/webapp_flow_go.html">webapp_flow.go</a>
+    <li><a href="../../../../../webapp/webapp_flow_test_go.html">webapp_flow_test.go</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page vendor/golang.org/x/sys/windows/security_windows.go">
+
+<p>// Copyright 2012 The Go Authors. All rights reserved. // Use of this source code is governed by a BSD-style // license that can be found in the <a href="../../../../../LICENSE.html">LICENSE</a> file.</p>
+
+<p>package windows</p>
+
+<p>import (</p>
+
+<pre class="ruby"><span class="ruby-string">&quot;syscall&quot;</span>
+<span class="ruby-string">&quot;unsafe&quot;</span>
+
+<span class="ruby-string">&quot;golang.org/x/sys/internal/unsafeheader&quot;</span>
+</pre>
+
+<p>)</p>
+
+<p>const (</p>
+
+<pre class="ruby"><span class="ruby-constant">NameUnknown</span>          = <span class="ruby-value">0</span>
+<span class="ruby-constant">NameFullyQualifiedDN</span> = <span class="ruby-value">1</span>
+<span class="ruby-constant">NameSamCompatible</span>    = <span class="ruby-value">2</span>
+<span class="ruby-constant">NameDisplay</span>          = <span class="ruby-value">3</span>
+<span class="ruby-constant">NameUniqueId</span>         = <span class="ruby-value">6</span>
+<span class="ruby-constant">NameCanonical</span>        = <span class="ruby-value">7</span>
+<span class="ruby-constant">NameUserPrincipal</span>    = <span class="ruby-value">8</span>
+<span class="ruby-constant">NameCanonicalEx</span>      = <span class="ruby-value">9</span>
+<span class="ruby-constant">NameServicePrincipal</span> = <span class="ruby-value">10</span>
+<span class="ruby-constant">NameDnsDomain</span>        = <span class="ruby-value">12</span>
+</pre>
+
+<p>)</p>
+
+<p>// This function returns 1 byte BOOLEAN rather than the 4 byte BOOL. // <a href="http://blogs.msdn.com/b/drnick/archive/2007/12/19/windows-and-upn-format-credentials.aspx">blogs.msdn.com/b/drnick/archive/2007/12/19/windows-and-upn-format-credentials.aspx</a> //sys   TranslateName(accName *uint16, accNameFormat uint32, desiredNameFormat uint32, translatedName *uint16, nSize *uint32) (err error) [failretval&amp;0xff==0] = secur32.TranslateNameW //sys   GetUserNameEx(nameFormat uint32, nameBuffre *uint16, nSize *uint32) (err error) [failretval&amp;0xff==0] = secur32.GetUserNameExW</p>
+
+<p>// TranslateAccountName converts a directory service // object name from one format to another. func TranslateAccountName(username string, from, to uint32, initSize int) (string, error) {</p>
+
+<pre>u, e := UTF16PtrFromString(username)
+if e != nil {
+        return &quot;&quot;, e
+}
+n := uint32(50)
+for {
+        b := make([]uint16, n)
+        e = TranslateName(u, from, to, &amp;b[0], &amp;n)
+        if e == nil {
+                return UTF16ToString(b[:n]), nil
+        }
+        if e != ERROR_INSUFFICIENT_BUFFER {
+                return &quot;&quot;, e
+        }
+        if n &lt;= uint32(len(b)) {
+                return &quot;&quot;, e
+        }
+}</pre>
+
+<p>}</p>
+
+<p>const (</p>
+
+<pre>// do not reorder
+NetSetupUnknownStatus = iota
+NetSetupUnjoined
+NetSetupWorkgroupName
+NetSetupDomainName</pre>
+
+<p>)</p>
+
+<p>type UserInfo10 struct {</p>
+
+<pre class="ruby"><span class="ruby-constant">Name</span>       <span class="ruby-operator">*</span><span class="ruby-identifier">uint16</span>
+<span class="ruby-constant">Comment</span>    <span class="ruby-operator">*</span><span class="ruby-identifier">uint16</span>
+<span class="ruby-constant">UsrComment</span> <span class="ruby-operator">*</span><span class="ruby-identifier">uint16</span>
+<span class="ruby-constant">FullName</span>   <span class="ruby-operator">*</span><span class="ruby-identifier">uint16</span>
+</pre>
+
+<p>}</p>
+
+<p>//sys   NetUserGetInfo(serverName *uint16, userName *uint16, level uint32, buf **byte) (neterr error) = netapi32.NetUserGetInfo //sys   NetGetJoinInformation(server *uint16, name **uint16, bufType *uint32) (neterr error) = netapi32.NetGetJoinInformation //sys   NetApiBufferFree(buf *byte) (neterr error) = netapi32.NetApiBufferFree</p>
+
+<p>const (</p>
+
+<pre>// do not reorder
+SidTypeUser = 1 + iota
+SidTypeGroup
+SidTypeDomain
+SidTypeAlias
+SidTypeWellKnownGroup
+SidTypeDeletedAccount
+SidTypeInvalid
+SidTypeUnknown
+SidTypeComputer
+SidTypeLabel</pre>
+
+<p>)</p>
+
+<p>type SidIdentifierAuthority struct {</p>
+
+<pre>Value [6]byte</pre>
+
+<p>}</p>
+
+<p>var (</p>
+
+<pre>SECURITY_NULL_SID_AUTHORITY        = SidIdentifierAuthority{[6]byte{0, 0, 0, 0, 0, 0}}
+SECURITY_WORLD_SID_AUTHORITY       = SidIdentifierAuthority{[6]byte{0, 0, 0, 0, 0, 1}}
+SECURITY_LOCAL_SID_AUTHORITY       = SidIdentifierAuthority{[6]byte{0, 0, 0, 0, 0, 2}}
+SECURITY_CREATOR_SID_AUTHORITY     = SidIdentifierAuthority{[6]byte{0, 0, 0, 0, 0, 3}}
+SECURITY_NON_UNIQUE_AUTHORITY      = SidIdentifierAuthority{[6]byte{0, 0, 0, 0, 0, 4}}
+SECURITY_NT_AUTHORITY              = SidIdentifierAuthority{[6]byte{0, 0, 0, 0, 0, 5}}
+SECURITY_MANDATORY_LABEL_AUTHORITY = SidIdentifierAuthority{[6]byte{0, 0, 0, 0, 0, 16}}</pre>
+
+<p>)</p>
+
+<p>const (</p>
+
+<pre class="ruby"><span class="ruby-constant">SECURITY_NULL_RID</span>                   = <span class="ruby-value">0</span>
+<span class="ruby-constant">SECURITY_WORLD_RID</span>                  = <span class="ruby-value">0</span>
+<span class="ruby-constant">SECURITY_LOCAL_RID</span>                  = <span class="ruby-value">0</span>
+<span class="ruby-constant">SECURITY_CREATOR_OWNER_RID</span>          = <span class="ruby-value">0</span>
+<span class="ruby-constant">SECURITY_CREATOR_GROUP_RID</span>          = <span class="ruby-value">1</span>
+<span class="ruby-constant">SECURITY_DIALUP_RID</span>                 = <span class="ruby-value">1</span>
+<span class="ruby-constant">SECURITY_NETWORK_RID</span>                = <span class="ruby-value">2</span>
+<span class="ruby-constant">SECURITY_BATCH_RID</span>                  = <span class="ruby-value">3</span>
+<span class="ruby-constant">SECURITY_INTERACTIVE_RID</span>            = <span class="ruby-value">4</span>
+<span class="ruby-constant">SECURITY_LOGON_IDS_RID</span>              = <span class="ruby-value">5</span>
+<span class="ruby-constant">SECURITY_SERVICE_RID</span>                = <span class="ruby-value">6</span>
+<span class="ruby-constant">SECURITY_LOCAL_SYSTEM_RID</span>           = <span class="ruby-value">18</span>
+<span class="ruby-constant">SECURITY_BUILTIN_DOMAIN_RID</span>         = <span class="ruby-value">32</span>
+<span class="ruby-constant">SECURITY_PRINCIPAL_SELF_RID</span>         = <span class="ruby-value">10</span>
+<span class="ruby-constant">SECURITY_CREATOR_OWNER_SERVER_RID</span>   = <span class="ruby-value">0x2</span>
+<span class="ruby-constant">SECURITY_CREATOR_GROUP_SERVER_RID</span>   = <span class="ruby-value">0x3</span>
+<span class="ruby-constant">SECURITY_LOGON_IDS_RID_COUNT</span>        = <span class="ruby-value">0x3</span>
+<span class="ruby-constant">SECURITY_ANONYMOUS_LOGON_RID</span>        = <span class="ruby-value">0x7</span>
+<span class="ruby-constant">SECURITY_PROXY_RID</span>                  = <span class="ruby-value">0x8</span>
+<span class="ruby-constant">SECURITY_ENTERPRISE_CONTROLLERS_RID</span> = <span class="ruby-value">0x9</span>
+<span class="ruby-constant">SECURITY_SERVER_LOGON_RID</span>           = <span class="ruby-constant">SECURITY_ENTERPRISE_CONTROLLERS_RID</span>
+<span class="ruby-constant">SECURITY_AUTHENTICATED_USER_RID</span>     = <span class="ruby-value">0xb</span>
+<span class="ruby-constant">SECURITY_RESTRICTED_CODE_RID</span>        = <span class="ruby-value">0xc</span>
+<span class="ruby-constant">SECURITY_NT_NON_UNIQUE_RID</span>          = <span class="ruby-value">0x15</span>
+</pre>
+
+<p>)</p>
+
+<p>// Predefined domain-relative RIDs for local groups. // See <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa379649(v=vs.85).aspx">msdn.microsoft.com/en-us/library/windows/desktop/aa379649(v=vs.85).aspx</a> const (</p>
+
+<pre class="ruby"><span class="ruby-constant">DOMAIN_ALIAS_RID_ADMINS</span>                         = <span class="ruby-value">0x220</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_USERS</span>                          = <span class="ruby-value">0x221</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_GUESTS</span>                         = <span class="ruby-value">0x222</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_POWER_USERS</span>                    = <span class="ruby-value">0x223</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_ACCOUNT_OPS</span>                    = <span class="ruby-value">0x224</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_SYSTEM_OPS</span>                     = <span class="ruby-value">0x225</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_PRINT_OPS</span>                      = <span class="ruby-value">0x226</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_BACKUP_OPS</span>                     = <span class="ruby-value">0x227</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_REPLICATOR</span>                     = <span class="ruby-value">0x228</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_RAS_SERVERS</span>                    = <span class="ruby-value">0x229</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_PREW2KCOMPACCESS</span>               = <span class="ruby-value">0x22a</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_REMOTE_DESKTOP_USERS</span>           = <span class="ruby-value">0x22b</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_NETWORK_CONFIGURATION_OPS</span>      = <span class="ruby-value">0x22c</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_INCOMING_FOREST_TRUST_BUILDERS</span> = <span class="ruby-value">0x22d</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_MONITORING_USERS</span>               = <span class="ruby-value">0x22e</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_LOGGING_USERS</span>                  = <span class="ruby-value">0x22f</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_AUTHORIZATIONACCESS</span>            = <span class="ruby-value">0x230</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_TS_LICENSE_SERVERS</span>             = <span class="ruby-value">0x231</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_DCOM_USERS</span>                     = <span class="ruby-value">0x232</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_IUSERS</span>                         = <span class="ruby-value">0x238</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_CRYPTO_OPERATORS</span>               = <span class="ruby-value">0x239</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_CACHEABLE_PRINCIPALS_GROUP</span>     = <span class="ruby-value">0x23b</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_NON_CACHEABLE_PRINCIPALS_GROUP</span> = <span class="ruby-value">0x23c</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_EVENT_LOG_READERS_GROUP</span>        = <span class="ruby-value">0x23d</span>
+<span class="ruby-constant">DOMAIN_ALIAS_RID_CERTSVC_DCOM_ACCESS_GROUP</span>      = <span class="ruby-value">0x23e</span>
+</pre>
+
+<p>)</p>
+
+<p>//sys   LookupAccountSid(systemName *uint16, sid *SID, name *uint16, nameLen *uint32, refdDomainName *uint16, refdDomainNameLen *uint32, use *uint32) (err error) = advapi32.LookupAccountSidW //sys   LookupAccountName(systemName *uint16, accountName *uint16, sid *SID, sidLen *uint32, refdDomainName *uint16, refdDomainNameLen *uint32, use *uint32) (err error) = advapi32.LookupAccountNameW //sys   ConvertSidToStringSid(sid *SID, stringSid **uint16) (err error) = advapi32.ConvertSidToStringSidW //sys   ConvertStringSidToSid(stringSid *uint16, sid **SID) (err error) = advapi32.ConvertStringSidToSidW //sys   GetLengthSid(sid *SID) (len uint32) = advapi32.GetLengthSid //sys   CopySid(destSidLen uint32, destSid *SID, srcSid *SID) (err error) = advapi32.CopySid //sys   AllocateAndInitializeSid(identAuth *SidIdentifierAuthority, subAuth byte, subAuth0 uint32, subAuth1 uint32, subAuth2 uint32, subAuth3 uint32, subAuth4 uint32, subAuth5 uint32, subAuth6 uint32, subAuth7 uint32, sid **SID) (err error) = advapi32.AllocateAndInitializeSid //sys   createWellKnownSid(sidType WELL_KNOWN_SID_TYPE, domainSid *SID, sid *SID, sizeSid *uint32) (err error) = advapi32.CreateWellKnownSid //sys   isWellKnownSid(sid *SID, sidType WELL_KNOWN_SID_TYPE) (isWellKnown bool) = advapi32.IsWellKnownSid //sys   FreeSid(sid *SID) (err error) [failretval!=0] = advapi32.FreeSid //sys   EqualSid(sid1 *SID, sid2 *SID) (isEqual bool) = advapi32.EqualSid //sys   getSidIdentifierAuthority(sid *SID) (authority *SidIdentifierAuthority) = advapi32.GetSidIdentifierAuthority //sys   getSidSubAuthorityCount(sid *SID) (count *uint8) = advapi32.GetSidSubAuthorityCount //sys   getSidSubAuthority(sid *SID, index uint32) (subAuthority *uint32) = advapi32.GetSidSubAuthority //sys   isValidSid(sid *SID) (isValid bool) = advapi32.IsValidSid</p>
+
+<p>// The security identifier (SID) structure is a variable-length // structure used to uniquely identify users or groups. type SID struct{}</p>
+
+<p>// StringToSid converts a string-format security identifier // SID into a valid, functional SID. func StringToSid(s string) (*SID, error) {</p>
+
+<pre>var sid *SID
+p, e := UTF16PtrFromString(s)
+if e != nil {
+        return nil, e
+}
+e = ConvertStringSidToSid(p, &amp;sid)
+if e != nil {
+        return nil, e
+}
+defer LocalFree((Handle)(unsafe.Pointer(sid)))
+return sid.Copy()</pre>
+
+<p>}</p>
+
+<p>// LookupSID retrieves a security identifier SID for the account // and the name of the domain on which the account was found. // System specify target computer to search. func LookupSID(system, account string) (sid *SID, domain string, accType uint32, err error) {</p>
+
+<pre>if len(account) == 0 {
+        return nil, &quot;&quot;, 0, syscall.EINVAL
+}
+acc, e := UTF16PtrFromString(account)
+if e != nil {
+        return nil, &quot;&quot;, 0, e
+}
+var sys *uint16
+if len(system) &gt; 0 {
+        sys, e = UTF16PtrFromString(system)
+        if e != nil {
+                return nil, &quot;&quot;, 0, e
+        }
+}
+n := uint32(50)
+dn := uint32(50)
+for {
+        b := make([]byte, n)
+        db := make([]uint16, dn)
+        sid = (*SID)(unsafe.Pointer(&amp;b[0]))
+        e = LookupAccountName(sys, acc, sid, &amp;n, &amp;db[0], &amp;dn, &amp;accType)
+        if e == nil {
+                return sid, UTF16ToString(db), accType, nil
+        }
+        if e != ERROR_INSUFFICIENT_BUFFER {
+                return nil, &quot;&quot;, 0, e
+        }
+        if n &lt;= uint32(len(b)) {
+                return nil, &quot;&quot;, 0, e
+        }
+}</pre>
+
+<p>}</p>
+
+<p>// String converts SID to a string format suitable for display, storage, or transmission. func (sid *SID) String() string {</p>
+
+<pre>var s *uint16
+e := ConvertSidToStringSid(sid, &amp;s)
+if e != nil {
+        return &quot;&quot;
+}
+defer LocalFree((Handle)(unsafe.Pointer(s)))
+return UTF16ToString((*[256]uint16)(unsafe.Pointer(s))[:])</pre>
+
+<p>}</p>
+
+<p>// Len returns the length, in bytes, of a valid security identifier SID. func (sid *SID) Len() int {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">int</span>(<span class="ruby-constant">GetLengthSid</span>(<span class="ruby-identifier">sid</span>))
+</pre>
+
+<p>}</p>
+
+<p>// Copy creates a duplicate of security identifier SID. func (sid *SID) Copy() (*SID, error) {</p>
+
+<pre>b := make([]byte, sid.Len())
+sid2 := (*SID)(unsafe.Pointer(&amp;b[0]))
+e := CopySid(uint32(len(b)), sid2, sid)
+if e != nil {
+        return nil, e
+}
+return sid2, nil</pre>
+
+<p>}</p>
+
+<p>// IdentifierAuthority returns the identifier authority of the SID. func (sid *SID) IdentifierAuthority() SidIdentifierAuthority {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-operator">*</span><span class="ruby-identifier">getSidIdentifierAuthority</span>(<span class="ruby-identifier">sid</span>)
+</pre>
+
+<p>}</p>
+
+<p>// SubAuthorityCount returns the number of sub-authorities in the SID. func (sid *SID) SubAuthorityCount() uint8 {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-operator">*</span><span class="ruby-identifier">getSidSubAuthorityCount</span>(<span class="ruby-identifier">sid</span>)
+</pre>
+
+<p>}</p>
+
+<p>// SubAuthority returns the sub-authority of the SID as specified by // the index, which must be less than sid.SubAuthorityCount(). func (sid *SID) SubAuthority(idx uint32) uint32 {</p>
+
+<pre>if idx &gt;= uint32(sid.SubAuthorityCount()) {
+        panic(&quot;sub-authority index out of range&quot;)
+}
+return *getSidSubAuthority(sid, idx)</pre>
+
+<p>}</p>
+
+<p>// IsValid returns whether the SID has a valid revision and length. func (sid *SID) IsValid() bool {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">isValidSid</span>(<span class="ruby-identifier">sid</span>)
+</pre>
+
+<p>}</p>
+
+<p>// Equals compares two SIDs for equality. func (sid *SID) Equals(sid2 *SID) bool {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">EqualSid</span>(<span class="ruby-identifier">sid</span>, <span class="ruby-identifier">sid2</span>)
+</pre>
+
+<p>}</p>
+
+<p>// IsWellKnown determines whether the SID matches the well-known sidType. func (sid *SID) IsWellKnown(sidType WELL_KNOWN_SID_TYPE) bool {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">isWellKnownSid</span>(<span class="ruby-identifier">sid</span>, <span class="ruby-identifier">sidType</span>)
+</pre>
+
+<p>}</p>
+
+<p>// LookupAccount retrieves the name of the account for this SID // and the name of the first domain on which this SID is found. // System specify target computer to search for. func (sid *SID) LookupAccount(system string) (account, domain string, accType uint32, err error) {</p>
+
+<pre>var sys *uint16
+if len(system) &gt; 0 {
+        sys, err = UTF16PtrFromString(system)
+        if err != nil {
+                return &quot;&quot;, &quot;&quot;, 0, err
+        }
+}
+n := uint32(50)
+dn := uint32(50)
+for {
+        b := make([]uint16, n)
+        db := make([]uint16, dn)
+        e := LookupAccountSid(sys, sid, &amp;b[0], &amp;n, &amp;db[0], &amp;dn, &amp;accType)
+        if e == nil {
+                return UTF16ToString(b), UTF16ToString(db), accType, nil
+        }
+        if e != ERROR_INSUFFICIENT_BUFFER {
+                return &quot;&quot;, &quot;&quot;, 0, e
+        }
+        if n &lt;= uint32(len(b)) {
+                return &quot;&quot;, &quot;&quot;, 0, e
+        }
+}</pre>
+
+<p>}</p>
+
+<p>// Various types of pre-specified SIDs that can be synthesized and compared at runtime. type WELL_KNOWN_SID_TYPE uint32</p>
+
+<p>const (</p>
+
+<pre class="ruby"><span class="ruby-constant">WinNullSid</span>                                    = <span class="ruby-value">0</span>
+<span class="ruby-constant">WinWorldSid</span>                                   = <span class="ruby-value">1</span>
+<span class="ruby-constant">WinLocalSid</span>                                   = <span class="ruby-value">2</span>
+<span class="ruby-constant">WinCreatorOwnerSid</span>                            = <span class="ruby-value">3</span>
+<span class="ruby-constant">WinCreatorGroupSid</span>                            = <span class="ruby-value">4</span>
+<span class="ruby-constant">WinCreatorOwnerServerSid</span>                      = <span class="ruby-value">5</span>
+<span class="ruby-constant">WinCreatorGroupServerSid</span>                      = <span class="ruby-value">6</span>
+<span class="ruby-constant">WinNtAuthoritySid</span>                             = <span class="ruby-value">7</span>
+<span class="ruby-constant">WinDialupSid</span>                                  = <span class="ruby-value">8</span>
+<span class="ruby-constant">WinNetworkSid</span>                                 = <span class="ruby-value">9</span>
+<span class="ruby-constant">WinBatchSid</span>                                   = <span class="ruby-value">10</span>
+<span class="ruby-constant">WinInteractiveSid</span>                             = <span class="ruby-value">11</span>
+<span class="ruby-constant">WinServiceSid</span>                                 = <span class="ruby-value">12</span>
+<span class="ruby-constant">WinAnonymousSid</span>                               = <span class="ruby-value">13</span>
+<span class="ruby-constant">WinProxySid</span>                                   = <span class="ruby-value">14</span>
+<span class="ruby-constant">WinEnterpriseControllersSid</span>                   = <span class="ruby-value">15</span>
+<span class="ruby-constant">WinSelfSid</span>                                    = <span class="ruby-value">16</span>
+<span class="ruby-constant">WinAuthenticatedUserSid</span>                       = <span class="ruby-value">17</span>
+<span class="ruby-constant">WinRestrictedCodeSid</span>                          = <span class="ruby-value">18</span>
+<span class="ruby-constant">WinTerminalServerSid</span>                          = <span class="ruby-value">19</span>
+<span class="ruby-constant">WinRemoteLogonIdSid</span>                           = <span class="ruby-value">20</span>
+<span class="ruby-constant">WinLogonIdsSid</span>                                = <span class="ruby-value">21</span>
+<span class="ruby-constant">WinLocalSystemSid</span>                             = <span class="ruby-value">22</span>
+<span class="ruby-constant">WinLocalServiceSid</span>                            = <span class="ruby-value">23</span>
+<span class="ruby-constant">WinNetworkServiceSid</span>                          = <span class="ruby-value">24</span>
+<span class="ruby-constant">WinBuiltinDomainSid</span>                           = <span class="ruby-value">25</span>
+<span class="ruby-constant">WinBuiltinAdministratorsSid</span>                   = <span class="ruby-value">26</span>
+<span class="ruby-constant">WinBuiltinUsersSid</span>                            = <span class="ruby-value">27</span>
+<span class="ruby-constant">WinBuiltinGuestsSid</span>                           = <span class="ruby-value">28</span>
+<span class="ruby-constant">WinBuiltinPowerUsersSid</span>                       = <span class="ruby-value">29</span>
+<span class="ruby-constant">WinBuiltinAccountOperatorsSid</span>                 = <span class="ruby-value">30</span>
+<span class="ruby-constant">WinBuiltinSystemOperatorsSid</span>                  = <span class="ruby-value">31</span>
+<span class="ruby-constant">WinBuiltinPrintOperatorsSid</span>                   = <span class="ruby-value">32</span>
+<span class="ruby-constant">WinBuiltinBackupOperatorsSid</span>                  = <span class="ruby-value">33</span>
+<span class="ruby-constant">WinBuiltinReplicatorSid</span>                       = <span class="ruby-value">34</span>
+<span class="ruby-constant">WinBuiltinPreWindows2000CompatibleAccessSid</span>   = <span class="ruby-value">35</span>
+<span class="ruby-constant">WinBuiltinRemoteDesktopUsersSid</span>               = <span class="ruby-value">36</span>
+<span class="ruby-constant">WinBuiltinNetworkConfigurationOperatorsSid</span>    = <span class="ruby-value">37</span>
+<span class="ruby-constant">WinAccountAdministratorSid</span>                    = <span class="ruby-value">38</span>
+<span class="ruby-constant">WinAccountGuestSid</span>                            = <span class="ruby-value">39</span>
+<span class="ruby-constant">WinAccountKrbtgtSid</span>                           = <span class="ruby-value">40</span>
+<span class="ruby-constant">WinAccountDomainAdminsSid</span>                     = <span class="ruby-value">41</span>
+<span class="ruby-constant">WinAccountDomainUsersSid</span>                      = <span class="ruby-value">42</span>
+<span class="ruby-constant">WinAccountDomainGuestsSid</span>                     = <span class="ruby-value">43</span>
+<span class="ruby-constant">WinAccountComputersSid</span>                        = <span class="ruby-value">44</span>
+<span class="ruby-constant">WinAccountControllersSid</span>                      = <span class="ruby-value">45</span>
+<span class="ruby-constant">WinAccountCertAdminsSid</span>                       = <span class="ruby-value">46</span>
+<span class="ruby-constant">WinAccountSchemaAdminsSid</span>                     = <span class="ruby-value">47</span>
+<span class="ruby-constant">WinAccountEnterpriseAdminsSid</span>                 = <span class="ruby-value">48</span>
+<span class="ruby-constant">WinAccountPolicyAdminsSid</span>                     = <span class="ruby-value">49</span>
+<span class="ruby-constant">WinAccountRasAndIasServersSid</span>                 = <span class="ruby-value">50</span>
+<span class="ruby-constant">WinNTLMAuthenticationSid</span>                      = <span class="ruby-value">51</span>
+<span class="ruby-constant">WinDigestAuthenticationSid</span>                    = <span class="ruby-value">52</span>
+<span class="ruby-constant">WinSChannelAuthenticationSid</span>                  = <span class="ruby-value">53</span>
+<span class="ruby-constant">WinThisOrganizationSid</span>                        = <span class="ruby-value">54</span>
+<span class="ruby-constant">WinOtherOrganizationSid</span>                       = <span class="ruby-value">55</span>
+<span class="ruby-constant">WinBuiltinIncomingForestTrustBuildersSid</span>      = <span class="ruby-value">56</span>
+<span class="ruby-constant">WinBuiltinPerfMonitoringUsersSid</span>              = <span class="ruby-value">57</span>
+<span class="ruby-constant">WinBuiltinPerfLoggingUsersSid</span>                 = <span class="ruby-value">58</span>
+<span class="ruby-constant">WinBuiltinAuthorizationAccessSid</span>              = <span class="ruby-value">59</span>
+<span class="ruby-constant">WinBuiltinTerminalServerLicenseServersSid</span>     = <span class="ruby-value">60</span>
+<span class="ruby-constant">WinBuiltinDCOMUsersSid</span>                        = <span class="ruby-value">61</span>
+<span class="ruby-constant">WinBuiltinIUsersSid</span>                           = <span class="ruby-value">62</span>
+<span class="ruby-constant">WinIUserSid</span>                                   = <span class="ruby-value">63</span>
+<span class="ruby-constant">WinBuiltinCryptoOperatorsSid</span>                  = <span class="ruby-value">64</span>
+<span class="ruby-constant">WinUntrustedLabelSid</span>                          = <span class="ruby-value">65</span>
+<span class="ruby-constant">WinLowLabelSid</span>                                = <span class="ruby-value">66</span>
+<span class="ruby-constant">WinMediumLabelSid</span>                             = <span class="ruby-value">67</span>
+<span class="ruby-constant">WinHighLabelSid</span>                               = <span class="ruby-value">68</span>
+<span class="ruby-constant">WinSystemLabelSid</span>                             = <span class="ruby-value">69</span>
+<span class="ruby-constant">WinWriteRestrictedCodeSid</span>                     = <span class="ruby-value">70</span>
+<span class="ruby-constant">WinCreatorOwnerRightsSid</span>                      = <span class="ruby-value">71</span>
+<span class="ruby-constant">WinCacheablePrincipalsGroupSid</span>                = <span class="ruby-value">72</span>
+<span class="ruby-constant">WinNonCacheablePrincipalsGroupSid</span>             = <span class="ruby-value">73</span>
+<span class="ruby-constant">WinEnterpriseReadonlyControllersSid</span>           = <span class="ruby-value">74</span>
+<span class="ruby-constant">WinAccountReadonlyControllersSid</span>              = <span class="ruby-value">75</span>
+<span class="ruby-constant">WinBuiltinEventLogReadersGroup</span>                = <span class="ruby-value">76</span>
+<span class="ruby-constant">WinNewEnterpriseReadonlyControllersSid</span>        = <span class="ruby-value">77</span>
+<span class="ruby-constant">WinBuiltinCertSvcDComAccessGroup</span>              = <span class="ruby-value">78</span>
+<span class="ruby-constant">WinMediumPlusLabelSid</span>                         = <span class="ruby-value">79</span>
+<span class="ruby-constant">WinLocalLogonSid</span>                              = <span class="ruby-value">80</span>
+<span class="ruby-constant">WinConsoleLogonSid</span>                            = <span class="ruby-value">81</span>
+<span class="ruby-constant">WinThisOrganizationCertificateSid</span>             = <span class="ruby-value">82</span>
+<span class="ruby-constant">WinApplicationPackageAuthoritySid</span>             = <span class="ruby-value">83</span>
+<span class="ruby-constant">WinBuiltinAnyPackageSid</span>                       = <span class="ruby-value">84</span>
+<span class="ruby-constant">WinCapabilityInternetClientSid</span>                = <span class="ruby-value">85</span>
+<span class="ruby-constant">WinCapabilityInternetClientServerSid</span>          = <span class="ruby-value">86</span>
+<span class="ruby-constant">WinCapabilityPrivateNetworkClientServerSid</span>    = <span class="ruby-value">87</span>
+<span class="ruby-constant">WinCapabilityPicturesLibrarySid</span>               = <span class="ruby-value">88</span>
+<span class="ruby-constant">WinCapabilityVideosLibrarySid</span>                 = <span class="ruby-value">89</span>
+<span class="ruby-constant">WinCapabilityMusicLibrarySid</span>                  = <span class="ruby-value">90</span>
+<span class="ruby-constant">WinCapabilityDocumentsLibrarySid</span>              = <span class="ruby-value">91</span>
+<span class="ruby-constant">WinCapabilitySharedUserCertificatesSid</span>        = <span class="ruby-value">92</span>
+<span class="ruby-constant">WinCapabilityEnterpriseAuthenticationSid</span>      = <span class="ruby-value">93</span>
+<span class="ruby-constant">WinCapabilityRemovableStorageSid</span>              = <span class="ruby-value">94</span>
+<span class="ruby-constant">WinBuiltinRDSRemoteAccessServersSid</span>           = <span class="ruby-value">95</span>
+<span class="ruby-constant">WinBuiltinRDSEndpointServersSid</span>               = <span class="ruby-value">96</span>
+<span class="ruby-constant">WinBuiltinRDSManagementServersSid</span>             = <span class="ruby-value">97</span>
+<span class="ruby-constant">WinUserModeDriversSid</span>                         = <span class="ruby-value">98</span>
+<span class="ruby-constant">WinBuiltinHyperVAdminsSid</span>                     = <span class="ruby-value">99</span>
+<span class="ruby-constant">WinAccountCloneableControllersSid</span>             = <span class="ruby-value">100</span>
+<span class="ruby-constant">WinBuiltinAccessControlAssistanceOperatorsSid</span> = <span class="ruby-value">101</span>
+<span class="ruby-constant">WinBuiltinRemoteManagementUsersSid</span>            = <span class="ruby-value">102</span>
+<span class="ruby-constant">WinAuthenticationAuthorityAssertedSid</span>         = <span class="ruby-value">103</span>
+<span class="ruby-constant">WinAuthenticationServiceAssertedSid</span>           = <span class="ruby-value">104</span>
+<span class="ruby-constant">WinLocalAccountSid</span>                            = <span class="ruby-value">105</span>
+<span class="ruby-constant">WinLocalAccountAndAdministratorSid</span>            = <span class="ruby-value">106</span>
+<span class="ruby-constant">WinAccountProtectedUsersSid</span>                   = <span class="ruby-value">107</span>
+<span class="ruby-constant">WinCapabilityAppointmentsSid</span>                  = <span class="ruby-value">108</span>
+<span class="ruby-constant">WinCapabilityContactsSid</span>                      = <span class="ruby-value">109</span>
+<span class="ruby-constant">WinAccountDefaultSystemManagedSid</span>             = <span class="ruby-value">110</span>
+<span class="ruby-constant">WinBuiltinDefaultSystemManagedGroupSid</span>        = <span class="ruby-value">111</span>
+<span class="ruby-constant">WinBuiltinStorageReplicaAdminsSid</span>             = <span class="ruby-value">112</span>
+<span class="ruby-constant">WinAccountKeyAdminsSid</span>                        = <span class="ruby-value">113</span>
+<span class="ruby-constant">WinAccountEnterpriseKeyAdminsSid</span>              = <span class="ruby-value">114</span>
+<span class="ruby-constant">WinAuthenticationKeyTrustSid</span>                  = <span class="ruby-value">115</span>
+<span class="ruby-constant">WinAuthenticationKeyPropertyMFASid</span>            = <span class="ruby-value">116</span>
+<span class="ruby-constant">WinAuthenticationKeyPropertyAttestationSid</span>    = <span class="ruby-value">117</span>
+<span class="ruby-constant">WinAuthenticationFreshKeyAuthSid</span>              = <span class="ruby-value">118</span>
+<span class="ruby-constant">WinBuiltinDeviceOwnersSid</span>                     = <span class="ruby-value">119</span>
+</pre>
+
+<p>)</p>
+
+<p>// Creates a SID for a well-known predefined alias, generally using the constants of the form // Win*Sid, for the local machine. func CreateWellKnownSid(sidType WELL_KNOWN_SID_TYPE) (*SID, error) {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">CreateWellKnownDomainSid</span>(<span class="ruby-identifier">sidType</span>, <span class="ruby-keyword">nil</span>)
+</pre>
+
+<p>}</p>
+
+<p>// Creates a SID for a well-known predefined alias, generally using the constants of the form // Win*Sid, for the domain specified by the domainSid parameter. func CreateWellKnownDomainSid(sidType WELL_KNOWN_SID_TYPE, domainSid *SID) (*SID, error) {</p>
+
+<pre>n := uint32(50)
+for {
+        b := make([]byte, n)
+        sid := (*SID)(unsafe.Pointer(&amp;b[0]))
+        err := createWellKnownSid(sidType, domainSid, sid, &amp;n)
+        if err == nil {
+                return sid, nil
+        }
+        if err != ERROR_INSUFFICIENT_BUFFER {
+                return nil, err
+        }
+        if n &lt;= uint32(len(b)) {
+                return nil, err
+        }
+}</pre>
+
+<p>}</p>
+
+<p>const (</p>
+
+<pre>// do not reorder
+TOKEN_ASSIGN_PRIMARY = 1 &lt;&lt; iota
+TOKEN_DUPLICATE
+TOKEN_IMPERSONATE
+TOKEN_QUERY
+TOKEN_QUERY_SOURCE
+TOKEN_ADJUST_PRIVILEGES
+TOKEN_ADJUST_GROUPS
+TOKEN_ADJUST_DEFAULT
+TOKEN_ADJUST_SESSIONID
+
+TOKEN_ALL_ACCESS = STANDARD_RIGHTS_REQUIRED |
+        TOKEN_ASSIGN_PRIMARY |
+        TOKEN_DUPLICATE |
+        TOKEN_IMPERSONATE |
+        TOKEN_QUERY |
+        TOKEN_QUERY_SOURCE |
+        TOKEN_ADJUST_PRIVILEGES |
+        TOKEN_ADJUST_GROUPS |
+        TOKEN_ADJUST_DEFAULT |
+        TOKEN_ADJUST_SESSIONID
+TOKEN_READ  = STANDARD_RIGHTS_READ | TOKEN_QUERY
+TOKEN_WRITE = STANDARD_RIGHTS_WRITE |
+        TOKEN_ADJUST_PRIVILEGES |
+        TOKEN_ADJUST_GROUPS |
+        TOKEN_ADJUST_DEFAULT
+TOKEN_EXECUTE = STANDARD_RIGHTS_EXECUTE</pre>
+
+<p>)</p>
+
+<p>const (</p>
+
+<pre>// do not reorder
+TokenUser = 1 + iota
+TokenGroups
+TokenPrivileges
+TokenOwner
+TokenPrimaryGroup
+TokenDefaultDacl
+TokenSource
+TokenType
+TokenImpersonationLevel
+TokenStatistics
+TokenRestrictedSids
+TokenSessionId
+TokenGroupsAndPrivileges
+TokenSessionReference
+TokenSandBoxInert
+TokenAuditPolicy
+TokenOrigin
+TokenElevationType
+TokenLinkedToken
+TokenElevation
+TokenHasRestrictions
+TokenAccessInformation
+TokenVirtualizationAllowed
+TokenVirtualizationEnabled
+TokenIntegrityLevel
+TokenUIAccess
+TokenMandatoryPolicy
+TokenLogonSid
+MaxTokenInfoClass</pre>
+
+<p>)</p>
+
+<p>// Group attributes inside of <a href="i">Tokengroups.Groups</a>.Attributes const (</p>
+
+<pre class="ruby"><span class="ruby-constant">SE_GROUP_MANDATORY</span>          = <span class="ruby-value">0x00000001</span>
+<span class="ruby-constant">SE_GROUP_ENABLED_BY_DEFAULT</span> = <span class="ruby-value">0x00000002</span>
+<span class="ruby-constant">SE_GROUP_ENABLED</span>            = <span class="ruby-value">0x00000004</span>
+<span class="ruby-constant">SE_GROUP_OWNER</span>              = <span class="ruby-value">0x00000008</span>
+<span class="ruby-constant">SE_GROUP_USE_FOR_DENY_ONLY</span>  = <span class="ruby-value">0x00000010</span>
+<span class="ruby-constant">SE_GROUP_INTEGRITY</span>          = <span class="ruby-value">0x00000020</span>
+<span class="ruby-constant">SE_GROUP_INTEGRITY_ENABLED</span>  = <span class="ruby-value">0x00000040</span>
+<span class="ruby-constant">SE_GROUP_LOGON_ID</span>           = <span class="ruby-value">0xC0000000</span>
+<span class="ruby-constant">SE_GROUP_RESOURCE</span>           = <span class="ruby-value">0x20000000</span>
+<span class="ruby-constant">SE_GROUP_VALID_ATTRIBUTES</span>   = <span class="ruby-constant">SE_GROUP_MANDATORY</span> <span class="ruby-operator">|</span> <span class="ruby-constant">SE_GROUP_ENABLED_BY_DEFAULT</span> <span class="ruby-operator">|</span> <span class="ruby-constant">SE_GROUP_ENABLED</span> <span class="ruby-operator">|</span> <span class="ruby-constant">SE_GROUP_OWNER</span> <span class="ruby-operator">|</span> <span class="ruby-constant">SE_GROUP_USE_FOR_DENY_ONLY</span> <span class="ruby-operator">|</span> <span class="ruby-constant">SE_GROUP_LOGON_ID</span> <span class="ruby-operator">|</span> <span class="ruby-constant">SE_GROUP_RESOURCE</span> <span class="ruby-operator">|</span> <span class="ruby-constant">SE_GROUP_INTEGRITY</span> <span class="ruby-operator">|</span> <span class="ruby-constant">SE_GROUP_INTEGRITY_ENABLED</span>
+</pre>
+
+<p>)</p>
+
+<p>// Privilege attributes const (</p>
+
+<pre class="ruby"><span class="ruby-constant">SE_PRIVILEGE_ENABLED_BY_DEFAULT</span> = <span class="ruby-value">0x00000001</span>
+<span class="ruby-constant">SE_PRIVILEGE_ENABLED</span>            = <span class="ruby-value">0x00000002</span>
+<span class="ruby-constant">SE_PRIVILEGE_REMOVED</span>            = <span class="ruby-value">0x00000004</span>
+<span class="ruby-constant">SE_PRIVILEGE_USED_FOR_ACCESS</span>    = <span class="ruby-value">0x80000000</span>
+<span class="ruby-constant">SE_PRIVILEGE_VALID_ATTRIBUTES</span>   = <span class="ruby-constant">SE_PRIVILEGE_ENABLED_BY_DEFAULT</span> <span class="ruby-operator">|</span> <span class="ruby-constant">SE_PRIVILEGE_ENABLED</span> <span class="ruby-operator">|</span> <span class="ruby-constant">SE_PRIVILEGE_REMOVED</span> <span class="ruby-operator">|</span> <span class="ruby-constant">SE_PRIVILEGE_USED_FOR_ACCESS</span>
+</pre>
+
+<p>)</p>
+
+<p>// Token types const (</p>
+
+<pre class="ruby"><span class="ruby-constant">TokenPrimary</span>       = <span class="ruby-value">1</span>
+<span class="ruby-constant">TokenImpersonation</span> = <span class="ruby-value">2</span>
+</pre>
+
+<p>)</p>
+
+<p>// Impersonation levels const (</p>
+
+<pre class="ruby"><span class="ruby-constant">SecurityAnonymous</span>      = <span class="ruby-value">0</span>
+<span class="ruby-constant">SecurityIdentification</span> = <span class="ruby-value">1</span>
+<span class="ruby-constant">SecurityImpersonation</span>  = <span class="ruby-value">2</span>
+<span class="ruby-constant">SecurityDelegation</span>     = <span class="ruby-value">3</span>
+</pre>
+
+<p>)</p>
+
+<p>type LUID struct {</p>
+
+<pre class="ruby"><span class="ruby-constant">LowPart</span>  <span class="ruby-identifier">uint32</span>
+<span class="ruby-constant">HighPart</span> <span class="ruby-identifier">int32</span>
+</pre>
+
+<p>}</p>
+
+<p>type LUIDAndAttributes struct {</p>
+
+<pre class="ruby"><span class="ruby-constant">Luid</span>       <span class="ruby-constant">LUID</span>
+<span class="ruby-constant">Attributes</span> <span class="ruby-identifier">uint32</span>
+</pre>
+
+<p>}</p>
+
+<p>type SIDAndAttributes struct {</p>
+
+<pre class="ruby"><span class="ruby-constant">Sid</span>        <span class="ruby-operator">*</span><span class="ruby-constant">SID</span>
+<span class="ruby-constant">Attributes</span> <span class="ruby-identifier">uint32</span>
+</pre>
+
+<p>}</p>
+
+<p>type Tokenuser struct {</p>
+
+<pre class="ruby"><span class="ruby-constant">User</span> <span class="ruby-constant">SIDAndAttributes</span>
+</pre>
+
+<p>}</p>
+
+<p>type Tokenprimarygroup struct {</p>
+
+<pre class="ruby"><span class="ruby-constant">PrimaryGroup</span> <span class="ruby-operator">*</span><span class="ruby-constant">SID</span>
+</pre>
+
+<p>}</p>
+
+<p>type Tokengroups struct {</p>
+
+<pre>GroupCount uint32
+Groups     [1]SIDAndAttributes // Use AllGroups() for iterating.</pre>
+
+<p>}</p>
+
+<p>// AllGroups returns a slice that can be used to iterate over the groups in g. func (g *Tokengroups) AllGroups() []SIDAndAttributes {</p>
+
+<pre>return (*[(1 &lt;&lt; 28) - 1]SIDAndAttributes)(unsafe.Pointer(&amp;g.Groups[0]))[:g.GroupCount:g.GroupCount]</pre>
+
+<p>}</p>
+
+<p>type Tokenprivileges struct {</p>
+
+<pre>PrivilegeCount uint32
+Privileges     [1]LUIDAndAttributes // Use AllPrivileges() for iterating.</pre>
+
+<p>}</p>
+
+<p>// AllPrivileges returns a slice that can be used to iterate over the privileges in p. func (p *Tokenprivileges) AllPrivileges() []LUIDAndAttributes {</p>
+
+<pre>return (*[(1 &lt;&lt; 27) - 1]LUIDAndAttributes)(unsafe.Pointer(&amp;p.Privileges[0]))[:p.PrivilegeCount:p.PrivilegeCount]</pre>
+
+<p>}</p>
+
+<p>type Tokenmandatorylabel struct {</p>
+
+<pre class="ruby"><span class="ruby-constant">Label</span> <span class="ruby-constant">SIDAndAttributes</span>
+</pre>
+
+<p>}</p>
+
+<p>func (tml *Tokenmandatorylabel) Size() uint32 {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">uint32</span>(<span class="ruby-identifier">unsafe</span>.<span class="ruby-constant">Sizeof</span>(<span class="ruby-constant">Tokenmandatorylabel</span>{})) <span class="ruby-operator">+</span> <span class="ruby-constant">GetLengthSid</span>(<span class="ruby-identifier">tml</span>.<span class="ruby-constant">Label</span>.<span class="ruby-constant">Sid</span>)
+</pre>
+
+<p>}</p>
+
+<p>// Authorization Functions //sys   checkTokenMembership(tokenHandle Token, sidToCheck *SID, isMember *int32) (err error) = advapi32.CheckTokenMembership //sys   isTokenRestricted(tokenHandle Token) (ret bool, err error) [!failretval] = advapi32.IsTokenRestricted //sys   OpenProcessToken(process Handle, access uint32, token *Token) (err error) = advapi32.OpenProcessToken //sys   OpenThreadToken(thread Handle, access uint32, openAsSelf bool, token *Token) (err error) = advapi32.OpenThreadToken //sys   ImpersonateSelf(impersonationlevel uint32) (err error) = advapi32.ImpersonateSelf //sys   RevertToSelf() (err error) = advapi32.RevertToSelf //sys   SetThreadToken(thread *Handle, token Token) (err error) = advapi32.SetThreadToken //sys   LookupPrivilegeValue(systemname *uint16, name *uint16, luid *LUID) (err error) = advapi32.LookupPrivilegeValueW //sys   AdjustTokenPrivileges(token Token, disableAllPrivileges bool, newstate *Tokenprivileges, buflen uint32, prevstate *Tokenprivileges, returnlen *uint32) (err error) = advapi32.AdjustTokenPrivileges //sys   AdjustTokenGroups(token Token, resetToDefault bool, newstate *Tokengroups, buflen uint32, prevstate *Tokengroups, returnlen *uint32) (err error) = advapi32.AdjustTokenGroups //sys   GetTokenInformation(token Token, infoClass uint32, info *byte, infoLen uint32, returnedLen *uint32) (err error) = advapi32.GetTokenInformation //sys   SetTokenInformation(token Token, infoClass uint32, info *byte, infoLen uint32) (err error) = advapi32.SetTokenInformation //sys   DuplicateTokenEx(existingToken Token, desiredAccess uint32, tokenAttributes *SecurityAttributes, impersonationLevel uint32, tokenType uint32, newToken *Token) (err error) = advapi32.DuplicateTokenEx //sys   GetUserProfileDirectory(t Token, dir *uint16, dirLen *uint32) (err error) = userenv.GetUserProfileDirectoryW //sys   getSystemDirectory(dir *uint16, dirLen uint32) (len uint32, err error) = kernel32.GetSystemDirectoryW //sys   getWindowsDirectory(dir *uint16, dirLen uint32) (len uint32, err error) = kernel32.GetWindowsDirectoryW //sys   getSystemWindowsDirectory(dir *uint16, dirLen uint32) (len uint32, err error) = kernel32.GetSystemWindowsDirectoryW</p>
+
+<p>// An access token contains the security information for a logon session. // The system creates an access token when a user logs on, and every // process executed on behalf of the user has a copy of the token. // The token identifies the user, the user’s groups, and the user’s // privileges. The system uses the token to control access to securable // objects and to control the ability of the user to perform various // system-related operations on the local computer. type Token Handle</p>
+
+<p>// OpenCurrentProcessToken opens an access token associated with current // process with TOKEN_QUERY access. It is a real token that needs to be closed. // // Deprecated: Explicitly call OpenProcessToken(CurrentProcess(), …) // with the desired access instead, or use GetCurrentProcessToken for a // TOKEN_QUERY token. func OpenCurrentProcessToken() (Token, error) {</p>
+
+<pre>var token Token
+err := OpenProcessToken(CurrentProcess(), TOKEN_QUERY, &amp;token)
+return token, err</pre>
+
+<p>}</p>
+
+<p>// GetCurrentProcessToken returns the access token associated with // the current process. It is a pseudo token that does not need // to be closed. func GetCurrentProcessToken() Token {</p>
+
+<pre>return Token(^uintptr(4 - 1))</pre>
+
+<p>}</p>
+
+<p>// GetCurrentThreadToken return the access token associated with // the current thread. It is a pseudo token that does not need // to be closed. func GetCurrentThreadToken() Token {</p>
+
+<pre>return Token(^uintptr(5 - 1))</pre>
+
+<p>}</p>
+
+<p>// GetCurrentThreadEffectiveToken returns the effective access token // associated with the current thread. It is a pseudo token that does // not need to be closed. func GetCurrentThreadEffectiveToken() Token {</p>
+
+<pre>return Token(^uintptr(6 - 1))</pre>
+
+<p>}</p>
+
+<p>// Close releases access to access token. func (t Token) Close() error {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">CloseHandle</span>(<span class="ruby-constant">Handle</span>(<span class="ruby-identifier">t</span>))
+</pre>
+
+<p>}</p>
+
+<p>// getInfo retrieves a specified type of information about an access token. func (t Token) getInfo(class uint32, initSize int) (unsafe.Pointer, error) {</p>
+
+<pre>n := uint32(initSize)
+for {
+        b := make([]byte, n)
+        e := GetTokenInformation(t, class, &amp;b[0], uint32(len(b)), &amp;n)
+        if e == nil {
+                return unsafe.Pointer(&amp;b[0]), nil
+        }
+        if e != ERROR_INSUFFICIENT_BUFFER {
+                return nil, e
+        }
+        if n &lt;= uint32(len(b)) {
+                return nil, e
+        }
+}</pre>
+
+<p>}</p>
+
+<p>// GetTokenUser retrieves access token t user account information. func (t Token) GetTokenUser() (*Tokenuser, error) {</p>
+
+<pre>i, e := t.getInfo(TokenUser, 50)
+if e != nil {
+        return nil, e
+}
+return (*Tokenuser)(i), nil</pre>
+
+<p>}</p>
+
+<p>// GetTokenGroups retrieves group accounts associated with access token t. func (t Token) GetTokenGroups() (*Tokengroups, error) {</p>
+
+<pre>i, e := t.getInfo(TokenGroups, 50)
+if e != nil {
+        return nil, e
+}
+return (*Tokengroups)(i), nil</pre>
+
+<p>}</p>
+
+<p>// GetTokenPrimaryGroup retrieves access token t primary group information. // A pointer to a SID structure representing a group that will become // the primary group of any objects created by a process using this access token. func (t Token) GetTokenPrimaryGroup() (*Tokenprimarygroup, error) {</p>
+
+<pre>i, e := t.getInfo(TokenPrimaryGroup, 50)
+if e != nil {
+        return nil, e
+}
+return (*Tokenprimarygroup)(i), nil</pre>
+
+<p>}</p>
+
+<p>// GetUserProfileDirectory retrieves path to the // root directory of the access token t user’s profile. func (t Token) GetUserProfileDirectory() (string, error) {</p>
+
+<pre>n := uint32(100)
+for {
+        b := make([]uint16, n)
+        e := GetUserProfileDirectory(t, &amp;b[0], &amp;n)
+        if e == nil {
+                return UTF16ToString(b), nil
+        }
+        if e != ERROR_INSUFFICIENT_BUFFER {
+                return &quot;&quot;, e
+        }
+        if n &lt;= uint32(len(b)) {
+                return &quot;&quot;, e
+        }
+}</pre>
+
+<p>}</p>
+
+<p>// IsElevated returns whether the current token is elevated from a UAC perspective. func (token Token) IsElevated() bool {</p>
+
+<pre>var isElevated uint32
+var outLen uint32
+err := GetTokenInformation(token, TokenElevation, (*byte)(unsafe.Pointer(&amp;isElevated)), uint32(unsafe.Sizeof(isElevated)), &amp;outLen)
+if err != nil {
+        return false
+}
+return outLen == uint32(unsafe.Sizeof(isElevated)) &amp;&amp; isElevated != 0</pre>
+
+<p>}</p>
+
+<p>// GetLinkedToken returns the linked token, which may be an elevated UAC token. func (token Token) GetLinkedToken() (Token, error) {</p>
+
+<pre>var linkedToken Token
+var outLen uint32
+err := GetTokenInformation(token, TokenLinkedToken, (*byte)(unsafe.Pointer(&amp;linkedToken)), uint32(unsafe.Sizeof(linkedToken)), &amp;outLen)
+if err != nil {
+        return Token(0), err
+}
+return linkedToken, nil</pre>
+
+<p>}</p>
+
+<p>// GetSystemDirectory retrieves the path to current location of the system // directory, which is typically, though not always, ‘C:WindowsSystem32`. func GetSystemDirectory() (string, error) {</p>
+
+<pre>n := uint32(MAX_PATH)
+for {
+        b := make([]uint16, n)
+        l, e := getSystemDirectory(&amp;b[0], n)
+        if e != nil {
+                return &quot;&quot;, e
+        }
+        if l &lt;= n {
+                return UTF16ToString(b[:l]), nil
+        }
+        n = l
+}</pre>
+
+<p>}</p>
+
+<p>// GetWindowsDirectory retrieves the path to current location of the Windows // directory, which is typically, though not always, ‘C:Windows`. This may // be a private user directory in the case that the application is running // under a terminal server. func GetWindowsDirectory() (string, error) {</p>
+
+<pre>n := uint32(MAX_PATH)
+for {
+        b := make([]uint16, n)
+        l, e := getWindowsDirectory(&amp;b[0], n)
+        if e != nil {
+                return &quot;&quot;, e
+        }
+        if l &lt;= n {
+                return UTF16ToString(b[:l]), nil
+        }
+        n = l
+}</pre>
+
+<p>}</p>
+
+<p>// GetSystemWindowsDirectory retrieves the path to current location of the // Windows directory, which is typically, though not always, ‘C:Windows`. func GetSystemWindowsDirectory() (string, error) {</p>
+
+<pre>n := uint32(MAX_PATH)
+for {
+        b := make([]uint16, n)
+        l, e := getSystemWindowsDirectory(&amp;b[0], n)
+        if e != nil {
+                return &quot;&quot;, e
+        }
+        if l &lt;= n {
+                return UTF16ToString(b[:l]), nil
+        }
+        n = l
+}</pre>
+
+<p>}</p>
+
+<p>// IsMember reports whether the access token t is a member of the provided SID. func (t Token) IsMember(sid *SID) (bool, error) {</p>
+
+<pre>var b int32
+if e := checkTokenMembership(t, sid, &amp;b); e != nil {
+        return false, e
+}
+return b != 0, nil</pre>
+
+<p>}</p>
+
+<p>// IsRestricted reports whether the access token t is a restricted token. func (t Token) IsRestricted() (isRestricted bool, err error) {</p>
+
+<pre>isRestricted, err = isTokenRestricted(t)
+if !isRestricted &amp;&amp; err == syscall.EINVAL {
+        // If err is EINVAL, this returned ERROR_SUCCESS indicating a non-restricted token.
+        err = nil
+}
+return</pre>
+
+<p>}</p>
+
+<p>const (</p>
+
+<pre class="ruby"><span class="ruby-constant">WTS_CONSOLE_CONNECT</span>        = <span class="ruby-value">0x1</span>
+<span class="ruby-constant">WTS_CONSOLE_DISCONNECT</span>     = <span class="ruby-value">0x2</span>
+<span class="ruby-constant">WTS_REMOTE_CONNECT</span>         = <span class="ruby-value">0x3</span>
+<span class="ruby-constant">WTS_REMOTE_DISCONNECT</span>      = <span class="ruby-value">0x4</span>
+<span class="ruby-constant">WTS_SESSION_LOGON</span>          = <span class="ruby-value">0x5</span>
+<span class="ruby-constant">WTS_SESSION_LOGOFF</span>         = <span class="ruby-value">0x6</span>
+<span class="ruby-constant">WTS_SESSION_LOCK</span>           = <span class="ruby-value">0x7</span>
+<span class="ruby-constant">WTS_SESSION_UNLOCK</span>         = <span class="ruby-value">0x8</span>
+<span class="ruby-constant">WTS_SESSION_REMOTE_CONTROL</span> = <span class="ruby-value">0x9</span>
+<span class="ruby-constant">WTS_SESSION_CREATE</span>         = <span class="ruby-value">0xa</span>
+<span class="ruby-constant">WTS_SESSION_TERMINATE</span>      = <span class="ruby-value">0xb</span>
+</pre>
+
+<p>)</p>
+
+<p>const (</p>
+
+<pre class="ruby"><span class="ruby-constant">WTSActive</span>       = <span class="ruby-value">0</span>
+<span class="ruby-constant">WTSConnected</span>    = <span class="ruby-value">1</span>
+<span class="ruby-constant">WTSConnectQuery</span> = <span class="ruby-value">2</span>
+<span class="ruby-constant">WTSShadow</span>       = <span class="ruby-value">3</span>
+<span class="ruby-constant">WTSDisconnected</span> = <span class="ruby-value">4</span>
+<span class="ruby-constant">WTSIdle</span>         = <span class="ruby-value">5</span>
+<span class="ruby-constant">WTSListen</span>       = <span class="ruby-value">6</span>
+<span class="ruby-constant">WTSReset</span>        = <span class="ruby-value">7</span>
+<span class="ruby-constant">WTSDown</span>         = <span class="ruby-value">8</span>
+<span class="ruby-constant">WTSInit</span>         = <span class="ruby-value">9</span>
+</pre>
+
+<p>)</p>
+
+<p>type WTSSESSION_NOTIFICATION struct {</p>
+
+<pre class="ruby"><span class="ruby-constant">Size</span>      <span class="ruby-identifier">uint32</span>
+<span class="ruby-constant">SessionID</span> <span class="ruby-identifier">uint32</span>
+</pre>
+
+<p>}</p>
+
+<p>type WTS_SESSION_INFO struct {</p>
+
+<pre class="ruby"><span class="ruby-constant">SessionID</span>         <span class="ruby-identifier">uint32</span>
+<span class="ruby-constant">WindowStationName</span> <span class="ruby-operator">*</span><span class="ruby-identifier">uint16</span>
+<span class="ruby-constant">State</span>             <span class="ruby-identifier">uint32</span>
+</pre>
+
+<p>}</p>
+
+<p>//sys WTSQueryUserToken(session uint32, token *Token) (err error) = wtsapi32.WTSQueryUserToken //sys WTSEnumerateSessions(handle Handle, reserved uint32, version uint32, sessions **WTS_SESSION_INFO, count *uint32) (err error) = wtsapi32.WTSEnumerateSessionsW //sys WTSFreeMemory(ptr uintptr) = wtsapi32.WTSFreeMemory //sys WTSGetActiveConsoleSessionId() (sessionID uint32)</p>
+
+<p>type ACL struct {</p>
+
+<pre class="ruby"><span class="ruby-identifier">aclRevision</span> <span class="ruby-identifier">byte</span>
+<span class="ruby-identifier">sbz1</span>        <span class="ruby-identifier">byte</span>
+<span class="ruby-identifier">aclSize</span>     <span class="ruby-identifier">uint16</span>
+<span class="ruby-identifier">aceCount</span>    <span class="ruby-identifier">uint16</span>
+<span class="ruby-identifier">sbz2</span>        <span class="ruby-identifier">uint16</span>
+</pre>
+
+<p>}</p>
+
+<p>type SECURITY_DESCRIPTOR struct {</p>
+
+<pre class="ruby"><span class="ruby-identifier">revision</span> <span class="ruby-identifier">byte</span>
+<span class="ruby-identifier">sbz1</span>     <span class="ruby-identifier">byte</span>
+<span class="ruby-identifier">control</span>  <span class="ruby-constant">SECURITY_DESCRIPTOR_CONTROL</span>
+<span class="ruby-identifier">owner</span>    <span class="ruby-operator">*</span><span class="ruby-constant">SID</span>
+<span class="ruby-identifier">group</span>    <span class="ruby-operator">*</span><span class="ruby-constant">SID</span>
+<span class="ruby-identifier">sacl</span>     <span class="ruby-operator">*</span><span class="ruby-constant">ACL</span>
+<span class="ruby-identifier">dacl</span>     <span class="ruby-operator">*</span><span class="ruby-constant">ACL</span>
+</pre>
+
+<p>}</p>
+
+<p>type SECURITY_QUALITY_OF_SERVICE struct {</p>
+
+<pre class="ruby"><span class="ruby-constant">Length</span>              <span class="ruby-identifier">uint32</span>
+<span class="ruby-constant">ImpersonationLevel</span>  <span class="ruby-identifier">uint32</span>
+<span class="ruby-constant">ContextTrackingMode</span> <span class="ruby-identifier">byte</span>
+<span class="ruby-constant">EffectiveOnly</span>       <span class="ruby-identifier">byte</span>
+</pre>
+
+<p>}</p>
+
+<p>// Constants for the ContextTrackingMode field of SECURITY_QUALITY_OF_SERVICE. const (</p>
+
+<pre class="ruby"><span class="ruby-constant">SECURITY_STATIC_TRACKING</span>  = <span class="ruby-value">0</span>
+<span class="ruby-constant">SECURITY_DYNAMIC_TRACKING</span> = <span class="ruby-value">1</span>
+</pre>
+
+<p>)</p>
+
+<p>type SecurityAttributes struct {</p>
+
+<pre class="ruby"><span class="ruby-constant">Length</span>             <span class="ruby-identifier">uint32</span>
+<span class="ruby-constant">SecurityDescriptor</span> <span class="ruby-operator">*</span><span class="ruby-constant">SECURITY_DESCRIPTOR</span>
+<span class="ruby-constant">InheritHandle</span>      <span class="ruby-identifier">uint32</span>
+</pre>
+
+<p>}</p>
+
+<p>type SE_OBJECT_TYPE uint32</p>
+
+<p>// Constants for type SE_OBJECT_TYPE const (</p>
+
+<pre class="ruby"><span class="ruby-constant">SE_UNKNOWN_OBJECT_TYPE</span>     = <span class="ruby-value">0</span>
+<span class="ruby-constant">SE_FILE_OBJECT</span>             = <span class="ruby-value">1</span>
+<span class="ruby-constant">SE_SERVICE</span>                 = <span class="ruby-value">2</span>
+<span class="ruby-constant">SE_PRINTER</span>                 = <span class="ruby-value">3</span>
+<span class="ruby-constant">SE_REGISTRY_KEY</span>            = <span class="ruby-value">4</span>
+<span class="ruby-constant">SE_LMSHARE</span>                 = <span class="ruby-value">5</span>
+<span class="ruby-constant">SE_KERNEL_OBJECT</span>           = <span class="ruby-value">6</span>
+<span class="ruby-constant">SE_WINDOW_OBJECT</span>           = <span class="ruby-value">7</span>
+<span class="ruby-constant">SE_DS_OBJECT</span>               = <span class="ruby-value">8</span>
+<span class="ruby-constant">SE_DS_OBJECT_ALL</span>           = <span class="ruby-value">9</span>
+<span class="ruby-constant">SE_PROVIDER_DEFINED_OBJECT</span> = <span class="ruby-value">10</span>
+<span class="ruby-constant">SE_WMIGUID_OBJECT</span>          = <span class="ruby-value">11</span>
+<span class="ruby-constant">SE_REGISTRY_WOW64_32KEY</span>    = <span class="ruby-value">12</span>
+<span class="ruby-constant">SE_REGISTRY_WOW64_64KEY</span>    = <span class="ruby-value">13</span>
+</pre>
+
+<p>)</p>
+
+<p>type SECURITY_INFORMATION uint32</p>
+
+<p>// Constants for type SECURITY_INFORMATION const (</p>
+
+<pre class="ruby"><span class="ruby-constant">OWNER_SECURITY_INFORMATION</span>            = <span class="ruby-value">0x00000001</span>
+<span class="ruby-constant">GROUP_SECURITY_INFORMATION</span>            = <span class="ruby-value">0x00000002</span>
+<span class="ruby-constant">DACL_SECURITY_INFORMATION</span>             = <span class="ruby-value">0x00000004</span>
+<span class="ruby-constant">SACL_SECURITY_INFORMATION</span>             = <span class="ruby-value">0x00000008</span>
+<span class="ruby-constant">LABEL_SECURITY_INFORMATION</span>            = <span class="ruby-value">0x00000010</span>
+<span class="ruby-constant">ATTRIBUTE_SECURITY_INFORMATION</span>        = <span class="ruby-value">0x00000020</span>
+<span class="ruby-constant">SCOPE_SECURITY_INFORMATION</span>            = <span class="ruby-value">0x00000040</span>
+<span class="ruby-constant">BACKUP_SECURITY_INFORMATION</span>           = <span class="ruby-value">0x00010000</span>
+<span class="ruby-constant">PROTECTED_DACL_SECURITY_INFORMATION</span>   = <span class="ruby-value">0x80000000</span>
+<span class="ruby-constant">PROTECTED_SACL_SECURITY_INFORMATION</span>   = <span class="ruby-value">0x40000000</span>
+<span class="ruby-constant">UNPROTECTED_DACL_SECURITY_INFORMATION</span> = <span class="ruby-value">0x20000000</span>
+<span class="ruby-constant">UNPROTECTED_SACL_SECURITY_INFORMATION</span> = <span class="ruby-value">0x10000000</span>
+</pre>
+
+<p>)</p>
+
+<p>type SECURITY_DESCRIPTOR_CONTROL uint16</p>
+
+<p>// Constants for type SECURITY_DESCRIPTOR_CONTROL const (</p>
+
+<pre class="ruby"><span class="ruby-constant">SE_OWNER_DEFAULTED</span>       = <span class="ruby-value">0x0001</span>
+<span class="ruby-constant">SE_GROUP_DEFAULTED</span>       = <span class="ruby-value">0x0002</span>
+<span class="ruby-constant">SE_DACL_PRESENT</span>          = <span class="ruby-value">0x0004</span>
+<span class="ruby-constant">SE_DACL_DEFAULTED</span>        = <span class="ruby-value">0x0008</span>
+<span class="ruby-constant">SE_SACL_PRESENT</span>          = <span class="ruby-value">0x0010</span>
+<span class="ruby-constant">SE_SACL_DEFAULTED</span>        = <span class="ruby-value">0x0020</span>
+<span class="ruby-constant">SE_DACL_AUTO_INHERIT_REQ</span> = <span class="ruby-value">0x0100</span>
+<span class="ruby-constant">SE_SACL_AUTO_INHERIT_REQ</span> = <span class="ruby-value">0x0200</span>
+<span class="ruby-constant">SE_DACL_AUTO_INHERITED</span>   = <span class="ruby-value">0x0400</span>
+<span class="ruby-constant">SE_SACL_AUTO_INHERITED</span>   = <span class="ruby-value">0x0800</span>
+<span class="ruby-constant">SE_DACL_PROTECTED</span>        = <span class="ruby-value">0x1000</span>
+<span class="ruby-constant">SE_SACL_PROTECTED</span>        = <span class="ruby-value">0x2000</span>
+<span class="ruby-constant">SE_RM_CONTROL_VALID</span>      = <span class="ruby-value">0x4000</span>
+<span class="ruby-constant">SE_SELF_RELATIVE</span>         = <span class="ruby-value">0x8000</span>
+</pre>
+
+<p>)</p>
+
+<p>type ACCESS_MASK uint32</p>
+
+<p>// Constants for type ACCESS_MASK const (</p>
+
+<pre class="ruby"><span class="ruby-constant">DELETE</span>                   = <span class="ruby-value">0x00010000</span>
+<span class="ruby-constant">READ_CONTROL</span>             = <span class="ruby-value">0x00020000</span>
+<span class="ruby-constant">WRITE_DAC</span>                = <span class="ruby-value">0x00040000</span>
+<span class="ruby-constant">WRITE_OWNER</span>              = <span class="ruby-value">0x00080000</span>
+<span class="ruby-constant">SYNCHRONIZE</span>              = <span class="ruby-value">0x00100000</span>
+<span class="ruby-constant">STANDARD_RIGHTS_REQUIRED</span> = <span class="ruby-value">0x000F0000</span>
+<span class="ruby-constant">STANDARD_RIGHTS_READ</span>     = <span class="ruby-constant">READ_CONTROL</span>
+<span class="ruby-constant">STANDARD_RIGHTS_WRITE</span>    = <span class="ruby-constant">READ_CONTROL</span>
+<span class="ruby-constant">STANDARD_RIGHTS_EXECUTE</span>  = <span class="ruby-constant">READ_CONTROL</span>
+<span class="ruby-constant">STANDARD_RIGHTS_ALL</span>      = <span class="ruby-value">0x001F0000</span>
+<span class="ruby-constant">SPECIFIC_RIGHTS_ALL</span>      = <span class="ruby-value">0x0000FFFF</span>
+<span class="ruby-constant">ACCESS_SYSTEM_SECURITY</span>   = <span class="ruby-value">0x01000000</span>
+<span class="ruby-constant">MAXIMUM_ALLOWED</span>          = <span class="ruby-value">0x02000000</span>
+<span class="ruby-constant">GENERIC_READ</span>             = <span class="ruby-value">0x80000000</span>
+<span class="ruby-constant">GENERIC_WRITE</span>            = <span class="ruby-value">0x40000000</span>
+<span class="ruby-constant">GENERIC_EXECUTE</span>          = <span class="ruby-value">0x20000000</span>
+<span class="ruby-constant">GENERIC_ALL</span>              = <span class="ruby-value">0x10000000</span>
+</pre>
+
+<p>)</p>
+
+<p>type ACCESS_MODE uint32</p>
+
+<p>// Constants for type ACCESS_MODE const (</p>
+
+<pre class="ruby"><span class="ruby-constant">NOT_USED_ACCESS</span>   = <span class="ruby-value">0</span>
+<span class="ruby-constant">GRANT_ACCESS</span>      = <span class="ruby-value">1</span>
+<span class="ruby-constant">SET_ACCESS</span>        = <span class="ruby-value">2</span>
+<span class="ruby-constant">DENY_ACCESS</span>       = <span class="ruby-value">3</span>
+<span class="ruby-constant">REVOKE_ACCESS</span>     = <span class="ruby-value">4</span>
+<span class="ruby-constant">SET_AUDIT_SUCCESS</span> = <span class="ruby-value">5</span>
+<span class="ruby-constant">SET_AUDIT_FAILURE</span> = <span class="ruby-value">6</span>
+</pre>
+
+<p>)</p>
+
+<p>// Constants for AceFlags and Inheritance fields const (</p>
+
+<pre class="ruby"><span class="ruby-constant">NO_INHERITANCE</span>                     = <span class="ruby-value">0x0</span>
+<span class="ruby-constant">SUB_OBJECTS_ONLY_INHERIT</span>           = <span class="ruby-value">0x1</span>
+<span class="ruby-constant">SUB_CONTAINERS_ONLY_INHERIT</span>        = <span class="ruby-value">0x2</span>
+<span class="ruby-constant">SUB_CONTAINERS_AND_OBJECTS_INHERIT</span> = <span class="ruby-value">0x3</span>
+<span class="ruby-constant">INHERIT_NO_PROPAGATE</span>               = <span class="ruby-value">0x4</span>
+<span class="ruby-constant">INHERIT_ONLY</span>                       = <span class="ruby-value">0x8</span>
+<span class="ruby-constant">INHERITED_ACCESS_ENTRY</span>             = <span class="ruby-value">0x10</span>
+<span class="ruby-constant">INHERITED_PARENT</span>                   = <span class="ruby-value">0x10000000</span>
+<span class="ruby-constant">INHERITED_GRANDPARENT</span>              = <span class="ruby-value">0x20000000</span>
+<span class="ruby-constant">OBJECT_INHERIT_ACE</span>                 = <span class="ruby-value">0x1</span>
+<span class="ruby-constant">CONTAINER_INHERIT_ACE</span>              = <span class="ruby-value">0x2</span>
+<span class="ruby-constant">NO_PROPAGATE_INHERIT_ACE</span>           = <span class="ruby-value">0x4</span>
+<span class="ruby-constant">INHERIT_ONLY_ACE</span>                   = <span class="ruby-value">0x8</span>
+<span class="ruby-constant">INHERITED_ACE</span>                      = <span class="ruby-value">0x10</span>
+<span class="ruby-constant">VALID_INHERIT_FLAGS</span>                = <span class="ruby-value">0x1F</span>
+</pre>
+
+<p>)</p>
+
+<p>type MULTIPLE_TRUSTEE_OPERATION uint32</p>
+
+<p>// Constants for MULTIPLE_TRUSTEE_OPERATION const (</p>
+
+<pre class="ruby"><span class="ruby-constant">NO_MULTIPLE_TRUSTEE</span>    = <span class="ruby-value">0</span>
+<span class="ruby-constant">TRUSTEE_IS_IMPERSONATE</span> = <span class="ruby-value">1</span>
+</pre>
+
+<p>)</p>
+
+<p>type TRUSTEE_FORM uint32</p>
+
+<p>// Constants for TRUSTEE_FORM const (</p>
+
+<pre class="ruby"><span class="ruby-constant">TRUSTEE_IS_SID</span>              = <span class="ruby-value">0</span>
+<span class="ruby-constant">TRUSTEE_IS_NAME</span>             = <span class="ruby-value">1</span>
+<span class="ruby-constant">TRUSTEE_BAD_FORM</span>            = <span class="ruby-value">2</span>
+<span class="ruby-constant">TRUSTEE_IS_OBJECTS_AND_SID</span>  = <span class="ruby-value">3</span>
+<span class="ruby-constant">TRUSTEE_IS_OBJECTS_AND_NAME</span> = <span class="ruby-value">4</span>
+</pre>
+
+<p>)</p>
+
+<p>type TRUSTEE_TYPE uint32</p>
+
+<p>// Constants for TRUSTEE_TYPE const (</p>
+
+<pre class="ruby"><span class="ruby-constant">TRUSTEE_IS_UNKNOWN</span>          = <span class="ruby-value">0</span>
+<span class="ruby-constant">TRUSTEE_IS_USER</span>             = <span class="ruby-value">1</span>
+<span class="ruby-constant">TRUSTEE_IS_GROUP</span>            = <span class="ruby-value">2</span>
+<span class="ruby-constant">TRUSTEE_IS_DOMAIN</span>           = <span class="ruby-value">3</span>
+<span class="ruby-constant">TRUSTEE_IS_ALIAS</span>            = <span class="ruby-value">4</span>
+<span class="ruby-constant">TRUSTEE_IS_WELL_KNOWN_GROUP</span> = <span class="ruby-value">5</span>
+<span class="ruby-constant">TRUSTEE_IS_DELETED</span>          = <span class="ruby-value">6</span>
+<span class="ruby-constant">TRUSTEE_IS_INVALID</span>          = <span class="ruby-value">7</span>
+<span class="ruby-constant">TRUSTEE_IS_COMPUTER</span>         = <span class="ruby-value">8</span>
+</pre>
+
+<p>)</p>
+
+<p>// Constants for ObjectsPresent field const (</p>
+
+<pre class="ruby"><span class="ruby-constant">ACE_OBJECT_TYPE_PRESENT</span>           = <span class="ruby-value">0x1</span>
+<span class="ruby-constant">ACE_INHERITED_OBJECT_TYPE_PRESENT</span> = <span class="ruby-value">0x2</span>
+</pre>
+
+<p>)</p>
+
+<p>type EXPLICIT_ACCESS struct {</p>
+
+<pre class="ruby"><span class="ruby-constant">AccessPermissions</span> <span class="ruby-constant">ACCESS_MASK</span>
+<span class="ruby-constant">AccessMode</span>        <span class="ruby-constant">ACCESS_MODE</span>
+<span class="ruby-constant">Inheritance</span>       <span class="ruby-identifier">uint32</span>
+<span class="ruby-constant">Trustee</span>           <span class="ruby-constant">TRUSTEE</span>
+</pre>
+
+<p>}</p>
+
+<p>// This type is the union inside of TRUSTEE and must be created using one of the TrusteeValueFrom* functions. type TrusteeValue uintptr</p>
+
+<p>func TrusteeValueFromString(str string) TrusteeValue {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">TrusteeValue</span>(<span class="ruby-identifier">unsafe</span>.<span class="ruby-constant">Pointer</span>(<span class="ruby-constant">StringToUTF16Ptr</span>(<span class="ruby-identifier">str</span>)))
+</pre>
+
+<p>} func TrusteeValueFromSID(sid *SID) TrusteeValue {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">TrusteeValue</span>(<span class="ruby-identifier">unsafe</span>.<span class="ruby-constant">Pointer</span>(<span class="ruby-identifier">sid</span>))
+</pre>
+
+<p>} func TrusteeValueFromObjectsAndSid(objectsAndSid *OBJECTS_AND_SID) TrusteeValue {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">TrusteeValue</span>(<span class="ruby-identifier">unsafe</span>.<span class="ruby-constant">Pointer</span>(<span class="ruby-identifier">objectsAndSid</span>))
+</pre>
+
+<p>} func TrusteeValueFromObjectsAndName(objectsAndName *OBJECTS_AND_NAME) TrusteeValue {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-constant">TrusteeValue</span>(<span class="ruby-identifier">unsafe</span>.<span class="ruby-constant">Pointer</span>(<span class="ruby-identifier">objectsAndName</span>))
+</pre>
+
+<p>}</p>
+
+<p>type TRUSTEE struct {</p>
+
+<pre class="ruby"><span class="ruby-constant">MultipleTrustee</span>          <span class="ruby-operator">*</span><span class="ruby-constant">TRUSTEE</span>
+<span class="ruby-constant">MultipleTrusteeOperation</span> <span class="ruby-constant">MULTIPLE_TRUSTEE_OPERATION</span>
+<span class="ruby-constant">TrusteeForm</span>              <span class="ruby-constant">TRUSTEE_FORM</span>
+<span class="ruby-constant">TrusteeType</span>              <span class="ruby-constant">TRUSTEE_TYPE</span>
+<span class="ruby-constant">TrusteeValue</span>             <span class="ruby-constant">TrusteeValue</span>
+</pre>
+
+<p>}</p>
+
+<p>type OBJECTS_AND_SID struct {</p>
+
+<pre class="ruby"><span class="ruby-constant">ObjectsPresent</span>          <span class="ruby-identifier">uint32</span>
+<span class="ruby-constant">ObjectTypeGuid</span>          <span class="ruby-constant">GUID</span>
+<span class="ruby-constant">InheritedObjectTypeGuid</span> <span class="ruby-constant">GUID</span>
+<span class="ruby-constant">Sid</span>                     <span class="ruby-operator">*</span><span class="ruby-constant">SID</span>
+</pre>
+
+<p>}</p>
+
+<p>type OBJECTS_AND_NAME struct {</p>
+
+<pre class="ruby"><span class="ruby-constant">ObjectsPresent</span>          <span class="ruby-identifier">uint32</span>
+<span class="ruby-constant">ObjectType</span>              <span class="ruby-constant">SE_OBJECT_TYPE</span>
+<span class="ruby-constant">ObjectTypeName</span>          <span class="ruby-operator">*</span><span class="ruby-identifier">uint16</span>
+<span class="ruby-constant">InheritedObjectTypeName</span> <span class="ruby-operator">*</span><span class="ruby-identifier">uint16</span>
+<span class="ruby-constant">Name</span>                    <span class="ruby-operator">*</span><span class="ruby-identifier">uint16</span>
+</pre>
+
+<p>}</p>
+
+<p>//sys   getSecurityInfo(handle Handle, objectType SE_OBJECT_TYPE, securityInformation SECURITY_INFORMATION, owner **SID, group **SID, dacl **ACL, sacl **ACL, sd **SECURITY_DESCRIPTOR) (ret error) = advapi32.GetSecurityInfo //sys   SetSecurityInfo(handle Handle, objectType SE_OBJECT_TYPE, securityInformation SECURITY_INFORMATION, owner *SID, group *SID, dacl *ACL, sacl *ACL) (ret error) = advapi32.SetSecurityInfo //sys   getNamedSecurityInfo(objectName string, objectType SE_OBJECT_TYPE, securityInformation SECURITY_INFORMATION, owner **SID, group **SID, dacl **ACL, sacl **ACL, sd **SECURITY_DESCRIPTOR) (ret error) = advapi32.GetNamedSecurityInfoW //sys   SetNamedSecurityInfo(objectName string, objectType SE_OBJECT_TYPE, securityInformation SECURITY_INFORMATION, owner *SID, group *SID, dacl *ACL, sacl *ACL) (ret error) = advapi32.SetNamedSecurityInfoW //sys   SetKernelObjectSecurity(handle Handle, securityInformation SECURITY_INFORMATION, securityDescriptor *SECURITY_DESCRIPTOR) (err error) = advapi32.SetKernelObjectSecurity</p>
+
+<p>//sys   buildSecurityDescriptor(owner *TRUSTEE, group *TRUSTEE, countAccessEntries uint32, accessEntries *EXPLICIT_ACCESS, countAuditEntries uint32, auditEntries *EXPLICIT_ACCESS, oldSecurityDescriptor *SECURITY_DESCRIPTOR, sizeNewSecurityDescriptor *uint32, newSecurityDescriptor **SECURITY_DESCRIPTOR) (ret error) = advapi32.BuildSecurityDescriptorW //sys   initializeSecurityDescriptor(absoluteSD *SECURITY_DESCRIPTOR, revision uint32) (err error) = advapi32.InitializeSecurityDescriptor</p>
+
+<p>//sys   getSecurityDescriptorControl(sd *SECURITY_DESCRIPTOR, control *SECURITY_DESCRIPTOR_CONTROL, revision *uint32) (err error) = advapi32.GetSecurityDescriptorControl //sys   getSecurityDescriptorDacl(sd *SECURITY_DESCRIPTOR, daclPresent *bool, dacl **ACL, daclDefaulted *bool) (err error) = advapi32.GetSecurityDescriptorDacl //sys   getSecurityDescriptorSacl(sd *SECURITY_DESCRIPTOR, saclPresent *bool, sacl **ACL, saclDefaulted *bool) (err error) = advapi32.GetSecurityDescriptorSacl //sys   getSecurityDescriptorOwner(sd *SECURITY_DESCRIPTOR, owner **SID, ownerDefaulted *bool) (err error) = advapi32.GetSecurityDescriptorOwner //sys   getSecurityDescriptorGroup(sd *SECURITY_DESCRIPTOR, group **SID, groupDefaulted *bool) (err error) = advapi32.GetSecurityDescriptorGroup //sys   getSecurityDescriptorLength(sd *SECURITY_DESCRIPTOR) (len uint32) = advapi32.GetSecurityDescriptorLength //sys   getSecurityDescriptorRMControl(sd *SECURITY_DESCRIPTOR, rmControl *uint8) (ret error) [failretval!=0] = advapi32.GetSecurityDescriptorRMControl //sys   isValidSecurityDescriptor(sd *SECURITY_DESCRIPTOR) (isValid bool) = advapi32.IsValidSecurityDescriptor</p>
+
+<p>//sys   setSecurityDescriptorControl(sd *SECURITY_DESCRIPTOR, controlBitsOfInterest SECURITY_DESCRIPTOR_CONTROL, controlBitsToSet SECURITY_DESCRIPTOR_CONTROL) (err error) = advapi32.SetSecurityDescriptorControl //sys   setSecurityDescriptorDacl(sd *SECURITY_DESCRIPTOR, daclPresent bool, dacl *ACL, daclDefaulted bool) (err error) = advapi32.SetSecurityDescriptorDacl //sys   setSecurityDescriptorSacl(sd *SECURITY_DESCRIPTOR, saclPresent bool, sacl *ACL, saclDefaulted bool) (err error) = advapi32.SetSecurityDescriptorSacl //sys   setSecurityDescriptorOwner(sd *SECURITY_DESCRIPTOR, owner *SID, ownerDefaulted bool) (err error) = advapi32.SetSecurityDescriptorOwner //sys   setSecurityDescriptorGroup(sd *SECURITY_DESCRIPTOR, group *SID, groupDefaulted bool) (err error) = advapi32.SetSecurityDescriptorGroup //sys   setSecurityDescriptorRMControl(sd *SECURITY_DESCRIPTOR, rmControl *uint8) = advapi32.SetSecurityDescriptorRMControl</p>
+
+<p>//sys   convertStringSecurityDescriptorToSecurityDescriptor(str string, revision uint32, sd **SECURITY_DESCRIPTOR, size *uint32) (err error) = advapi32.ConvertStringSecurityDescriptorToSecurityDescriptorW //sys   convertSecurityDescriptorToStringSecurityDescriptor(sd *SECURITY_DESCRIPTOR, revision uint32, securityInformation SECURITY_INFORMATION, str **uint16, strLen *uint32) (err error) = advapi32.ConvertSecurityDescriptorToStringSecurityDescriptorW</p>
+
+<p>//sys   makeAbsoluteSD(selfRelativeSD *SECURITY_DESCRIPTOR, absoluteSD *SECURITY_DESCRIPTOR, absoluteSDSize *uint32, dacl *ACL, daclSize *uint32, sacl *ACL, saclSize *uint32, owner *SID, ownerSize *uint32, group *SID, groupSize *uint32) (err error) = advapi32.MakeAbsoluteSD //sys   makeSelfRelativeSD(absoluteSD *SECURITY_DESCRIPTOR, selfRelativeSD *SECURITY_DESCRIPTOR, selfRelativeSDSize *uint32) (err error) = advapi32.MakeSelfRelativeSD</p>
+
+<p>//sys   setEntriesInAcl(countExplicitEntries uint32, explicitEntries *EXPLICIT_ACCESS, oldACL *ACL, newACL **ACL) (ret error) = advapi32.SetEntriesInAclW</p>
+
+<p>// Control returns the security descriptor control bits. func (sd *SECURITY_DESCRIPTOR) Control() (control SECURITY_DESCRIPTOR_CONTROL, revision uint32, err error) {</p>
+
+<pre>err = getSecurityDescriptorControl(sd, &amp;control, &amp;revision)
+return</pre>
+
+<p>}</p>
+
+<p>// SetControl sets the security descriptor control bits. func (sd *SECURITY_DESCRIPTOR) SetControl(controlBitsOfInterest SECURITY_DESCRIPTOR_CONTROL, controlBitsToSet SECURITY_DESCRIPTOR_CONTROL) error {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">setSecurityDescriptorControl</span>(<span class="ruby-identifier">sd</span>, <span class="ruby-identifier">controlBitsOfInterest</span>, <span class="ruby-identifier">controlBitsToSet</span>)
+</pre>
+
+<p>}</p>
+
+<p>// RMControl returns the security descriptor resource manager control bits. func (sd *SECURITY_DESCRIPTOR) RMControl() (control uint8, err error) {</p>
+
+<pre class="ruby"><span class="ruby-identifier">err</span> = <span class="ruby-identifier">getSecurityDescriptorRMControl</span>(<span class="ruby-identifier">sd</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">control</span>)
+<span class="ruby-keyword">return</span>
+</pre>
+
+<p>}</p>
+
+<p>// SetRMControl sets the security descriptor resource manager control bits. func (sd *SECURITY_DESCRIPTOR) SetRMControl(rmControl uint8) {</p>
+
+<pre class="ruby"><span class="ruby-identifier">setSecurityDescriptorRMControl</span>(<span class="ruby-identifier">sd</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">rmControl</span>)
+</pre>
+
+<p>}</p>
+
+<p>// DACL returns the security descriptor DACL and whether it was defaulted. The dacl return value may be nil // if a DACL exists but is an “empty DACL”, meaning fully permissive. If the DACL does not exist, err returns // ERROR_OBJECT_NOT_FOUND. func (sd *SECURITY_DESCRIPTOR) DACL() (dacl *ACL, defaulted bool, err error) {</p>
+
+<pre>var present bool
+err = getSecurityDescriptorDacl(sd, &amp;present, &amp;dacl, &amp;defaulted)
+if !present {
+        err = ERROR_OBJECT_NOT_FOUND
+}
+return</pre>
+
+<p>}</p>
+
+<p>// SetDACL sets the absolute security descriptor DACL. func (absoluteSD *SECURITY_DESCRIPTOR) SetDACL(dacl *ACL, present, defaulted bool) error {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">setSecurityDescriptorDacl</span>(<span class="ruby-identifier">absoluteSD</span>, <span class="ruby-identifier">present</span>, <span class="ruby-identifier">dacl</span>, <span class="ruby-identifier">defaulted</span>)
+</pre>
+
+<p>}</p>
+
+<p>// SACL returns the security descriptor SACL and whether it was defaulted. The sacl return value may be nil // if a SACL exists but is an “empty SACL”, meaning fully permissive. If the SACL does not exist, err returns // ERROR_OBJECT_NOT_FOUND. func (sd *SECURITY_DESCRIPTOR) SACL() (sacl *ACL, defaulted bool, err error) {</p>
+
+<pre>var present bool
+err = getSecurityDescriptorSacl(sd, &amp;present, &amp;sacl, &amp;defaulted)
+if !present {
+        err = ERROR_OBJECT_NOT_FOUND
+}
+return</pre>
+
+<p>}</p>
+
+<p>// SetSACL sets the absolute security descriptor SACL. func (absoluteSD *SECURITY_DESCRIPTOR) SetSACL(sacl *ACL, present, defaulted bool) error {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">setSecurityDescriptorSacl</span>(<span class="ruby-identifier">absoluteSD</span>, <span class="ruby-identifier">present</span>, <span class="ruby-identifier">sacl</span>, <span class="ruby-identifier">defaulted</span>)
+</pre>
+
+<p>}</p>
+
+<p>// Owner returns the security descriptor owner and whether it was defaulted. func (sd *SECURITY_DESCRIPTOR) Owner() (owner *SID, defaulted bool, err error) {</p>
+
+<pre>err = getSecurityDescriptorOwner(sd, &amp;owner, &amp;defaulted)
+return</pre>
+
+<p>}</p>
+
+<p>// SetOwner sets the absolute security descriptor owner. func (absoluteSD *SECURITY_DESCRIPTOR) SetOwner(owner *SID, defaulted bool) error {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">setSecurityDescriptorOwner</span>(<span class="ruby-identifier">absoluteSD</span>, <span class="ruby-identifier">owner</span>, <span class="ruby-identifier">defaulted</span>)
+</pre>
+
+<p>}</p>
+
+<p>// Group returns the security descriptor group and whether it was defaulted. func (sd *SECURITY_DESCRIPTOR) Group() (group *SID, defaulted bool, err error) {</p>
+
+<pre>err = getSecurityDescriptorGroup(sd, &amp;group, &amp;defaulted)
+return</pre>
+
+<p>}</p>
+
+<p>// SetGroup sets the absolute security descriptor owner. func (absoluteSD *SECURITY_DESCRIPTOR) SetGroup(group *SID, defaulted bool) error {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">setSecurityDescriptorGroup</span>(<span class="ruby-identifier">absoluteSD</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">defaulted</span>)
+</pre>
+
+<p>}</p>
+
+<p>// Length returns the length of the security descriptor. func (sd *SECURITY_DESCRIPTOR) Length() uint32 {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">getSecurityDescriptorLength</span>(<span class="ruby-identifier">sd</span>)
+</pre>
+
+<p>}</p>
+
+<p>// IsValid returns whether the security descriptor is valid. func (sd *SECURITY_DESCRIPTOR) IsValid() bool {</p>
+
+<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">isValidSecurityDescriptor</span>(<span class="ruby-identifier">sd</span>)
+</pre>
+
+<p>}</p>
+
+<p>// String returns the SDDL form of the security descriptor, with a function signature that can be // used with %v formatting directives. func (sd *SECURITY_DESCRIPTOR) String() string {</p>
+
+<pre>var sddl *uint16
+err := convertSecurityDescriptorToStringSecurityDescriptor(sd, 1, 0xff, &amp;sddl, nil)
+if err != nil {
+        return &quot;&quot;
+}
+defer LocalFree(Handle(unsafe.Pointer(sddl)))
+return UTF16PtrToString(sddl)</pre>
+
+<p>}</p>
+
+<p>// ToAbsolute converts a self-relative security descriptor into an absolute one. func (selfRelativeSD *SECURITY_DESCRIPTOR) ToAbsolute() (absoluteSD *SECURITY_DESCRIPTOR, err error) {</p>
+
+<pre>control, _, err := selfRelativeSD.Control()
+if err != nil {
+        return
+}
+if control&amp;SE_SELF_RELATIVE == 0 {
+        err = ERROR_INVALID_PARAMETER
+        return
+}
+var absoluteSDSize, daclSize, saclSize, ownerSize, groupSize uint32
+err = makeAbsoluteSD(selfRelativeSD, nil, &amp;absoluteSDSize,
+        nil, &amp;daclSize, nil, &amp;saclSize, nil, &amp;ownerSize, nil, &amp;groupSize)
+switch err {
+case ERROR_INSUFFICIENT_BUFFER:
+case nil:
+        // makeAbsoluteSD is expected to fail, but it succeeds.
+        return nil, ERROR_INTERNAL_ERROR
+default:
+        return nil, err
+}
+if absoluteSDSize &gt; 0 {
+        absoluteSD = (*SECURITY_DESCRIPTOR)(unsafe.Pointer(&amp;make([]byte, absoluteSDSize)[0]))
+}
+var (
+        dacl  *ACL
+        sacl  *ACL
+        owner *SID
+        group *SID
+)
+if daclSize &gt; 0 {
+        dacl = (*ACL)(unsafe.Pointer(&amp;make([]byte, daclSize)[0]))
+}
+if saclSize &gt; 0 {
+        sacl = (*ACL)(unsafe.Pointer(&amp;make([]byte, saclSize)[0]))
+}
+if ownerSize &gt; 0 {
+        owner = (*SID)(unsafe.Pointer(&amp;make([]byte, ownerSize)[0]))
+}
+if groupSize &gt; 0 {
+        group = (*SID)(unsafe.Pointer(&amp;make([]byte, groupSize)[0]))
+}
+err = makeAbsoluteSD(selfRelativeSD, absoluteSD, &amp;absoluteSDSize,
+        dacl, &amp;daclSize, sacl, &amp;saclSize, owner, &amp;ownerSize, group, &amp;groupSize)
+return</pre>
+
+<p>}</p>
+
+<p>// ToSelfRelative converts an absolute security descriptor into a self-relative one. func (absoluteSD *SECURITY_DESCRIPTOR) ToSelfRelative() (selfRelativeSD *SECURITY_DESCRIPTOR, err error) {</p>
+
+<pre>control, _, err := absoluteSD.Control()
+if err != nil {
+        return
+}
+if control&amp;SE_SELF_RELATIVE != 0 {
+        err = ERROR_INVALID_PARAMETER
+        return
+}
+var selfRelativeSDSize uint32
+err = makeSelfRelativeSD(absoluteSD, nil, &amp;selfRelativeSDSize)
+switch err {
+case ERROR_INSUFFICIENT_BUFFER:
+case nil:
+        // makeSelfRelativeSD is expected to fail, but it succeeds.
+        return nil, ERROR_INTERNAL_ERROR
+default:
+        return nil, err
+}
+if selfRelativeSDSize &gt; 0 {
+        selfRelativeSD = (*SECURITY_DESCRIPTOR)(unsafe.Pointer(&amp;make([]byte, selfRelativeSDSize)[0]))
+}
+err = makeSelfRelativeSD(absoluteSD, selfRelativeSD, &amp;selfRelativeSDSize)
+return</pre>
+
+<p>}</p>
+
+<p>func (selfRelativeSD *SECURITY_DESCRIPTOR) copySelfRelativeSecurityDescriptor() *SECURITY_DESCRIPTOR {</p>
+
+<pre>sdLen := int(selfRelativeSD.Length())
+const min = int(unsafe.Sizeof(SECURITY_DESCRIPTOR{}))
+if sdLen &lt; min {
+        sdLen = min
+}
+
+var src []byte
+h := (*unsafeheader.Slice)(unsafe.Pointer(&amp;src))
+h.Data = unsafe.Pointer(selfRelativeSD)
+h.Len = sdLen
+h.Cap = sdLen
+
+const psize = int(unsafe.Sizeof(uintptr(0)))
+
+var dst []byte
+h = (*unsafeheader.Slice)(unsafe.Pointer(&amp;dst))
+alloc := make([]uintptr, (sdLen+psize-1)/psize)
+h.Data = (*unsafeheader.Slice)(unsafe.Pointer(&amp;alloc)).Data
+h.Len = sdLen
+h.Cap = sdLen
+
+copy(dst, src)
+return (*SECURITY_DESCRIPTOR)(unsafe.Pointer(&amp;dst[0]))</pre>
+
+<p>}</p>
+
+<p>// SecurityDescriptorFromString converts an SDDL string describing a security descriptor into a // self-relative security descriptor object allocated on the Go heap. func SecurityDescriptorFromString(sddl string) (sd *SECURITY_DESCRIPTOR, err error) {</p>
+
+<pre>var winHeapSD *SECURITY_DESCRIPTOR
+err = convertStringSecurityDescriptorToSecurityDescriptor(sddl, 1, &amp;winHeapSD, nil)
+if err != nil {
+        return
+}
+defer LocalFree(Handle(unsafe.Pointer(winHeapSD)))
+return winHeapSD.copySelfRelativeSecurityDescriptor(), nil</pre>
+
+<p>}</p>
+
+<p>// GetSecurityInfo queries the security information for a given handle and returns the self-relative security // descriptor result on the Go heap. func GetSecurityInfo(handle Handle, objectType SE_OBJECT_TYPE, securityInformation SECURITY_INFORMATION) (sd *SECURITY_DESCRIPTOR, err error) {</p>
+
+<pre>var winHeapSD *SECURITY_DESCRIPTOR
+err = getSecurityInfo(handle, objectType, securityInformation, nil, nil, nil, nil, &amp;winHeapSD)
+if err != nil {
+        return
+}
+defer LocalFree(Handle(unsafe.Pointer(winHeapSD)))
+return winHeapSD.copySelfRelativeSecurityDescriptor(), nil</pre>
+
+<p>}</p>
+
+<p>// GetNamedSecurityInfo queries the security information for a given named object and returns the self-relative security // descriptor result on the Go heap. func GetNamedSecurityInfo(objectName string, objectType SE_OBJECT_TYPE, securityInformation SECURITY_INFORMATION) (sd *SECURITY_DESCRIPTOR, err error) {</p>
+
+<pre>var winHeapSD *SECURITY_DESCRIPTOR
+err = getNamedSecurityInfo(objectName, objectType, securityInformation, nil, nil, nil, nil, &amp;winHeapSD)
+if err != nil {
+        return
+}
+defer LocalFree(Handle(unsafe.Pointer(winHeapSD)))
+return winHeapSD.copySelfRelativeSecurityDescriptor(), nil</pre>
+
+<p>}</p>
+
+<p>// BuildSecurityDescriptor makes a new security descriptor using the input trustees, explicit access lists, and // prior security descriptor to be merged, any of which can be nil, returning the self-relative security descriptor // result on the Go heap. func BuildSecurityDescriptor(owner *TRUSTEE, group *TRUSTEE, accessEntries []EXPLICIT_ACCESS, auditEntries []EXPLICIT_ACCESS, mergedSecurityDescriptor *SECURITY_DESCRIPTOR) (sd *SECURITY_DESCRIPTOR, err error) {</p>
+
+<pre>var winHeapSD *SECURITY_DESCRIPTOR
+var winHeapSDSize uint32
+var firstAccessEntry *EXPLICIT_ACCESS
+if len(accessEntries) &gt; 0 {
+        firstAccessEntry = &amp;accessEntries[0]
+}
+var firstAuditEntry *EXPLICIT_ACCESS
+if len(auditEntries) &gt; 0 {
+        firstAuditEntry = &amp;auditEntries[0]
+}
+err = buildSecurityDescriptor(owner, group, uint32(len(accessEntries)), firstAccessEntry, uint32(len(auditEntries)), firstAuditEntry, mergedSecurityDescriptor, &amp;winHeapSDSize, &amp;winHeapSD)
+if err != nil {
+        return
+}
+defer LocalFree(Handle(unsafe.Pointer(winHeapSD)))
+return winHeapSD.copySelfRelativeSecurityDescriptor(), nil</pre>
+
+<p>}</p>
+
+<p>// NewSecurityDescriptor creates and initializes a new absolute security descriptor. func NewSecurityDescriptor() (absoluteSD *SECURITY_DESCRIPTOR, err error) {</p>
+
+<pre>absoluteSD = &amp;SECURITY_DESCRIPTOR{}
+err = initializeSecurityDescriptor(absoluteSD, 1)
+return</pre>
+
+<p>}</p>
+
+<p>// ACLFromEntries returns a new ACL on the Go heap containing a list of explicit entries as well as those of another ACL. // Both explicitEntries and mergedACL are optional and can be nil. func ACLFromEntries(explicitEntries []EXPLICIT_ACCESS, mergedACL *ACL) (acl *ACL, err error) {</p>
+
+<pre>var firstExplicitEntry *EXPLICIT_ACCESS
+if len(explicitEntries) &gt; 0 {
+        firstExplicitEntry = &amp;explicitEntries[0]
+}
+var winHeapACL *ACL
+err = setEntriesInAcl(uint32(len(explicitEntries)), firstExplicitEntry, mergedACL, &amp;winHeapACL)
+if err != nil {
+        return
+}
+defer LocalFree(Handle(unsafe.Pointer(winHeapACL)))
+aclBytes := make([]byte, winHeapACL.aclSize)
+copy(aclBytes, (*[(1 &lt;&lt; 31) - 1]byte)(unsafe.Pointer(winHeapACL))[:len(aclBytes):len(aclBytes)])
+return (*ACL)(unsafe.Pointer(&amp;aclBytes[0])), nil</pre>
+
+<p>}</p>
+
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
