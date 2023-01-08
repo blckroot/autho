@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>local_server_test.go - RDoc Documentation</title>
+<title>oauth_device.go - RDoc Documentation</title>
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "../";
@@ -109,123 +109,83 @@
   </div>
 </nav>
 
-<main role="main" aria-label="Page webapp/local_server_test.go">
+<main role="main" aria-label="Page autho-1.0.0/oauth_device.go">
 
-<p>package webapp</p>
+<p>package oauth</p>
 
 <p>import (</p>
 
-<pre class="ruby"><span class="ruby-string">&quot;bytes&quot;</span>
-<span class="ruby-string">&quot;errors&quot;</span>
-<span class="ruby-string">&quot;net&quot;</span>
+<pre class="ruby"><span class="ruby-string">&quot;bufio&quot;</span>
+<span class="ruby-string">&quot;context&quot;</span>
+<span class="ruby-string">&quot;fmt&quot;</span>
+<span class="ruby-string">&quot;io&quot;</span>
 <span class="ruby-string">&quot;net/http&quot;</span>
-<span class="ruby-string">&quot;testing&quot;</span>
+<span class="ruby-string">&quot;os&quot;</span>
+
+<span class="ruby-string">&quot;github.com/cli/browser&quot;</span>
+<span class="ruby-string">&quot;github.com/cli/oauth/api&quot;</span>
+<span class="ruby-string">&quot;github.com/cli/oauth/device&quot;</span>
 </pre>
 
 <p>)</p>
 
-<p>type fakeListener struct {</p>
+<p>// DeviceFlow captures the full OAuth Device flow, including prompting the user to copy a one-time // code and opening their web browser, and returns an access token upon completion. func (oa *Flow) DeviceFlow() (*api.AccessToken, error) {</p>
 
-<pre class="ruby"><span class="ruby-identifier">closed</span> <span class="ruby-identifier">bool</span>
-<span class="ruby-identifier">addr</span>   <span class="ruby-operator">*</span><span class="ruby-identifier">net</span>.<span class="ruby-constant">TCPAddr</span>
-</pre>
+<pre>httpClient := oa.HTTPClient
+if httpClient == nil {
+        httpClient = http.DefaultClient
+}
+
+stdin := oa.Stdin
+if stdin == nil {
+        stdin = os.Stdin
+}
+stdout := oa.Stdout
+if stdout == nil {
+        stdout = os.Stdout
+}
+host := oa.Host
+if host == nil {
+        host = GitHubHost(&quot;https://&quot; + oa.Hostname)
+}
+
+code, err := device.RequestCode(httpClient, host.DeviceCodeURL, oa.ClientID, oa.Scopes)
+if err != nil {
+        return nil, err
+}
+
+if oa.DisplayCode == nil {
+        fmt.Fprintf(stdout, &quot;First, copy your one-time code: %s\n&quot;, code.UserCode)
+        fmt.Fprint(stdout, &quot;Then press [Enter] to continue in the web browser... &quot;)
+        _ = waitForEnter(stdin)
+} else {
+        err := oa.DisplayCode(code.UserCode, code.VerificationURI)
+        if err != nil {
+                return nil, err
+        }
+}
+
+browseURL := oa.BrowseURL
+if browseURL == nil {
+        browseURL = browser.OpenURL
+}
+
+if err = browseURL(code.VerificationURI); err != nil {
+        return nil, fmt.Errorf(&quot;error opening the web browser: %w&quot;, err)
+}
+
+return device.Wait(context.TODO(), httpClient, host.TokenURL, device.WaitOptions{
+        ClientID:   oa.ClientID,
+        DeviceCode: code,
+})</pre>
 
 <p>}</p>
 
-<p>func (l *fakeListener) Accept() (net.Conn, error) {</p>
+<p>func waitForEnter(r io.Reader) error {</p>
 
-<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">errors</span>.<span class="ruby-constant">New</span>(<span class="ruby-string">&quot;not implemented&quot;</span>)
-</pre>
-
-<p>} func (l *fakeListener) Close() error {</p>
-
-<pre class="ruby"><span class="ruby-identifier">l</span>.<span class="ruby-identifier">closed</span> = <span class="ruby-keyword">true</span>
-<span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
-</pre>
-
-<p>} func (l *fakeListener) Addr() net.Addr {</p>
-
-<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">l</span>.<span class="ruby-identifier">addr</span>
-</pre>
-
-<p>}</p>
-
-<p>type responseWriter struct {</p>
-
-<pre class="ruby"><span class="ruby-identifier">header</span>  <span class="ruby-identifier">http</span>.<span class="ruby-constant">Header</span>
-<span class="ruby-identifier">written</span> <span class="ruby-identifier">bytes</span>.<span class="ruby-constant">Buffer</span>
-<span class="ruby-identifier">status</span>  <span class="ruby-identifier">int</span>
-</pre>
-
-<p>}</p>
-
-<p>func (w *responseWriter) Header() http.Header {</p>
-
-<pre>if w.header == nil {
-        w.header = make(http.Header)
-}
-return w.header</pre>
-
-<p>} func (w *responseWriter) Write(b []byte) (int, error) {</p>
-
-<pre>if w.status == 0 {
-        w.status = 200
-}
-return w.written.Write(b)</pre>
-
-<p>} func (w *responseWriter) WriteHeader(s int) {</p>
-
-<pre class="ruby"><span class="ruby-identifier">w</span>.<span class="ruby-identifier">status</span> = <span class="ruby-identifier">s</span>
-</pre>
-
-<p>}</p>
-
-<p>func Test_localServer_ServeHTTP(t *testing.T) {</p>
-
-<pre>listener := &amp;fakeListener{}
-s := &amp;localServer{
-        CallbackPath: &quot;/hello&quot;,
-        resultChan:   make(chan CodeResponse, 1),
-        listener:     listener,
-}
-
-w1 := &amp;responseWriter{}
-w2 := &amp;responseWriter{}
-
-serveChan := make(chan struct{})
-go func() {
-        req1, _ := http.NewRequest(&quot;GET&quot;, &quot;http://127.0.0.1:12345/favicon.ico&quot;, nil)
-        s.ServeHTTP(w1, req1)
-        req2, _ := http.NewRequest(&quot;GET&quot;, &quot;http://127.0.0.1:12345/hello?code=ABC-123&amp;state=xy%2Fz&quot;, nil)
-        s.ServeHTTP(w2, req2)
-        serveChan &lt;- struct{}{}
-}()
-
-res := &lt;-s.resultChan
-if res.Code != &quot;ABC-123&quot; {
-        t.Errorf(&quot;got code %q&quot;, res.Code)
-}
-if res.State != &quot;xy/z&quot; {
-        t.Errorf(&quot;got state %q&quot;, res.State)
-}
-
-&lt;-serveChan
-if w1.status != 404 {
-        t.Errorf(&quot;status = %d&quot;, w2.status)
-}
-
-if w2.status != 200 {
-        t.Errorf(&quot;status = %d&quot;, w2.status)
-}
-if w2.written.String() != &quot;&lt;p&gt;You may now close this page and return to the client app.&lt;/p&gt;&quot; {
-        t.Errorf(&quot;written: %q&quot;, w2.written.String())
-}
-if w2.Header().Get(&quot;Content-Type&quot;) != &quot;text/html&quot; {
-        t.Errorf(&quot;Content-Type: %v&quot;, w2.Header().Get(&quot;Content-Type&quot;))
-}
-if !listener.closed {
-        t.Error(&quot;expected listener to be closed&quot;)
-}</pre>
+<pre>scanner := bufio.NewScanner(r)
+scanner.Scan()
+return scanner.Err()</pre>
 
 <p>}</p>
 

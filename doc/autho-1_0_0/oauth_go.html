@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>local_server_test.go - RDoc Documentation</title>
+<title>oauth.go - RDoc Documentation</title>
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "../";
@@ -109,123 +109,93 @@
   </div>
 </nav>
 
-<main role="main" aria-label="Page webapp/local_server_test.go">
+<main role="main" aria-label="Page autho-1.0.0/oauth.go">
 
-<p>package webapp</p>
+<p>// Package oauth is a library for Go client applications that need to perform OAuth authorization // against a server, typically GitHub.com. package oauth</p>
 
 <p>import (</p>
 
-<pre class="ruby"><span class="ruby-string">&quot;bytes&quot;</span>
-<span class="ruby-string">&quot;errors&quot;</span>
-<span class="ruby-string">&quot;net&quot;</span>
+<pre class="ruby"><span class="ruby-string">&quot;errors&quot;</span>
+<span class="ruby-string">&quot;fmt&quot;</span>
+<span class="ruby-string">&quot;io&quot;</span>
 <span class="ruby-string">&quot;net/http&quot;</span>
-<span class="ruby-string">&quot;testing&quot;</span>
+<span class="ruby-string">&quot;net/url&quot;</span>
+
+<span class="ruby-string">&quot;github.com/cli/oauth/api&quot;</span>
+<span class="ruby-string">&quot;github.com/cli/oauth/device&quot;</span>
 </pre>
 
 <p>)</p>
 
-<p>type fakeListener struct {</p>
+<p>type httpClient interface {</p>
 
-<pre class="ruby"><span class="ruby-identifier">closed</span> <span class="ruby-identifier">bool</span>
-<span class="ruby-identifier">addr</span>   <span class="ruby-operator">*</span><span class="ruby-identifier">net</span>.<span class="ruby-constant">TCPAddr</span>
+<pre>PostForm(string, url.Values) (*http.Response, error)</pre>
+
+<p>}</p>
+
+<p>// Host defines the endpoints used to authorize against an OAuth server. type Host struct {</p>
+
+<pre class="ruby"><span class="ruby-constant">DeviceCodeURL</span> <span class="ruby-identifier">string</span>
+<span class="ruby-constant">AuthorizeURL</span>  <span class="ruby-identifier">string</span>
+<span class="ruby-constant">TokenURL</span>      <span class="ruby-identifier">string</span>
 </pre>
 
 <p>}</p>
 
-<p>func (l *fakeListener) Accept() (net.Conn, error) {</p>
+<p>// GitHubHost constructs a Host from the given URL to a GitHub instance. func GitHubHost(hostURL string) *Host {</p>
 
-<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">errors</span>.<span class="ruby-constant">New</span>(<span class="ruby-string">&quot;not implemented&quot;</span>)
-</pre>
+<pre>u, _ := url.Parse(hostURL)
 
-<p>} func (l *fakeListener) Close() error {</p>
-
-<pre class="ruby"><span class="ruby-identifier">l</span>.<span class="ruby-identifier">closed</span> = <span class="ruby-keyword">true</span>
-<span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
-</pre>
-
-<p>} func (l *fakeListener) Addr() net.Addr {</p>
-
-<pre class="ruby"><span class="ruby-keyword">return</span> <span class="ruby-identifier">l</span>.<span class="ruby-identifier">addr</span>
-</pre>
-
-<p>}</p>
-
-<p>type responseWriter struct {</p>
-
-<pre class="ruby"><span class="ruby-identifier">header</span>  <span class="ruby-identifier">http</span>.<span class="ruby-constant">Header</span>
-<span class="ruby-identifier">written</span> <span class="ruby-identifier">bytes</span>.<span class="ruby-constant">Buffer</span>
-<span class="ruby-identifier">status</span>  <span class="ruby-identifier">int</span>
-</pre>
-
-<p>}</p>
-
-<p>func (w *responseWriter) Header() http.Header {</p>
-
-<pre>if w.header == nil {
-        w.header = make(http.Header)
-}
-return w.header</pre>
-
-<p>} func (w *responseWriter) Write(b []byte) (int, error) {</p>
-
-<pre>if w.status == 0 {
-        w.status = 200
-}
-return w.written.Write(b)</pre>
-
-<p>} func (w *responseWriter) WriteHeader(s int) {</p>
-
-<pre class="ruby"><span class="ruby-identifier">w</span>.<span class="ruby-identifier">status</span> = <span class="ruby-identifier">s</span>
-</pre>
-
-<p>}</p>
-
-<p>func Test_localServer_ServeHTTP(t *testing.T) {</p>
-
-<pre>listener := &amp;fakeListener{}
-s := &amp;localServer{
-        CallbackPath: &quot;/hello&quot;,
-        resultChan:   make(chan CodeResponse, 1),
-        listener:     listener,
-}
-
-w1 := &amp;responseWriter{}
-w2 := &amp;responseWriter{}
-
-serveChan := make(chan struct{})
-go func() {
-        req1, _ := http.NewRequest(&quot;GET&quot;, &quot;http://127.0.0.1:12345/favicon.ico&quot;, nil)
-        s.ServeHTTP(w1, req1)
-        req2, _ := http.NewRequest(&quot;GET&quot;, &quot;http://127.0.0.1:12345/hello?code=ABC-123&amp;state=xy%2Fz&quot;, nil)
-        s.ServeHTTP(w2, req2)
-        serveChan &lt;- struct{}{}
-}()
-
-res := &lt;-s.resultChan
-if res.Code != &quot;ABC-123&quot; {
-        t.Errorf(&quot;got code %q&quot;, res.Code)
-}
-if res.State != &quot;xy/z&quot; {
-        t.Errorf(&quot;got state %q&quot;, res.State)
-}
-
-&lt;-serveChan
-if w1.status != 404 {
-        t.Errorf(&quot;status = %d&quot;, w2.status)
-}
-
-if w2.status != 200 {
-        t.Errorf(&quot;status = %d&quot;, w2.status)
-}
-if w2.written.String() != &quot;&lt;p&gt;You may now close this page and return to the client app.&lt;/p&gt;&quot; {
-        t.Errorf(&quot;written: %q&quot;, w2.written.String())
-}
-if w2.Header().Get(&quot;Content-Type&quot;) != &quot;text/html&quot; {
-        t.Errorf(&quot;Content-Type: %v&quot;, w2.Header().Get(&quot;Content-Type&quot;))
-}
-if !listener.closed {
-        t.Error(&quot;expected listener to be closed&quot;)
+return &amp;Host{
+        DeviceCodeURL: fmt.Sprintf(&quot;%s://%s/login/device/code&quot;, u.Scheme, u.Host),
+        AuthorizeURL:  fmt.Sprintf(&quot;%s://%s/login/oauth/authorize&quot;, u.Scheme, u.Host),
+        TokenURL:      fmt.Sprintf(&quot;%s://%s/login/oauth/access_token&quot;, u.Scheme, u.Host),
 }</pre>
+
+<p>}</p>
+
+<p>// Flow facilitates a single OAuth authorization flow. type Flow struct {</p>
+
+<pre>// The hostname to authorize the app with.
+//
+// Deprecated: Use Host instead.
+Hostname string
+// Host configuration to authorize the app with.
+Host *Host
+// OAuth scopes to request from the user.
+Scopes []string
+// OAuth application ID.
+ClientID string
+// OAuth application secret. Only applicable in web application flow.
+ClientSecret string
+// The localhost URI for web application flow callback, e.g. &quot;http://127.0.0.1/callback&quot;.
+CallbackURI string
+
+// Display a one-time code to the user. Receives the code and the browser URL as arguments. Defaults to printing the
+// code to the user on Stdout with instructions to copy the code and to press Enter to continue in their browser.
+DisplayCode func(string, string) error
+// Open a web browser at a URL. Defaults to opening the default system browser.
+BrowseURL func(string) error
+// Render an HTML page to the user upon completion of web application flow. The default is to
+// render a simple message that informs the user they can close the browser tab and return to the app.
+WriteSuccessHTML func(io.Writer)
+
+// The HTTP client to use for API POST requests. Defaults to http.DefaultClient.
+HTTPClient httpClient
+// The stream to listen to keyboard input on. Defaults to os.Stdin.
+Stdin io.Reader
+// The stream to print UI messages to. Defaults to os.Stdout.
+Stdout io.Writer</pre>
+
+<p>}</p>
+
+<p>// DetectFlow tries to perform Device flow first and falls back to Web application flow. func (oa *Flow) DetectFlow() (*api.AccessToken, error) {</p>
+
+<pre>accessToken, err := oa.DeviceFlow()
+if errors.Is(err, device.ErrUnsupported) {
+        return oa.WebAppFlow()
+}
+return accessToken, err</pre>
 
 <p>}</p>
 
